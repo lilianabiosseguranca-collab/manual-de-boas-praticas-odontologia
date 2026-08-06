@@ -1,10 +1,33 @@
-/* Home Page - Replace this page layout, components, content, behavior with what you want and translate to the language of the user */
+import { Hero } from '@/components/sections/Hero'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { Pain } from '@/components/sections/Pain'
+import { Legislation } from '@/components/sections/Legislation'
+import { TargetAudience } from '@/components/sections/TargetAudience'
+import { Curriculum } from '@/components/sections/Curriculum'
+import { OfferHighlights } from '@/components/sections/OfferHighlights'
+import { CourseStructure } from '@/components/sections/CourseStructure'
+import { Bonuses } from '@/components/sections/Bonuses'
+import { Pricing } from '@/components/sections/Pricing'
+import { AboutAuthor } from '@/components/sections/AboutAuthor'
+import { FAQ } from '@/components/sections/FAQ'
+
 const Index = () => {
   return (
-    <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">
-        This is a example page ready to be rewritten with your own content
-      </h1>
+    <div className="w-full min-h-screen bg-white text-slate-900 font-sans antialiased relative">
+      <div className="relative z-10 flex flex-col w-full">
+        <Hero />
+        <Testimonials />
+        <TargetAudience />
+        <Pain />
+        <Legislation />
+        <Curriculum />
+        <OfferHighlights />
+        <CourseStructure />
+        <Bonuses />
+        <Pricing />
+        <AboutAuthor />
+        <FAQ />
+      </div>
     </div>
   )
 }

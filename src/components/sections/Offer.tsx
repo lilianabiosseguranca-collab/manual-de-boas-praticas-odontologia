@@ -59,9 +59,9 @@ export const Offer = () => {
                   </p>{' '}
                   <div className="text-6xl md:text-7xl font-bold text-slate-900 tracking-tighter">
                     <span className="text-2xl font-normal text-slate-500 mr-2">12x de R$</span>
-                    20,37
+                    30,72
                   </div>
-                  <p className="text-slate-500 mt-2 text-lg">ou R$ 197 à vista</p>
+                  <p className="text-slate-500 mt-2 text-lg">ou R$ 297 à vista</p>
                 </div>
 
                 <Button

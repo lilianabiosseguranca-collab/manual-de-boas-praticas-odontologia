@@ -1,58 +1,52 @@
 routerAdd('POST', '/backend/v1/meta/capi', (e) => {
   const body = e.requestInfo().body || {}
+  const pixelId = '1115990062814370'
 
-  const pixelId = $secrets.get('META_PIXEL_ID') || ''
-  const accessToken = $secrets.get('META_CAPI_ACCESS_TOKEN') || ''
-  const caapiEnabled = $secrets.has('META_CAPI_ACCESS_TOKEN') && $secrets.has('META_PIXEL_ID')
-
-  if (!caapiEnabled) {
-    return e.json(200, { status: 'disabled', message: 'Meta CAPI not configured' })
+  const token = $secrets.get('META_CAPI_TOKEN') || ''
+  if (!token) {
+    return e.json(200, { success: false, message: 'CAPI token not configured' })
   }
 
-  const userAgent = e.request.header.get('User-Agent') || ''
-  const clientIp = (e.request.remoteAddr || '').split(':')[0] || ''
+  const eventName = body.eventName || 'PageView'
+  const eventID = body.eventID || ''
+  const eventSourceUrl = body.eventSourceUrl || ''
+  const testEventCode = body.testEventCode || ''
 
-  const payload = {
-    data: [
-      {
-        event_name: body.eventName || 'PageView',
-        event_time: Math.floor(Date.now() / 1000),
-        event_id:
-          body.eventID ||
-          (typeof crypto !== 'undefined' && crypto.randomUUID
-            ? crypto.randomUUID()
-            : Math.random().toString(36).slice(2) + Date.now().toString(36)),
-        action_source: 'website',
-        event_source_url: body.eventSourceUrl || '',
-        user_data: {
-          client_ip_address: clientIp,
-          client_user_agent: userAgent,
-        },
-      },
-    ],
+  const eventData = {
+    event_name: eventName,
+    event_time: Math.floor(Date.now() / 1000),
+    event_id: eventID,
+    event_source_url: eventSourceUrl,
+    action_source: 'website',
   }
 
-  if (body.test_event_code) {
-    payload.test_event_code = body.test_event_code
+  if (testEventCode) {
+    eventData.test_event_code = testEventCode
   }
+
+  if (body.customData) {
+    eventData.custom_data = body.customData
+  }
+
+  const payload = { data: [eventData] }
 
   try {
     const res = $http.send({
-      url: 'https://graph.facebook.com/v21.0/' + pixelId + '/events?access_token=' + accessToken,
+      url: 'https://graph.facebook.com/v18.0/' + pixelId + '/events?access_token=' + token,
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
-      timeout: 10000,
+      timeout: 15,
     })
 
-    let responseBody = {}
-    try {
-      responseBody = res.json || JSON.parse(res.body || '{}')
-    } catch (_) {}
-
-    return e.json(res.statusCode, responseBody)
+    if (res.statusCode >= 200 && res.statusCode < 300) {
+      return e.json(200, { success: true })
+    } else {
+      $app.logger().error('CAPI request failed', 'status', res.statusCode, 'body', res.body)
+      return e.json(res.statusCode, { success: false, error: 'CAPI request failed' })
+    }
   } catch (err) {
-    $app.logger().error('Meta CAPI transport error', 'error', String(err))
-    return e.json(200, { status: 'error', message: 'transport_error' })
+    $app.logger().error('CAPI transport error', 'error', String(err))
+    return e.json(500, { success: false, error: 'CAPI transport error' })
   }
 })

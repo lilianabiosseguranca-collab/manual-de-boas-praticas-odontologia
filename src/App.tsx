@@ -32,7 +32,7 @@ const App = () => {
   }, [])
 
   return (
-    <BrowserRouter future={{ v7_startTransition: false, v7_relativeSplatPath: false }}>
+    <BrowserRouter>
       <RouteTracker />
       <AuthProvider>
         <TooltipProvider>

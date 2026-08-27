@@ -60,8 +60,8 @@ export const Hero = () => {
 
             <div className="text-base sm:text-lg md:text-xl text-slate-800 font-medium leading-relaxed max-w-2xl space-y-4">
               <p>
-                No Método Foguete você tem um caminho prático para dominar a esterilização - sem
-                precisar entender sozinho a RDC 1002/2025.
+                Guia completo com tudo o que você precisa ficar atualizado com +50 documentos
+                pré-prontos
               </p>
             </div>
 

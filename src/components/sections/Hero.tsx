@@ -54,11 +54,8 @@ export const Hero = () => {
           {/* Text Content */}
           <div className="max-w-3xl space-y-6 md:space-y-10 order-1 lg:order-1 pt-4 md:pt-0">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight drop-shadow-sm">
-              Como ter segurança&nbsp;
-              <div>
-                na esterilização do seu consultório odontológico - com clareza em cada etapa e
-                respaldo da nova legislação de odontologia&nbsp;
-              </div>
+              A maneira mais eficiente de você ficar atualizado com os documentos exigidos pela nova
+              legislação de odontologia
             </h1>
 
             <div className="text-base sm:text-lg md:text-xl text-slate-800 font-medium leading-relaxed max-w-2xl space-y-4">

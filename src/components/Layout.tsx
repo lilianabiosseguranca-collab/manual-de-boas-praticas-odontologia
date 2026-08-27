@@ -38,7 +38,9 @@ export default function Layout() {
         )}
       >
         <div className="container px-4 md:px-6 flex items-center justify-between">
-          <div className="font-serif font-bold text-xl tracking-tight">Método Foguete&nbsp;</div>
+          <div className="font-serif font-bold text-xl tracking-tight">
+            Manual de Boas Práticas - Documentos para odontologia
+          </div>
         </div>
       </header>
 

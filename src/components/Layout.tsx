@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { initPixel, trackPageView, trackEvent } from '@/lib/pixel'
 import { cn } from '@/lib/utils'
+import { setupTransparentFavicon } from '@/lib/favicon'
 import logoImg from '@/assets/design-sem-nome-11-26c3d.png'
 
 export default function Layout() {
@@ -12,6 +13,9 @@ export default function Layout() {
   useEffect(() => {
     // Initialize Meta Pixel
     initPixel()
+
+    // Initialize dynamic transparent favicon from logo image
+    setupTransparentFavicon(logoImg)
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -43,7 +47,7 @@ export default function Layout() {
             <img
               src={logoImg}
               alt="Manual de Boas Práticas"
-              className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain drop-shadow-sm shrink-0"
+              className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain shrink-0 [mix-blend-mode:multiply]"
             />
             <span className="font-serif font-bold text-base sm:text-lg md:text-xl tracking-tight text-slate-900 leading-tight">
               Manual de Boas Práticas - Documentos para odontologia

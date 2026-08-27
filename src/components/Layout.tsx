@@ -8,14 +8,17 @@ import logoImg from '@/assets/design-sem-nome-11-26c3d.png'
 
 export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [transparentLogo, setTransparentLogo] = useState<string>('')
   const location = useLocation()
 
   useEffect(() => {
     // Initialize Meta Pixel
     initPixel()
 
-    // Initialize dynamic transparent favicon from logo image
-    setupTransparentFavicon(logoImg)
+    // Initialize dynamic transparent favicon from logo image and update header logo
+    setupTransparentFavicon(logoImg).then((dataUrl) => {
+      setTransparentLogo(dataUrl)
+    })
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -45,9 +48,12 @@ export default function Layout() {
         <div className="container px-4 md:px-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src={logoImg}
+              src={transparentLogo || logoImg}
               alt="Manual de Boas Práticas"
-              className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain shrink-0 [mix-blend-mode:multiply]"
+              className={cn(
+                'w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain shrink-0 transition-opacity duration-200',
+                !transparentLogo ? 'opacity-0' : 'opacity-100',
+              )}
             />
             <span className="font-serif font-bold text-base sm:text-lg md:text-xl tracking-tight text-slate-900 leading-tight">
               Manual de Boas Práticas - Documentos para odontologia

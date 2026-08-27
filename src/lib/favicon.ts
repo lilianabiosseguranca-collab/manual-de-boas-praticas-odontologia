@@ -1,64 +1,109 @@
 /**
- * Utility to process the logo image, remove its white background using HTML5 Canvas,
- * and dynamically set the favicon with the transparent PNG data URL.
+ * Utility to remove white/off-white background from an image using HTML5 Canvas.
+ * Returns a transparent PNG data URL and caches it.
  */
-export function setupTransparentFavicon(imageSrc: string) {
-  if (typeof window === 'undefined') return
+let cachedTransparentUrl: string | null = null
+let pendingPromise: Promise<string> | null = null
 
-  const img = new Image()
-  img.crossOrigin = 'anonymous'
-
-  img.onload = () => {
-    try {
-      const canvas = document.createElement('canvas')
-      canvas.width = img.naturalWidth || img.width
-      canvas.height = img.naturalHeight || img.height
-
-      const ctx = canvas.getContext('2d')
-      if (!ctx) return
-
-      ctx.drawImage(img, 0, 0)
-
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
-      const data = imageData.data
-
-      // Remove pure white or near-white pixels (make transparent with smooth alpha roll-off)
-      for (let i = 0; i < data.length; i += 4) {
-        const r = data[i]
-        const g = data[i + 1]
-        const b = data[i + 2]
-
-        // Check if pixel is near-white (threshold ~ 235)
-        const minVal = Math.min(r, g, b)
-        if (minVal > 220) {
-          // If all channels are very light, make transparent
-          if (r > 240 && g > 240 && b > 240) {
-            data[i + 3] = 0
-          } else {
-            // Anti-aliasing edge blend for near-white pixels
-            const brightness = (r + g + b) / 3
-            const factor = Math.max(0, (255 - brightness) / 35)
-            data[i + 3] = Math.round(data[i + 3] * factor)
-          }
-        }
-      }
-
-      ctx.putImageData(imageData, 0, 0)
-      const transparentDataUrl = canvas.toDataURL('image/png')
-
-      // Update or create favicon link tag
-      let link = document.querySelector<HTMLLinkElement>("link[rel*='icon']")
-      if (!link) {
-        link = document.createElement('link')
-        link.rel = 'icon'
-        document.head.appendChild(link)
-      }
-      link.type = 'image/png'
-      link.href = transparentDataUrl
-    } catch (e) {
-      console.warn('Failed to generate transparent favicon:', e)
-    }
+/**
+ * Removes white and very light background pixels from an image source,
+ * converting them into full transparency (alpha = 0) with a smooth edge transition.
+ */
+export function removeWhiteBackground(imageSrc: string): Promise<string> {
+  if (typeof window === 'undefined') {
+    return Promise.resolve(imageSrc)
   }
 
-  img.src = imageSrc
+  if (cachedTransparentUrl) {
+    return Promise.resolve(cachedTransparentUrl)
+  }
+
+  if (pendingPromise) {
+    return pendingPromise
+  }
+
+  pendingPromise = new Promise((resolve) => {
+    const img = new Image()
+    img.crossOrigin = 'anonymous'
+
+    img.onload = () => {
+      try {
+        const canvas = document.createElement('canvas')
+        const width = img.naturalWidth || img.width
+        const height = img.naturalHeight || img.height
+        canvas.width = width
+        canvas.height = height
+
+        const ctx = canvas.getContext('2d')
+        if (!ctx) {
+          resolve(imageSrc)
+          return
+        }
+
+        ctx.drawImage(img, 0, 0)
+
+        const imageData = ctx.getImageData(0, 0, width, height)
+        const data = imageData.data
+
+        // Aggressive background removal:
+        // Any pixel where R, G, and B are all > 200 is treated as background / off-white.
+        // We also apply smooth anti-aliasing near edges (between 185 and 215) so the icon doesn't have jagged fringes.
+        for (let i = 0; i < data.length; i += 4) {
+          const r = data[i]
+          const g = data[i + 1]
+          const b = data[i + 2]
+
+          const minChannel = Math.min(r, g, b)
+
+          if (minChannel >= 205) {
+            // Full background / off-white removal
+            data[i + 3] = 0
+          } else if (minChannel > 180) {
+            // Smooth edge transition / anti-aliasing for border pixels
+            // minChannel 180 -> factor = 1 (fully opaque)
+            // minChannel 205 -> factor = 0 (fully transparent)
+            const factor = (205 - minChannel) / 25
+            data[i + 3] = Math.round(data[i + 3] * Math.max(0, Math.min(1, factor)))
+          }
+        }
+
+        ctx.putImageData(imageData, 0, 0)
+        const transparentDataUrl = canvas.toDataURL('image/png')
+        cachedTransparentUrl = transparentDataUrl
+        resolve(transparentDataUrl)
+      } catch (err) {
+        console.warn('Failed to remove white background from image:', err)
+        resolve(imageSrc)
+      }
+    }
+
+    img.onerror = () => {
+      console.warn('Failed to load image for background removal:', imageSrc)
+      resolve(imageSrc)
+    }
+
+    img.src = imageSrc
+  })
+
+  return pendingPromise
+}
+
+/**
+ * Updates the document favicon with a transparent version of the image.
+ */
+export async function setupTransparentFavicon(imageSrc: string): Promise<string> {
+  const transparentUrl = await removeWhiteBackground(imageSrc)
+
+  if (typeof document !== 'undefined') {
+    let link = document.querySelector<HTMLLinkElement>("link[rel*='icon']")
+    if (!link) {
+      link = document.createElement('link')
+      link.rel = 'icon'
+      document.head.appendChild(link)
+    }
+    link.type = 'image/png'
+    link.href = transparentUrl
+  }
+
+  return transparentUrl
 }

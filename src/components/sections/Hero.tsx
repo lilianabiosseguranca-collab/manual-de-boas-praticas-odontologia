@@ -24,8 +24,7 @@ export const Hero = () => {
     },
     {
       title: 'Checklist de esterilização para salão de beleza',
-      image:
-        'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=600&h=800&q=80',
+      image: 'https://img.usecurling.com/p/600/800?q=abstract',
       spine: 'border-l-[#831843]',
       rotate: -4,
       translateX: 25,
@@ -33,8 +32,7 @@ export const Hero = () => {
     },
     {
       title: 'Checklist de esterilização para consultório odontológico',
-      image:
-        'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&h=800&q=80',
+      image: 'https://img.usecurling.com/p/600/800?q=abstract',
       spine: 'border-l-[#1e3a8a]',
       rotate: 4,
       translateX: 50,
@@ -72,7 +70,7 @@ export const Hero = () => {
                 className="w-full sm:w-auto text-[1.05rem] md:text-xl px-6 py-6 md:px-8 md:py-8 h-auto bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl shadow-xl transition-transform hover:-translate-y-1 whitespace-normal text-center leading-snug"
               >
                 <a href="#pricing" onClick={handleCtaClick}>
-                  Quero ter segurança na esterilização
+                  Quero uma atualização rápida e eficiente
                   <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 shrink-0" />
                 </a>
               </Button>

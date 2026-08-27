@@ -49,7 +49,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Digital Asset Montage: 3D Exploding Documents & Folder Composition */}
+          {/* 17 Physical Folders Archive Component */}
           <div className="relative w-full h-full flex items-center justify-center min-h-[460px] sm:min-h-[520px] lg:min-h-[580px] order-2 lg:order-2">
             <DocumentExplosion />
           </div>

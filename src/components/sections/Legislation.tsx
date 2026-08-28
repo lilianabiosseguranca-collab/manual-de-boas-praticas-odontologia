@@ -20,11 +20,11 @@ export const Legislation = () => {
         <div className="text-center animate-fade-in-up">
           <div className="max-w-4xl mx-auto mb-12 space-y-6">
             <h2 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#000000] bg-[#ffffff]">
-              Por que eu não criei um curso SOMENTE sobre a nova legislação da Anvisa?
+              A&nbsp; nova legislação da Anvisa mudou o jogo
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 font-medium">
-              Porque só mostrar o que mudou OU só incentivar você ler a legislação vai fazer com que
-              você trave na prática do dia a dia.
+              O Manual de Rotinas e Procedimentos se expandiu exponencialmente. Agora você precisa
+              da Série de Documentos de Boas Práticas de Funcionamento
             </p>
           </div>
           <img

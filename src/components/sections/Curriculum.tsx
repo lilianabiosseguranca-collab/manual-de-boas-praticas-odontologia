@@ -115,18 +115,6 @@ export function Curriculum() {
           </div>
         </div>
 
-        <div className="mt-20 max-w-3xl mx-auto rounded-3xl bg-white border border-slate-200 shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
-          <div className="p-8 md:p-12">
-            <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
-              2. Checklist de esterilização
-            </h3>
-
-            <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
-              Enxergue os gargalos no seu ambiente de trabalho e tenha facilidade na aplicação
-            </p>
-          </div>
-        </div>
-
         {/* Checklists Visuals */}
         <div className="mt-12 max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
@@ -155,90 +143,16 @@ export function Curriculum() {
                 style={{ perspective: '1000px' }}
               >
                 {/* Glow behind the item to make it pop on hover */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-slate-300/30 to-slate-200/30 rounded-[2rem] blur-xl opacity-0 group-hover:opacity-100 transition duration-700"></div>
 
                 {/* Book/Guide body */}
-                <div
-                  className={`relative flex flex-col bg-white rounded-r-2xl rounded-l-sm overflow-hidden border-y border-r border-slate-200 border-l-[14px] transition-all duration-700 shadow-[10px_10px_20px_rgba(0,0,0,0.12),-5px_5px_15px_rgba(0,0,0,0.04)] [transform:rotateY(-8deg)_rotateX(2deg)] group-hover:[transform:rotateY(0deg)_rotateX(0deg)_translateY(-12px)] group-hover:shadow-[15px_25px_40px_rgba(0,0,0,0.2),-5px_10px_20px_rgba(0,0,0,0.08)] ${item.spine}`}
-                  style={{ transformStyle: 'preserve-3d' }}
-                >
-                  {/* Spine effect for a "tangible" physical feel */}
-                  <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/40 via-black/5 to-transparent z-30 mix-blend-overlay pointer-events-none"></div>
-                  <div className="absolute left-1 top-0 bottom-0 w-px bg-white/30 z-40 pointer-events-none"></div>
-                  <div className="absolute inset-0 shadow-[inset_4px_0_12px_rgba(0,0,0,0.1)] z-30 pointer-events-none"></div>
-
-                  <div className="relative aspect-[3/4] w-full overflow-hidden">
-                    {/* Shadow overlay to integrate title properly */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/40 to-transparent z-10 pointer-events-none"></div>
-
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105"
-                    />
-
-                    <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-sm text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
-                      PDF Premium
-                    </div>
-
-                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-20">
-                      <div className="w-8 h-1.5 bg-white/60 rounded-full mb-4 transition-all duration-300 group-hover:w-12 group-hover:bg-white"></div>
-                      <h4 className="text-lg md:text-xl font-bold text-white leading-tight drop-shadow-md">
-                        {item.title}
-                      </h4>
-                    </div>
-                  </div>
-                </div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Section 3: Posicionamento e valorização */}
-        <div className="mt-20 max-w-3xl mx-auto rounded-3xl bg-white border border-slate-200 shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
-          <div className="p-8 md:p-12">
-            <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
-              3. Posicionamento e valorização
-            </h3>
 
-            <div className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
-              Saiba usar a segurança da esterilização bem feita a seu favor.
-              <div>
-                <br />
-              </div>
-              <div>
-                Aprenda a comunicar isso de forma clara para seu chefe e/ou seu cliente para que
-                eles se sintam mais seguros e percebam o valor do seu trabalho.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-12 max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-[#f2f2f2] group flex flex-col justify-center">
-              <img
-                src="/visual-edits/17-defcab6d.png"
-                alt="Confiança para dialogar com gestores"
-                className="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-[#f2f2f2] group flex flex-col justify-center">
-              <img
-                src="/visual-edits/16-9b8939c2.png"
-                alt="Recebe um aumento salarial"
-                className="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-[#f2f2f2] group flex flex-col justify-center">
-              <img
-                src="/visual-edits/e-isso-que-acontece-quando-voce-estuda-e-aplica-o-que-aprendeu-comigo-8-ae2f941d.png"
-                alt="Tem base e argumentos para realizar mudanças reais no trabalho"
-                className="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-            </div>
-          </div>
-        </div>
+        <div className="mt-12 max-w-5xl mx-auto"></div>
       </div>
     </section>
   )

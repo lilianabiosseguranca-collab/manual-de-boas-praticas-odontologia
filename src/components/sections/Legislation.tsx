@@ -23,8 +23,8 @@ export const Legislation = () => {
               A&nbsp; nova legislação da Anvisa mudou o jogo
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 font-medium">
-              O Manual de Rotinas e Procedimentos se expandiu exponencialmente. Agora você precisa
-              da Série de Documentos de Boas Práticas de Funcionamento
+              O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
+              precisa ter para mostrar em uma inspeção sanitária
             </p>
           </div>
           <img
@@ -41,8 +41,10 @@ export const Legislation = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
               <AlertCircle className="w-10 h-10 text-blue-600 shrink-0 mt-1" />
               <p className="text-xl md:text-2xl font-semibold text-blue-900 m-0 leading-snug">
-                Conhecer a legislação não é a mesma coisa que saber aplicá-la. Segurança vem de
-                entender o processo.
+                <span>
+                  O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
+                  precisa ter para mostrar em uma inspeção sanitária
+                </span>
               </p>
             </div>
           </div>

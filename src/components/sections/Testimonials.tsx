@@ -54,7 +54,7 @@ export function Testimonials() {
     <section className="py-16 md:py-24 bg-slate-50">
       <div className="container px-4 mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center text-slate-900 mb-16 tracking-tight">
-          Com o Método Foguete você:
+          Por dentro do Manual de Boas Práticas Sanitárias
         </h2>
 
         <div className="flex flex-col gap-16 md:gap-20">

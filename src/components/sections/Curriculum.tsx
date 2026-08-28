@@ -25,8 +25,8 @@ export function Curriculum() {
     <section className="py-16 md:py-24 bg-slate-50">
       <div className="container px-4 md:px-6 mx-auto max-w-5xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
-            No Método Foguete você aprende:
+          <h2 className="font-extrabold tracking-tight text-slate-900 text-[2.29rem]">
+            Por dentro do Manual de Boas Práticas Sanitárias
           </h2>
         </div>
 

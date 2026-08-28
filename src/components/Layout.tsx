@@ -56,7 +56,7 @@ export default function Layout() {
               )}
             />
             <span className="font-serif font-bold text-base sm:text-lg md:text-xl tracking-tight text-slate-900 leading-tight">
-              Manual de Boas Práticas - Documentos para odontologia
+              Manual de Boas Práticas Sanitárias - Documentos para odontologia
             </span>
           </div>
         </div>

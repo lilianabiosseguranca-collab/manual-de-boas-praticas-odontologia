@@ -16,11 +16,11 @@ const Index = () => {
     <div className="w-full min-h-screen bg-white text-slate-900 font-sans antialiased relative">
       <div className="relative z-10 flex flex-col w-full">
         <Hero />
-        <Testimonials />
+        <Curriculum />
         <TargetAudience />
         <Pain />
         <Legislation />
-        <Curriculum />
+        <Testimonials />
         <OfferHighlights />
         <CourseStructure />
         <Bonuses />

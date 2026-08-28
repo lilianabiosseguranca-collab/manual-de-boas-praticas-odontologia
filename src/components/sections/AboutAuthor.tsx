@@ -41,9 +41,11 @@ export function AboutAuthor() {
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
               Agora, ela reuniu toda a sua expertise e criou o{' '}
-              <strong className="text-blue-700 font-bold">Método Foguete</strong> para ajudar
-              profissionais a terem segurança e estarem atualizados tanto com as melhores práticas
-              de esterilização e serem profissionais valorizados.
+              <strong className="text-blue-700 font-bold">
+                Manual de Boas Práticas Sanitárias
+              </strong>
+              &nbsp;para ajudar profissionais da odontologia a ficarem atualizados com os documentos
+              exigidos pela nova legislação federal (RDC 1002/2025) de maneira rápida e eficiente.
             </p>
           </div>
         </div>

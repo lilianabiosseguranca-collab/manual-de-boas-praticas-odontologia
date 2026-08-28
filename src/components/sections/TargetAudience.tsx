@@ -100,18 +100,20 @@ export const TargetAudience = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-indigo-500 mt-0.5 shrink-0" />
                   <span>
-                    Quer ter a segurança de que a esterilização está sendo feita corretamente.
+                    Cirurgião-dentista que quer segurança na hora de apresentar os documentos para a
+                    vigilância sanitária
                   </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-indigo-500 mt-0.5 shrink-0" />
+                  <span>ASB/TSB que quer ter todos os processos organizados</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-indigo-500 mt-0.5 shrink-0" />
                   <span>
-                    Quer ter a paz de espírito quando for passar por uma fiscalização ou auditoria.
+                    Gestor de clínicas odontológicas que precisa de tudo organizado e pronto o mais
+                    rápido possível
                   </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-indigo-500 mt-0.5 shrink-0" />
-                  <span>Quer ter certeza de que está oferecendo o melhor para o seu paciente.</span>
                 </li>
               </ul>
             </CardContent>

@@ -72,43 +72,77 @@ export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    fill="currentColor"
     className={className}
     {...props}
   >
-    {/* Upper cleansing water droplet */}
-    <path d="M12 2c-1.3 1.6-2 2.5-2 3.5a2 2 0 0 0 4 0c0-1-.7-1.9-2-3.5Z" />
+    {/* ================= WATER DROPLETS (FLOWING WATER) ================= */}
+    {/* Top center main droplet */}
+    <path d="M12 0.8 C 11.2 2 10.2 3.2 10.2 4.2 A 1.8 1.8 0 0 0 13.8 4.2 C 13.8 3.2 12.8 2 12 0.8 Z" />
+    {/* Top left droplet */}
+    <path d="M4.5 3.5 C 4 4.2 3.4 5 3.4 5.6 A 1.1 1.1 0 0 0 5.6 5.6 C 5.6 5 5 4.2 4.5 3.5 Z" />
+    {/* Top right droplet */}
+    <path d="M19.5 3.5 C 19 4.2 18.4 5 18.4 5.6 A 1.1 1.1 0 0 0 20.6 5.6 C 20.6 5 20 4.2 19.5 3.5 Z" />
 
-    {/* Soap suds / foam bubbles */}
-    <circle cx="5" cy="5.5" r="1.2" />
-    <circle cx="19" cy="5.5" r="1.2" />
-    <circle cx="3" cy="10" r="0.8" />
-    <circle cx="21" cy="10" r="0.8" />
+    {/* ================= SOAP FOAM BUBBLE CLUSTERS ================= */}
+    <circle cx="7.2" cy="6.2" r="1.1" />
+    <circle cx="16.8" cy="6.2" r="1.1" />
+    <circle cx="9.6" cy="7.5" r="1.3" />
+    <circle cx="14.4" cy="7.5" r="1.3" />
+    <circle cx="12" cy="6.6" r="1.5" />
+    <circle cx="12" cy="4.8" r="0.9" />
 
-    {/* Left Hand: forearm, wrist, distinct abducted thumb and fingers reaching across */}
-    <path d="M1.5 15.5c2.5 0 4-.8 5.5-2.2" />
-    {/* Left thumb (raised upward in washing friction) */}
-    <path d="M7 13.3c.6-1.8 1.8-3.3 3.2-3.3s1.8 1 1.3 2.5" />
-    {/* Left fingers extending to the right across the other hand */}
-    <path d="M11.5 12.5c2-.5 4.5-.5 6.5.5" />
-    <path d="M11 14.5c2.5-.2 5.2.2 7 1.5" />
-    <path d="M1.5 18.5c2.5 0 4.5.3 7-1" />
+    {/* ================= TWO REAL HUMAN HANDS RUBBING IN FRICTION ================= */}
+    {/* LEFT HAND (anatomical silhouette): wrist at left bottom, thumb angled upward/inward, 4 distinct long fingers rubbing across toward upper right */}
+    <path
+      d="M 1 18.2
+         C 1.8 17.5, 3.2 16.8, 4.8 16.2
+         C 5.2 15.3, 5.8 13.5, 6.7 11.8
+         C 7.3 10.6, 8.4 10.0, 9.5 10.4
+         C 10.5 10.8, 10.8 11.9, 10.3 13.0
+         C 9.8 14.0, 8.9 14.8, 8.0 15.4
+         C 9.6 14.8, 12.0 14.0, 15.4 13.4
+         C 16.5 13.2, 17.4 13.9, 17.5 14.9
+         C 17.6 15.9, 16.8 16.7, 15.7 16.9
+         C 13.2 17.3, 11.2 17.7, 9.8 18.0
+         C 12.0 18.1, 14.2 18.4, 16.4 19.0
+         C 17.5 19.3, 18.0 20.2, 17.7 21.1
+         C 17.4 22.0, 16.4 22.4, 15.3 22.1
+         C 13.0 21.4, 10.8 20.8, 8.8 20.3
+         C 7.0 20.4, 4.8 21.0, 2.0 22.0
+         L 1.2 19.8 Z"
+    />
 
-    {/* Right Hand: forearm, wrist, opposing thumb and fingers interlacing/rubbing */}
-    <path d="M22.5 18.5c-2.5 0-4-.8-5.5-2.2" />
-    {/* Right thumb / palm contour */}
-    <path d="M17 16.3c-.6 1.8-1.8 2.7-3.2 2.7s-1.8-1-1.3-2" />
-    {/* Right fingers extending to the left */}
-    <path d="M12.5 17.5c-2 .5-4.5.5-6.5-.5" />
-    <path d="M13 15.5c-2.5.2-5.2-.2-7-1.5" />
-    <path d="M22.5 15.5c-2.5 0-4.5-.3-7 1" />
+    {/* RIGHT HAND (anatomical silhouette): wrist at right top, opposing thumb angled downward/inward, 4 distinct fingers wrapping & scrubbing across toward lower left */}
+    <path
+      d="M 23 10.8
+         C 22.2 11.5, 20.8 12.2, 19.2 12.8
+         C 18.8 13.7, 18.2 15.5, 17.3 17.2
+         C 16.7 18.4, 15.6 19.0, 14.5 18.6
+         C 13.5 18.2, 13.2 17.1, 13.7 16.0
+         C 14.2 15.0, 15.1 14.2, 16.0 13.6
+         C 14.4 14.2, 12.0 15.0, 8.6 15.6
+         C 7.5 15.8, 6.6 15.1, 6.5 14.1
+         C 6.4 13.1, 7.2 12.3, 8.3 12.1
+         C 10.8 11.7, 12.8 11.3, 14.2 11.0
+         C 12.0 10.9, 9.8 10.6, 7.6 10.0
+         C 6.5 9.7, 6.0 8.8, 6.3 7.9
+         C 6.6 7.0, 7.6 6.6, 8.7 6.9
+         C 11.0 7.6, 13.2 8.2, 15.2 8.7
+         C 17.0 8.6, 19.2 8.0, 22.0 7.0
+         L 22.8 9.2 Z"
+    />
 
-    {/* Lower soap lather / water splash bubble */}
-    <circle cx="12" cy="21" r="1" />
+    {/* Soap suds in active lather between the palms and interlaced fingers */}
+    <circle cx="11.8" cy="14.5" r="1.3" />
+    <circle cx="13.2" cy="12.5" r="1.1" />
+    <circle cx="10.2" cy="16.5" r="0.9" />
+    <circle cx="14.8" cy="10.8" r="0.9" />
+
+    {/* ================= BOTTOM FALLING WATER SPLASHES ================= */}
+    <circle cx="12" cy="23.2" r="0.8" />
+    <path d="M7.5 22.2 C 7.2 22.7 6.8 23.3 6.8 23.6 A 0.7 0.7 0 0 0 8.2 23.6 C 8.2 23.3 7.8 22.7 7.5 22.2 Z" />
+    <path d="M16.5 22.2 C 16.2 22.7 15.8 23.3 15.8 23.6 A 0.7 0.7 0 0 0 17.2 23.6 C 17.2 23.3 16.8 22.7 16.5 22.2 Z" />
   </svg>
 )
 

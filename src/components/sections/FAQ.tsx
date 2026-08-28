@@ -42,7 +42,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Quais são as formas de pagamento?',
-    a: 'Você pode realizar o pagamento via pix, cartão de crédito, boleto bancário e parcelamento sem comprometer o seu limite no cartão de crédito. Você pode parcelar em até 12x. Tudo processado de forma segura pela Hotmart.',
+    a: 'Você pode realizar o pagamento via pix, cartão de crédito, boleto bancário e parcelamento sem comprometer o seu limite no cartão de crédito. Você pode parcelar em até 7x. Tudo processado de forma segura pela Hotmart.',
   },
   {
     q: 'O curso tem garantia?',

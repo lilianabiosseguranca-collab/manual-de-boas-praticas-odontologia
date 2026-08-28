@@ -24,7 +24,8 @@ import {
   Layers,
 } from 'lucide-react'
 
-// Custom Dental / Surgical Instruments Icon SVG matching Lucide standard style (stroke-width 2, round linecaps)
+// Custom Dental Explorer / Double-ended Probe Icon SVG matching Lucide standard style (stroke-width 2, round linecaps)
+// Based faithfully on the double-ended dental explorer photo (knurled textured handle, shepherd's hook tip & sharp contra-angle tip)
 export const DentalInstrumentsIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   className = 'w-6 h-6',
   ...props
@@ -40,23 +41,30 @@ export const DentalInstrumentsIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
     className={className}
     {...props}
   >
-    {/* Instrument 1: Dental Mirror (Angled handle with circular inspection head) */}
-    <circle cx="6" cy="6" r="3.5" />
-    <path d="M8.5 8.5L19 19" />
-    <path d="M17 21l4-4" />
+    {/* Main central textured metal handle running diagonally */}
+    <line x1="6.5" y1="17.5" x2="17.5" y2="6.5" />
 
-    {/* Instrument 2: Dental Explorer / Curved Probe with grip knurling */}
-    <path d="M19.5 4.5c-.8-.8-2.2-.4-2.8.5l-2.2 3.5L5.5 17.5" />
-    <path d="M3.5 19.5l2 2" />
-    {/* Knurled handle detail line */}
-    <path d="M10 13l2 2" />
+    {/* Knurling / cross-hatch grip texture markings along the handle */}
+    <line x1="8" y1="14" x2="10" y2="16" />
+    <line x1="10" y1="12" x2="12" y2="14" />
+    <line x1="12" y1="10" x2="14" y2="12" />
+    <line x1="14" y1="8" x2="16" y2="10" />
+
+    {/* Upper-Right Working End: Smooth curved Shepherd's hook / Sickle probe */}
+    {/* Taper from handle -> shank neck -> curved hook arc -> fine pointed tip */}
+    <path d="M17.5 6.5 C 19 5, 19.5 3.8, 18.5 2.5 C 17.5 1.5, 20.5 1.5, 22.5 3.5" />
+
+    {/* Lower-Left Working End: Sharp Contra-angle / Right-angle explorer tip */}
+    {/* Shank angled bend -> sharp acute-angle contra-bend -> terminal tip */}
+    <path d="M6.5 17.5 L 4.5 19.5 L 4.5 22.5 L 1.5 22.5" />
   </svg>
 )
 
 // Alias for backwards compatibility if needed
 export const AutoclaveIcon = DentalInstrumentsIcon
 
-// Custom Hand Washing (Two Hands Rubbing with Soap Suds & Water Drops) Icon SVG matching Lucide standard style
+// Custom Hand Washing (Two Hands Rubbing & Interlacing with Soap Bubbles & Water Droplets) Icon SVG
+// Based faithfully on the Coren hand hygiene technique (rubbing palms/interlaced fingers, active friction with soap lather & water drops)
 export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   className = 'w-6 h-6',
   ...props
@@ -72,26 +80,31 @@ export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
     className={className}
     {...props}
   >
-    {/* Water cleansing droplets falling from top */}
-    <path d="M7 2.5v2" />
-    <path d="M12 2v2.5" />
-    <path d="M17 2.5v2" />
+    {/* Top cleansing water droplets */}
+    <path
+      d="M12 2 C 12 2, 10.5 3.8, 10.5 4.8 C 10.5 5.6, 11.2 6.2, 12 6.2 C 12.8 6.2, 13.5 5.6, 13.5 4.8 C 13.5 3.8, 12 2, 12 2 Z"
+      strokeWidth="1.6"
+    />
+    <path d="M5.5 4.5 v 1.8" />
+    <path d="M18.5 4.5 v 1.8" />
 
-    {/* Soap suds / cleansing lather bubbles */}
-    <circle cx="12" cy="7.5" r="1.5" />
-    <circle cx="7.5" cy="8.5" r="1" />
-    <circle cx="16.5" cy="8.5" r="1" />
+    {/* Soap suds / foam bubbles */}
+    <circle cx="7" cy="8.5" r="1.2" strokeWidth="1.6" />
+    <circle cx="17" cy="8.5" r="1.2" strokeWidth="1.6" />
+    <circle cx="12" cy="7.8" r="0.9" strokeWidth="1.5" />
 
-    {/* Left hand & fingers rubbing inwards */}
-    <path d="M2 13.5h5l3.5-2.5a1.8 1.8 0 0 1 2.2.3l1.8 1.7" />
-    <path d="M2 17h5.5l4-1.5" />
+    {/* Left hand & wrist in friction motion (Coren palm-to-palm / interlaced rubbing) */}
+    {/* Left wrist & palm base entering from left */}
+    <path d="M2 13.5 C 4 13.5, 5.5 13, 7.5 11 C 8.5 10, 10 9.8, 11.5 10.5" />
+    <path d="M2 17.5 C 4.5 17.5, 6 17, 8 15 C 9.5 13.5, 11.5 13, 13 13.5" />
 
-    {/* Right hand & fingers clasping / interlocking over left hand */}
-    <path d="M22 13.5h-5l-3.5 2.5a1.8 1.8 0 0 1-2.2-.3L9.5 14" />
-    <path d="M22 17h-5.5l-4 1.5" />
+    {/* Right hand & fingers rubbing/interlacing across left hand */}
+    <path d="M22 13.5 C 20 13.5, 18.5 13, 16.5 11 C 15.5 10, 14 9.8, 12.5 10.5" />
+    <path d="M22 17.5 C 19.5 17.5, 18 17, 16 15 C 14.5 13.5, 12.5 13, 11 13.5" />
 
-    {/* Lower rinse water droplet */}
-    <path d="M12 20.5v1.5" />
+    {/* Friction motion / water & soap froth ripples beneath hands */}
+    <path d="M9 19.5 C 10.5 20.5, 13.5 20.5, 15 19.5" strokeWidth="1.8" />
+    <circle cx="12" cy="21.5" r="0.8" strokeWidth="1.4" />
   </svg>
 )
 

@@ -836,10 +836,7 @@ export const DocumentExplosion: React.FC = () => {
                   {activeChapter.roman}
                 </span>
                 <span className="text-slate-300 text-xs">•</span>
-                <span className="text-[11px] sm:text-xs font-bold tracking-wider text-slate-500 uppercase">
-                  PASTA #{activeChapter.num}
-                </span>
-                <span className="text-slate-300 text-xs">•</span>
+
                 <span className="text-[11px] sm:text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
                   {activeChapter.tag}
                 </span>

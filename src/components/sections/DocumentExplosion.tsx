@@ -24,8 +24,8 @@ import {
   Layers,
 } from 'lucide-react'
 
-// Custom Autoclave (Sterilizer) Icon SVG matching Lucide standard style (stroke-width 2, round linecaps)
-export const AutoclaveIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
+// Custom Dental / Surgical Instruments Icon SVG matching Lucide standard style (stroke-width 2, round linecaps)
+export const DentalInstrumentsIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   className = 'w-6 h-6',
   ...props
 }) => (
@@ -40,27 +40,23 @@ export const AutoclaveIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
     className={className}
     {...props}
   >
-    {/* Autoclave main chamber body */}
-    <rect x="2" y="3" width="20" height="18" rx="3" />
-    {/* Circular pressure chamber door */}
-    <circle cx="12" cy="11" r="5.5" strokeDasharray="32" />
-    {/* Inner observation window / dial */}
-    <circle cx="12" cy="11" r="2.5" />
-    {/* Pressure gauge indicator hand */}
-    <path d="M12 11l1.5-1.5" />
-    {/* Door locking wheel spokes / safety bolts */}
-    <path d="M12 4.5v1" />
-    <path d="M12 16.5v1" />
-    <path d="M5.5 11h1" />
-    <path d="M17.5 11h1" />
-    {/* Bottom digital control display / program status bar */}
-    <rect x="6" y="17.5" width="8" height="2" rx="0.5" />
-    {/* Start/Cycle LED status indicator */}
-    <circle cx="17.5" cy="18.5" r="0.75" fill="currentColor" />
+    {/* Instrument 1: Dental Mirror (Angled handle with circular inspection head) */}
+    <circle cx="6" cy="6" r="3.5" />
+    <path d="M8.5 8.5L19 19" />
+    <path d="M17 21l4-4" />
+
+    {/* Instrument 2: Dental Explorer / Curved Probe with grip knurling */}
+    <path d="M19.5 4.5c-.8-.8-2.2-.4-2.8.5l-2.2 3.5L5.5 17.5" />
+    <path d="M3.5 19.5l2 2" />
+    {/* Knurled handle detail line */}
+    <path d="M10 13l2 2" />
   </svg>
 )
 
-// Custom Hand Washing (Higiene das mãos) Icon SVG matching Lucide standard style
+// Alias for backwards compatibility if needed
+export const AutoclaveIcon = DentalInstrumentsIcon
+
+// Custom Hand Washing (Two Hands Rubbing with Soap Suds & Water Drops) Icon SVG matching Lucide standard style
 export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   className = 'w-6 h-6',
   ...props
@@ -76,22 +72,26 @@ export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
     className={className}
     {...props}
   >
-    {/* Water drops / cleansing lather at top */}
-    <path
-      d="M12 2.5a1.5 1.5 0 0 1 1.5 2.5L12 6.5 10.5 5A1.5 1.5 0 0 1 12 2.5z"
-      fill="currentColor"
-      fillOpacity="0.15"
-    />
-    <circle cx="7.5" cy="4.5" r="1" fill="currentColor" fillOpacity="0.3" />
-    <circle cx="16.5" cy="4.5" r="1" fill="currentColor" fillOpacity="0.3" />
-    {/* Upper washing hand reaching down */}
-    <path d="M4 11.5l4-1.5 3 1.5c1 .5 2.5 0 3-1l.5-1" />
-    <path d="M14.5 9.5l3.5 1.5c1 .4 2.5.2 3.5-.5l.5-.5" />
-    {/* Lower receiving hand & palm */}
-    <path d="M2 17.5l5.5-1.5 4 1.5c1.5.6 3 0 3.5-1.5" />
-    <path d="M15 16l4.5-.5c1.2-.1 2.5.7 2.5 2 0 1.2-1.3 2-2.5 2H11l-5-1.5-4-1" />
-    {/* Soap suds / bubble sparkle */}
-    <path d="M17 12.5a1 1 0 1 0 2 0 1 1 0 1 0-2 0z" />
+    {/* Water cleansing droplets falling from top */}
+    <path d="M7 2.5v2" />
+    <path d="M12 2v2.5" />
+    <path d="M17 2.5v2" />
+
+    {/* Soap suds / cleansing lather bubbles */}
+    <circle cx="12" cy="7.5" r="1.5" />
+    <circle cx="7.5" cy="8.5" r="1" />
+    <circle cx="16.5" cy="8.5" r="1" />
+
+    {/* Left hand & fingers rubbing inwards */}
+    <path d="M2 13.5h5l3.5-2.5a1.8 1.8 0 0 1 2.2.3l1.8 1.7" />
+    <path d="M2 17h5.5l4-1.5" />
+
+    {/* Right hand & fingers clasping / interlocking over left hand */}
+    <path d="M22 13.5h-5l-3.5 2.5a1.8 1.8 0 0 1-2.2-.3L9.5 14" />
+    <path d="M22 17h-5.5l-4 1.5" />
+
+    {/* Lower rinse water droplet */}
+    <path d="M12 20.5v1.5" />
   </svg>
 )
 
@@ -436,7 +436,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Protocolo para processamento de dispositivos médicos incluindo informações de rastreabilidade',
     subtitle:
       'Fluxo unidirecional de CME, esterilização, indicadores químicos/biológicos e rotulagem',
-    icon: AutoclaveIcon,
+    icon: DentalInstrumentsIcon,
     colorTheme: {
       name: 'Azul Celeste Hospitalar',
       spineGradient: 'from-[#0077b6] via-[#0096c7] to-[#023e8a]',

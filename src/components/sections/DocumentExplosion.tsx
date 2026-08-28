@@ -709,7 +709,15 @@ export const DocumentExplosion: React.FC = () => {
                     transformOrigin: 'bottom center',
                   }}
                 >
-                  {/* Floating Folder Spine Body */}
+                  {/* Floating Hover Tooltip with Full Chapter Name */}
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-50 flex flex-col items-center">
+                    <div className="bg-slate-900/95 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow-xl whitespace-nowrap border border-slate-700 backdrop-blur-xs">
+                      <span className="text-amber-300 mr-1.5">{chap.roman}:</span>
+                      <span>{chap.title}</span>
+                    </div>
+                    <div className="w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-slate-900/95" />
+                  </div>
+                  {/* Floating Folder Spine Body */}{' '}
                   <div
                     className={`relative w-full h-full rounded-t-md bg-gradient-to-b ${theme.spineGradient} ${theme.spineShadow} border-t border-x border-white/25 flex flex-col justify-between p-1 transition-all overflow-hidden ${
                       isSelected
@@ -738,55 +746,40 @@ export const DocumentExplosion: React.FC = () => {
                     {/* ================= SPINAL PAPER LABEL TICKET ================= */}
                     <div className="relative z-10 w-full mt-1">
                       <div
-                        className={`w-full rounded-[2px] ${theme.labelBg} border ${theme.labelBorder} shadow-[0_1px_3px_rgba(0,0,0,0.25)] py-1 px-0.5 flex flex-col items-center justify-center text-center`}
+                        className={`w-full rounded-[2px] ${theme.labelBg} border ${theme.labelBorder} shadow-[0_1px_3px_rgba(0,0,0,0.25)] py-1.5 px-0.5 flex flex-col items-center justify-center text-center`}
                       >
                         {/* Paper label lines decoration */}
-                        <div className="w-4 h-0.5 bg-slate-400/40 rounded-full mb-0.5" />
+                        <div className="w-4 h-0.5 bg-slate-400/40 rounded-full mb-1" />
 
-                        {/* Chapter Number on Physical Tag */}
-                        <span className="text-[11px] sm:text-xs font-black text-slate-900 leading-none tracking-tight">
-                          {chap.num}
-                        </span>
-
-                        {/* Roman Numeral */}
-                        <span className="text-[7.5px] sm:text-[8px] font-extrabold text-slate-700 tracking-tighter leading-none mt-0.5">
+                        {/* Roman Numeral ONLY */}
+                        <span className="text-[11px] sm:text-xs font-black text-slate-900 tracking-tight leading-none font-serif">
                           {chap.roman.replace('CAPÍTULO ', '')}
                         </span>
                       </div>
                     </div>
 
-                    {/* ================= MIDDLE: CHAPTER ICON & SHORT TAG ================= */}
+                    {/* ================= MIDDLE: CHAPTER ICON ONLY (Hover tooltip shows full name) ================= */}
                     <div className="relative z-10 flex flex-col items-center justify-center my-auto py-1">
                       <div
-                        className={`w-5 h-5 sm:w-6 sm:h-6 rounded flex items-center justify-center text-white/95 shadow-xs transition-transform ${
+                        className={`w-6 h-6 sm:w-7 sm:h-7 rounded flex items-center justify-center text-white/95 shadow-xs transition-transform ${
                           isSelected
                             ? 'scale-110 bg-black/35 ring-1 ring-white/30'
                             : 'bg-black/25 group-hover:bg-black/35'
                         }`}
                       >
-                        <ChapIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <ChapIcon className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
                       </div>
-
-                      <span className="text-[7.5px] sm:text-[8.5px] font-extrabold text-white/95 tracking-tight uppercase line-clamp-1 max-w-[38px] truncate mt-1 leading-none drop-shadow-xs text-center">
-                        {chap.tag.split(' ')[0]}
-                      </span>
                     </div>
 
                     {/* ================= BOTTOM: METAL PULL HOLE (RING HOLE) ================= */}
-                    <div className="relative z-10 flex flex-col items-center pb-1">
+                    <div className="relative z-10 flex flex-col items-center pb-2">
                       {/* Metal Grommet Ring */}
                       <div className="relative w-4 h-4 rounded-full bg-gradient-to-br from-slate-200 via-slate-400 to-slate-600 p-[1.5px] shadow-[0_2px_4px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.8)]">
                         <div className="w-full h-full rounded-full bg-gradient-to-b from-black via-slate-950 to-slate-900 shadow-[inset_0_2px_4px_rgba(0,0,0,0.9)] flex items-center justify-center">
                           <div className="w-1.5 h-1.5 rounded-full bg-black" />
                         </div>
                       </div>
-
-                      {/* Volume Tag at bottom edge */}
-                      <span className="text-[7px] font-black text-white/80 tracking-tighter mt-1 leading-none">
-                        {chap.yearTag}
-                      </span>
                     </div>
-
                     {/* Active Folder Floating Arrow Indicator */}
                     {isSelected && (
                       <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6] ring-2 ring-white" />

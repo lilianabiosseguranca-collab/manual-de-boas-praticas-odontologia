@@ -22,10 +22,6 @@ export const Legislation = () => {
             <h2 className="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight text-[#000000] bg-[#ffffff]">
               A&nbsp; nova legislação da Anvisa mudou o jogo
             </h2>
-            <p className="text-xl md:text-2xl text-slate-600 font-medium">
-              O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
-              precisa ter para mostrar em uma inspeção sanitária
-            </p>
           </div>
           <img
             src={legislacaoImg}
@@ -53,9 +49,7 @@ export const Legislation = () => {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-stretch max-w-5xl mx-auto">
             {/* Column 1: The Problem */}
             <div className="space-y-6 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-rose-100 flex flex-col hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-bold text-slate-800 leading-snug">
-                Sem contexto, tudo vira:
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-800 leading-snug">Sem o Manual&nbsp;</h3>
               <ul className="space-y-4 mt-4 flex-1">
                 {['confuso', 'difícil de executar', 'e muitas vezes ignorado no dia a dia'].map(
                   (item, i) => (
@@ -75,9 +69,7 @@ export const Legislation = () => {
 
             {/* Column 2: The Solution */}
             <div className="space-y-6 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-emerald-100 flex flex-col hover:shadow-md transition-shadow">
-              <h3 className="text-2xl font-bold text-slate-800 leading-snug">
-                Você só consegue aplicar na prática quando você entende:
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-800 leading-snug">Com o Manual</h3>
               <ul className="space-y-4 mt-4 flex-1">
                 {['o que fazer', 'como fazer', 'por que fazer'].map((item, i) => (
                   <li
@@ -101,7 +93,6 @@ export const Legislation = () => {
           <div className="relative isolate max-w-4xl mx-auto">
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-indigo-500 via-indigo-600 to-[#0097b2] rounded-[2.5rem] blur-xl opacity-20 animate-pulse" />
             <div className="bg-indigo-600 rounded-[2rem] p-10 md:p-14 text-center relative overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-[url('https://img.usecurling.com/p/800/400?q=stars&color=blue')] opacity-10 mix-blend-overlay" />
               <div className="relative z-10">
                 <p className="text-2xl md:text-3xl text-indigo-50 leading-relaxed font-light">
                   <strong className="text-white font-extrabold block mb-6 text-3xl md:text-4xl drop-shadow-sm">

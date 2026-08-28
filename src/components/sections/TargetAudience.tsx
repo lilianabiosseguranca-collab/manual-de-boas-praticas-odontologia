@@ -41,9 +41,9 @@ export const TargetAudience = () => {
                 </div>
               </div>
 
-              {/* Items List / Right Side (Desktop fills the width horizontally) */}
+              {/* Items List / Right Side (Empilhados verticalmente) */}
               <div className="flex-1 w-full">
-                <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-700">
+                <ul className="flex flex-col gap-4 text-slate-700">
                   <li className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-50/70 border border-slate-100/80 hover:bg-slate-50 transition-colors">
                     <CheckCircle2 className="w-6 h-6 text-indigo-600 mt-0.5 shrink-0" />
                     <span className="text-base leading-relaxed">

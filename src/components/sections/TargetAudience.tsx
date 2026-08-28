@@ -93,7 +93,9 @@ export const TargetAudience = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6">
                 <ToothIcon className="w-8 h-8 text-indigo-600" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Cirurgião-Dentista</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">
+                Profissionais da Odontologia
+              </h3>
               <ul className="space-y-5 text-slate-700 text-lg">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-indigo-500 mt-0.5 shrink-0" />
@@ -110,84 +112,6 @@ export const TargetAudience = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-indigo-500 mt-0.5 shrink-0" />
                   <span>Quer ter certeza de que está oferecendo o melhor para o seu paciente.</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white border-slate-200 shadow-md">
-            <CardContent className="p-8">
-              <div className="w-16 h-16 bg-[#0097b2]/10 rounded-2xl flex items-center justify-center mb-6">
-                <SurgicalMaskIcon className="w-8 h-8 text-[#0097b2]" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">ASB e TSB</h3>
-              <ul className="space-y-5 text-slate-700 text-lg">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-[#0097b2] mt-0.5 shrink-0" />
-                  <span>
-                    Quer segurança para entender exatamente o que fazer e o porquê fazer em cada
-                    etapa do processo.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-[#0097b2] mt-0.5 shrink-0" />
-                  <span>Quer ser um profissional valorizado e reconhecido.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-[#0097b2] mt-0.5 shrink-0" />
-                  <span>Quer se posicionar com mais confiança dentro do consultório.</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white border-slate-200 shadow-md">
-            <CardContent className="p-8">
-              <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                <NailPolishIcon className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Podóloga e Nail Designer</h3>
-              <ul className="space-y-5 text-slate-700 text-lg">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-purple-500 mt-0.5 shrink-0" />
-                  <span>Quer ter a segurança de dominar o processo de esterilização</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-purple-500 mt-0.5 shrink-0" />
-                  <span>Quer atrair mais clientes pela segurança que você oferece</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-purple-500 mt-0.5 shrink-0" />
-                  <span>Quer a certeza de estar oferecendo o melhor pro cliente</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white border-slate-200 shadow-md">
-            <CardContent className="p-8">
-              <div className="w-16 h-16 bg-zinc-100 rounded-2xl flex items-center justify-center mb-6">
-                <PiercingIcon className="w-8 h-8 text-zinc-600" />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Piercer</h3>
-              <ul className="space-y-5 text-slate-700 text-lg">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-zinc-500 mt-0.5 shrink-0" />
-                  <span>
-                    Quer ter a certeza de que os processos de esterilização estão sendo feitos
-                    corretamente
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-zinc-500 mt-0.5 shrink-0" />
-                  <span>Quer ter tranquilidade em uma visita da vigilância sanitária</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-zinc-500 mt-0.5 shrink-0" />
-                  <span>
-                    Quer oferecer o melhor pro cliente e atrair mais pessoas pela segurança que você
-                    oferece
-                  </span>
                 </li>
               </ul>
             </CardContent>

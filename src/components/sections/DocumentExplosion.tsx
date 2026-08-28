@@ -647,7 +647,7 @@ export const DocumentExplosion: React.FC = () => {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
             </span>
             <span>
-              Manual de Boas Práticas Sanitárias - Documentos organizados conforme RDC 1002/2025
+              Documentos organizados e formulados conforme os capítulos descritos na RDC 1002/2025
             </span>
           </div>
 

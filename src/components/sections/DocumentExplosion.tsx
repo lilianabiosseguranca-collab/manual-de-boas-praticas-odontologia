@@ -938,15 +938,9 @@ export const DocumentExplosion: React.FC = () => {
 
         {/* Bottom Fast Navigation Bar */}
         <div className="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between text-xs text-slate-600 gap-2">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-blue-600" />
-            <span className="font-semibold text-slate-700">
-              Pasta {activeChapter.num} de 17 selecionada
-            </span>
-          </div>
+          <div className="flex items-center gap-2"></div>
           <div className="flex items-center gap-1.5 text-slate-700 font-bold">
             <Sparkles className="w-4 h-4 text-amber-500" />
-            <span>Todas as 17 pastas acompanham o Manual de Boas Práticas completo</span>
           </div>
         </div>
       </div>

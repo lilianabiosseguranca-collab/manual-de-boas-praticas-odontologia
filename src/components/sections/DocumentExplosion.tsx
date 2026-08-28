@@ -821,8 +821,8 @@ export const DocumentExplosion: React.FC = () => {
         />
 
         {/* Header of the opened folder */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-100">
-          <div className="flex items-center gap-3.5">
+        <div className="flex items-start justify-between gap-3 sm:gap-4 pb-4 border-b border-slate-100">
+          <div className="flex items-center gap-3 sm:gap-3.5 min-w-0 pr-2">
             {/* Folder Icon with matching Theme Color */}
             <div
               className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${activeChapter.colorTheme.spineGradient} flex items-center justify-center text-white shadow-md border border-white/30 shrink-0`}
@@ -830,12 +830,12 @@ export const DocumentExplosion: React.FC = () => {
               <ActiveIcon className="w-6 h-6 sm:w-7 sm:h-7 drop-shadow-xs" />
             </div>
 
-            <div>
-              <div className="flex items-center gap-2">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs sm:text-sm font-black tracking-wider text-blue-700 uppercase">
                   {activeChapter.roman}
                 </span>
-                <span className="text-slate-300 text-xs">•</span>
+                <span className="text-slate-300 text-xs hidden sm:inline">•</span>
 
                 <span className="text-[11px] sm:text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
                   {activeChapter.tag}
@@ -848,26 +848,26 @@ export const DocumentExplosion: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation Between Chapters */}
-          <div className="flex items-center gap-2 shrink-0">
-            <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
-              <button
-                type="button"
-                onClick={handlePrev}
-                aria-label="Pasta anterior"
-                className="w-8 h-8 rounded-md bg-white border border-slate-200/80 hover:bg-slate-50 flex items-center justify-center text-slate-700 hover:text-blue-600 transition-colors shadow-xs cursor-pointer"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                type="button"
-                onClick={handleNext}
-                aria-label="Próxima pasta"
-                className="w-8 h-8 rounded-md bg-white border border-slate-200/80 hover:bg-slate-50 flex items-center justify-center text-slate-700 hover:text-blue-600 transition-colors shadow-xs cursor-pointer"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
+          {/* Navigation Between Chapters - Top Right Position */}
+          <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200 shrink-0 self-start">
+            <button
+              type="button"
+              onClick={handlePrev}
+              aria-label="Pasta anterior"
+              title="Pasta anterior"
+              className="w-8 h-8 rounded-md bg-white border border-slate-200/80 hover:bg-slate-50 flex items-center justify-center text-slate-700 hover:text-blue-600 transition-colors shadow-xs cursor-pointer active:scale-95"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
+              onClick={handleNext}
+              aria-label="Próxima pasta"
+              title="Próxima pasta"
+              className="w-8 h-8 rounded-md bg-white border border-slate-200/80 hover:bg-slate-50 flex items-center justify-center text-slate-700 hover:text-blue-600 transition-colors shadow-xs cursor-pointer active:scale-95"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
 

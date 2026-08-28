@@ -25,6 +25,5 @@ const highlights = [
 ]
 
 export const OfferHighlights = () => {
-  return
-  null
+  return null
 }

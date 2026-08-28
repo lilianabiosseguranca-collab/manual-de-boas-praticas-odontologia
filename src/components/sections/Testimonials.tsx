@@ -50,6 +50,5 @@ const items = [
 ]
 
 export function Testimonials() {
-  return
-  null
+  return null
 }

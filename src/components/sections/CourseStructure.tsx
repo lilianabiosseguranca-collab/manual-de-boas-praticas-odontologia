@@ -21,6 +21,5 @@ export function CourseStructure() {
     },
   ]
 
-  return
-  null
+  return null
 }

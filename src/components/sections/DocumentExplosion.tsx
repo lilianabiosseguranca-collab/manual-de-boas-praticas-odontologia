@@ -9,10 +9,8 @@ import {
   Wrench,
   Cpu,
   Trash2,
-  Stethoscope,
   Sparkles,
   ShieldCheck,
-  HandMetal,
   AlertTriangle,
   Ambulance,
   ShieldAlert,
@@ -25,6 +23,77 @@ import {
   Shield,
   Layers,
 } from 'lucide-react'
+
+// Custom Autoclave (Sterilizer) Icon SVG matching Lucide standard style (stroke-width 2, round linecaps)
+export const AutoclaveIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
+  className = 'w-6 h-6',
+  ...props
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    {...props}
+  >
+    {/* Autoclave main chamber body */}
+    <rect x="2" y="3" width="20" height="18" rx="3" />
+    {/* Circular pressure chamber door */}
+    <circle cx="12" cy="11" r="5.5" strokeDasharray="32" />
+    {/* Inner observation window / dial */}
+    <circle cx="12" cy="11" r="2.5" />
+    {/* Pressure gauge indicator hand */}
+    <path d="M12 11l1.5-1.5" />
+    {/* Door locking wheel spokes / safety bolts */}
+    <path d="M12 4.5v1" />
+    <path d="M12 16.5v1" />
+    <path d="M5.5 11h1" />
+    <path d="M17.5 11h1" />
+    {/* Bottom digital control display / program status bar */}
+    <rect x="6" y="17.5" width="8" height="2" rx="0.5" />
+    {/* Start/Cycle LED status indicator */}
+    <circle cx="17.5" cy="18.5" r="0.75" fill="currentColor" />
+  </svg>
+)
+
+// Custom Hand Washing (Higiene das mãos) Icon SVG matching Lucide standard style
+export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
+  className = 'w-6 h-6',
+  ...props
+}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    {...props}
+  >
+    {/* Water drops / cleansing lather at top */}
+    <path
+      d="M12 2.5a1.5 1.5 0 0 1 1.5 2.5L12 6.5 10.5 5A1.5 1.5 0 0 1 12 2.5z"
+      fill="currentColor"
+      fillOpacity="0.15"
+    />
+    <circle cx="7.5" cy="4.5" r="1" fill="currentColor" fillOpacity="0.3" />
+    <circle cx="16.5" cy="4.5" r="1" fill="currentColor" fillOpacity="0.3" />
+    {/* Upper washing hand reaching down */}
+    <path d="M4 11.5l4-1.5 3 1.5c1 .5 2.5 0 3-1l.5-1" />
+    <path d="M14.5 9.5l3.5 1.5c1 .4 2.5.2 3.5-.5l.5-.5" />
+    {/* Lower receiving hand & palm */}
+    <path d="M2 17.5l5.5-1.5 4 1.5c1.5.6 3 0 3.5-1.5" />
+    <path d="M15 16l4.5-.5c1.2-.1 2.5.7 2.5 2 0 1.2-1.3 2-2.5 2H11l-5-1.5-4-1" />
+    {/* Soap suds / bubble sparkle */}
+    <path d="M17 12.5a1 1 0 1 0 2 0 1 1 0 1 0-2 0z" />
+  </svg>
+)
 
 export interface PhysicalFolderData {
   id: string
@@ -367,7 +436,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Protocolo para processamento de dispositivos médicos incluindo informações de rastreabilidade',
     subtitle:
       'Fluxo unidirecional de CME, esterilização, indicadores químicos/biológicos e rotulagem',
-    icon: Stethoscope,
+    icon: AutoclaveIcon,
     colorTheme: {
       name: 'Azul Celeste Hospitalar',
       spineGradient: 'from-[#0077b6] via-[#0096c7] to-[#023e8a]',
@@ -462,7 +531,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     title: 'Protocolo de higiene das mãos, precauções e isolamento',
     subtitle:
       'Técnica correta de antissepsia, uso racional de EPIs e prevenção de transmissão cruzada',
-    icon: HandMetal,
+    icon: HandWashIcon,
     colorTheme: {
       name: 'Azul Cobalto Brilhante',
       spineGradient: 'from-[#1e3d59] via-[#2a557d] to-[#122638]',

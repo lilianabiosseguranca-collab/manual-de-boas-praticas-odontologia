@@ -646,21 +646,19 @@ export const DocumentExplosion: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
             </span>
-            <span>
-              Documentos organizados e formulados conforme os capítulos descritos na RDC 1002/2025
-            </span>
+            <span>Documentos formulados conforme os capítulos da RDC 1002/2025</span>
           </div>
 
           {/* RDC 1002 Seal */}
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-900 text-xs font-bold shadow-xs">
             <Shield className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-            <span>Selo de Conformidade ANVISA / RDC 1002</span>
+            <span>Consultório seguro contra multas</span>
           </div>
 
           {/* +50 Docs Word Badge */}
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-bold shadow-xs">
             <FileText className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-            <span>+50 Documentos em Word (.docx)</span>
+            <span>+50 Documentos em Word (.docx) prontos para usar</span>
           </div>
         </div>
 

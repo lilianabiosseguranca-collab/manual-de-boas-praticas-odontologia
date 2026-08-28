@@ -850,10 +850,6 @@ export const DocumentExplosion: React.FC = () => {
 
           {/* Navigation Between Chapters */}
           <div className="flex items-center gap-2 shrink-0">
-            <span className="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
-              {activeChapter.pagesCount}
-            </span>
-
             <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200">
               <button
                 type="button"

@@ -31,11 +31,11 @@ export function Bonuses() {
                 </div>
                 <div>
                   <h3 className="text-[#2b6cb0] font-bold text-sm tracking-wider uppercase mb-2">
-                    Bônus 1
+                    Bônus
                   </h3>
                   <CardTitle className="text-2xl leading-tight text-slate-900 mb-3">
-                    Saiba como economizar tempo e dinheiro ao se atualizar com a nova legislação de
-                    odontologia
+                    Aulão: Manual de Rotinas e Procedimentos x Série de Documentos de Boas Práticas
+                    de Funcionamento
                   </CardTitle>
                   <p className="text-slate-600 text-lg leading-relaxed font-light">
                     Liliana Donatelli mostra como você ganha tempo e evita gastos desnecessários
@@ -63,45 +63,6 @@ export function Bonuses() {
           </Card>
 
           {/* Bonus 2 */}
-          <Card className="relative border-0 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 overflow-hidden group bg-white flex flex-col">
-            <div className="absolute top-0 left-0 w-full h-1.5 bg-[#2b6cb0]" />
-            <CardHeader className="pt-10 pb-6 px-8 md:px-10 flex-none">
-              <div className="flex flex-col sm:flex-row items-start gap-5">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 bg-[#2b6cb0]/10 text-[#2b6cb0] group-hover:scale-110 transition-transform duration-300">
-                  <ShieldCheck className="w-7 h-7" />
-                </div>
-                <div>
-                  <h3 className="text-[#2b6cb0] font-bold text-sm tracking-wider uppercase mb-2">
-                    Bônus 2
-                  </h3>
-                  <CardTitle className="text-2xl leading-tight text-slate-900 mb-3">
-                    Tenha tranquilidade em uma vista da Vigilância Sanitária
-                  </CardTitle>
-                  <p className="text-slate-600 text-lg leading-relaxed font-light">
-                    A assessora da Superintendência da Vigilância Sanitária de MG, Patrícia Silva,
-                    mostra os erros mais frequentes&nbsp;
-                  </p>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="px-8 md:px-10 pb-10 flex-1 flex flex-col justify-end">
-              <div className="mt-6 relative mx-auto w-full max-w-[28rem] group-hover:-translate-y-1 transition-transform duration-500">
-                {/* Realistic iPad Mockup */}
-                <div className="relative rounded-[1.5rem] bg-slate-900 p-2.5 sm:p-3 shadow-2xl border border-slate-700/50">
-                  {/* Camera dot */}
-                  <div className="absolute top-1.5 sm:top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-slate-800/80"></div>
-                  {/* Screen */}
-                  <div className="relative rounded-[0.75rem] sm:rounded-[1rem] overflow-hidden aspect-[16/10] bg-black shadow-inner">
-                    <img
-                      src={patriciaAula}
-                      alt="Aula Patrícia Silva"
-                      className="w-full h-full object-cover scale-[1.01]"
-                    />
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

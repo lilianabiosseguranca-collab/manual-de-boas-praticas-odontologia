@@ -20,7 +20,9 @@ export const TargetAudience = () => {
     <section className="py-16 md:py-20 bg-white">
       <div className="container px-4 md:px-6 max-w-6xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Para quem é este curso?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+            Para quem são estes documentos?
+          </h2>
         </div>
 
         <Card className="w-full bg-white border-slate-200 shadow-md hover:shadow-lg transition-shadow duration-300">

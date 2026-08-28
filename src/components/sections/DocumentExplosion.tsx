@@ -63,8 +63,8 @@ export const DentalInstrumentsIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
 // Alias for backwards compatibility if needed
 export const AutoclaveIcon = DentalInstrumentsIcon
 
-// Custom Hand Washing (Two Hands Rubbing & Interlacing with Soap Bubbles & Water Droplets) Icon SVG
-// Based faithfully on the Coren hand hygiene technique (rubbing palms/interlaced fingers, active friction with soap lather & water drops)
+// Custom Hand Washing (Two Human Hands Rubbing / Interlacing in Active Friction with Soap Foam & Water Drops) Icon SVG
+// Based faithfully on the Coren clinical hand hygiene technique (two clearly anatomical hands with defined wrists, palms, thumbs and interlaced fingers in friction, surrounded by water drops and soap bubbles)
 export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   className = 'w-6 h-6',
   ...props
@@ -80,31 +80,35 @@ export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
     className={className}
     {...props}
   >
-    {/* Top cleansing water droplets */}
-    <path
-      d="M12 2 C 12 2, 10.5 3.8, 10.5 4.8 C 10.5 5.6, 11.2 6.2, 12 6.2 C 12.8 6.2, 13.5 5.6, 13.5 4.8 C 13.5 3.8, 12 2, 12 2 Z"
-      strokeWidth="1.6"
-    />
-    <path d="M5.5 4.5 v 1.8" />
-    <path d="M18.5 4.5 v 1.8" />
+    {/* Upper cleansing water droplet */}
+    <path d="M12 2c-1.3 1.6-2 2.5-2 3.5a2 2 0 0 0 4 0c0-1-.7-1.9-2-3.5Z" />
 
     {/* Soap suds / foam bubbles */}
-    <circle cx="7" cy="8.5" r="1.2" strokeWidth="1.6" />
-    <circle cx="17" cy="8.5" r="1.2" strokeWidth="1.6" />
-    <circle cx="12" cy="7.8" r="0.9" strokeWidth="1.5" />
+    <circle cx="5" cy="5.5" r="1.2" />
+    <circle cx="19" cy="5.5" r="1.2" />
+    <circle cx="3" cy="10" r="0.8" />
+    <circle cx="21" cy="10" r="0.8" />
 
-    {/* Left hand & wrist in friction motion (Coren palm-to-palm / interlaced rubbing) */}
-    {/* Left wrist & palm base entering from left */}
-    <path d="M2 13.5 C 4 13.5, 5.5 13, 7.5 11 C 8.5 10, 10 9.8, 11.5 10.5" />
-    <path d="M2 17.5 C 4.5 17.5, 6 17, 8 15 C 9.5 13.5, 11.5 13, 13 13.5" />
+    {/* Left Hand: forearm, wrist, distinct abducted thumb and fingers reaching across */}
+    <path d="M1.5 15.5c2.5 0 4-.8 5.5-2.2" />
+    {/* Left thumb (raised upward in washing friction) */}
+    <path d="M7 13.3c.6-1.8 1.8-3.3 3.2-3.3s1.8 1 1.3 2.5" />
+    {/* Left fingers extending to the right across the other hand */}
+    <path d="M11.5 12.5c2-.5 4.5-.5 6.5.5" />
+    <path d="M11 14.5c2.5-.2 5.2.2 7 1.5" />
+    <path d="M1.5 18.5c2.5 0 4.5.3 7-1" />
 
-    {/* Right hand & fingers rubbing/interlacing across left hand */}
-    <path d="M22 13.5 C 20 13.5, 18.5 13, 16.5 11 C 15.5 10, 14 9.8, 12.5 10.5" />
-    <path d="M22 17.5 C 19.5 17.5, 18 17, 16 15 C 14.5 13.5, 12.5 13, 11 13.5" />
+    {/* Right Hand: forearm, wrist, opposing thumb and fingers interlacing/rubbing */}
+    <path d="M22.5 18.5c-2.5 0-4-.8-5.5-2.2" />
+    {/* Right thumb / palm contour */}
+    <path d="M17 16.3c-.6 1.8-1.8 2.7-3.2 2.7s-1.8-1-1.3-2" />
+    {/* Right fingers extending to the left */}
+    <path d="M12.5 17.5c-2 .5-4.5.5-6.5-.5" />
+    <path d="M13 15.5c-2.5.2-5.2-.2-7-1.5" />
+    <path d="M22.5 15.5c-2.5 0-4.5-.3-7 1" />
 
-    {/* Friction motion / water & soap froth ripples beneath hands */}
-    <path d="M9 19.5 C 10.5 20.5, 13.5 20.5, 15 19.5" strokeWidth="1.8" />
-    <circle cx="12" cy="21.5" r="0.8" strokeWidth="1.4" />
+    {/* Lower soap lather / water splash bubble */}
+    <circle cx="12" cy="21" r="1" />
   </svg>
 )
 

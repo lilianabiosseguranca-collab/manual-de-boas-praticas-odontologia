@@ -61,7 +61,7 @@ export const Pricing = () => {
               onClick={handleCheckout}
               className="w-full md:w-[400px] h-auto py-5 px-6 text-base sm:text-lg md:text-xl font-bold rounded-full shadow-[0_8px_30px_rgba(56,161,105,0.4)] hover:shadow-[0_8px_30px_rgba(56,161,105,0.6)] hover:-translate-y-1 transition-all duration-300 hover:bg-[#2f855a] text-white bg-[#38a169] relative z-10 whitespace-normal text-center leading-snug"
             >
-              Quero ter segurança na esterilização
+              Quero uma atualização rápida e eficiente
             </Button>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-5 border-t border-slate-100 w-full pt-8 relative z-10">

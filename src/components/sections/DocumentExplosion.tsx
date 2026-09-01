@@ -554,7 +554,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-8',
     num: '8',
     labelNumber: '8',
-    tag: 'Tecnologias em Saúde (PGTS)',
+    tag: '(PGTS)',
     title: 'Plano de Gerenciamento de Tecnologias em Saúde (PGTS)',
     subtitle:
       'Inventário, calibração, manutenção de autoclaves, compressores e fotopolimerizadores',

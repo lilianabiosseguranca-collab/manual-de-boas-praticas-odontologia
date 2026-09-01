@@ -224,7 +224,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-1',
     num: '1',
     labelNumber: '1',
-    tag: 'Arquitetura Sanitária',
+    tag: 'Arquitetura',
     title: 'Projeto básico de arquitetura',
     subtitle: 'Layouts físicos, fluxos sanitários, dimensionamento e normas prediais odontológicas',
     icon: Building2,

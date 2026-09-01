@@ -161,7 +161,7 @@ export const CHAPTERS_17 = [
   'Capítulo 3: Plano anual de educação permanente',
   'Capítulo 4: Contratos, licenças e qualificações de serviços terceirizados',
   'Capítulo 5: Plano de monitoramento e controle da água',
-  'Capítulo 6: Controle de vetores e pragas urbanas',
+  'Capítulo 6: Controle de pragas e vetores',
   'Capítulo 7: Plano anual de manutenção preventiva e corretiva da edificação e instalações',
   'Capítulo 8: Plano de Gerenciamento de Tecnologias em Saúde (PGTS)',
   'Capítulo 9: Plano de Gerenciamento de Resíduos (PGRSS)',
@@ -446,7 +446,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     num: '6',
     labelNumber: '6',
     tag: 'Controle de Pragas',
-    title: 'Controle de vetores e pragas urbanas',
+    title: 'Controle de pragas e vetores',
     subtitle: 'Comprovantes de desinsetização/desratização, periodicidade e barreiras físicas',
     icon: Bug,
     colorTheme: {
@@ -463,12 +463,20 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-amber-900/80 text-amber-200 border-amber-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'Controle integrado de pragas com certificadora',
-      'Mapeamento de armadilhas e barreiras físicas',
-      'Registro de aplicações e fichas toxicológicas',
+    documents: [
+      {
+        name: 'Controle de pragas e vetores',
+        fileName: 'Controle_de_pragas_e_vetores.docx',
+        format: 'word',
+      },
+      {
+        name: 'Checklist: Controle de pragas e vetores',
+        fileName: 'Checklist_Controle_de_pragas_e_vetores.docx',
+        format: 'word',
+      },
     ],
-    wordFileName: 'Capitulo_06_Controle_Vetores_Pragas.docx',
+    summaryBullets: ['Controle de pragas e vetores', 'Checklist: Controle de pragas e vetores'],
+    wordFileName: '2 arquivos Word (.docx) inclusos nesta pasta',
     pagesCount: '10 páginas',
     yearTag: 'VOL. 06',
   },

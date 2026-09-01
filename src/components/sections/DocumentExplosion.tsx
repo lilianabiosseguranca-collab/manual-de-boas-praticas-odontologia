@@ -502,12 +502,51 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-slate-800 text-slate-200 border-slate-600',
       metalRingBorder: 'border-slate-400 ring-slate-900',
     },
-    summaryBullets: [
-      'PMOC completo para climatização odontológica',
-      'Inspeção preventiva de compressores e bombas de vácuo',
-      'Relatórios e cronograma de manutenção estrutural',
+    documents: [
+      {
+        name: 'POP Plano anual de manutenção',
+        fileName: 'POP_Plano_anual_de_manutencao.docx',
+        format: 'word',
+      },
+      {
+        name: 'Calendário anual de manutenção 2027',
+        fileName: 'Calendario_anual_de_manutencao_2027.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Registro de manutenção preventiva',
+        fileName: 'Registro_de_manutencao_preventiva.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Controle de revisão do plano anual de manutenção',
+        fileName: 'Controle_de_revisao_do_plano_anual_de_manutencao.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Registro de manutenção corretiva',
+        fileName: 'Registro_de_manutencao_corretiva.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Checklist para auditoria do plano de manutenção',
+        fileName: 'Checklist_para_auditoria_do_plano_de_manutencao.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Registro de inspeção e certificados dos prestadores de serviço',
+        fileName: 'Registro_de_inspecao_e_certificados_dos_prestadores_de_servico.xlsx',
+        format: 'excel',
+      },
     ],
-    wordFileName: 'Capitulo_07_Manutencao_Predial_PMOC.docx',
+    summaryBullets: [
+      'POP Plano anual de manutenção',
+      'Calendário anual de manutenção 2027',
+      'Registro de manutenção preventiva e corretiva',
+      'Controle de revisão e checklist de auditoria',
+      'Registro de inspeção e certificados de prestadores de serviço',
+    ],
+    wordFileName: '7 arquivos inclusos nesta pasta',
     pagesCount: '20 páginas',
     yearTag: 'VOL. 07',
   },

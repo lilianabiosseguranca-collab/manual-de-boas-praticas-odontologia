@@ -156,7 +156,7 @@ export interface PhysicalFolderData {
 
 export const CHAPTERS_17 = [
   'Introdução: Introdução (capa, índice, orientações, etc)',
-  'Capítulo 1: Projeto básico de arquitetura',
+  'Capítulo 1: Projeto de arquitetura',
   'Capítulo 2: Gestão de recursos humanos',
   'Capítulo 3: Plano anual de educação permanente',
   'Capítulo 4: Contratos, licenças e qualificações de serviços terceirizados',
@@ -225,7 +225,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     num: '1',
     labelNumber: '1',
     tag: 'Arquitetura',
-    title: 'Projeto básico de arquitetura',
+    title: 'Projeto de arquitetura',
     subtitle: 'Layouts físicos, fluxos sanitários, dimensionamento e normas prediais odontológicas',
     icon: Building2,
     colorTheme: {

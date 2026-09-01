@@ -1067,14 +1067,17 @@ export const DocumentExplosion: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Right side: Ready Status & Disclaimer */}
-                    <div className="flex flex-col sm:items-end items-start gap-1.5 shrink-0 pl-13 sm:pl-0">
+                    {/* Right side: Ready Status & Disclaimer Badges */}
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 shrink-0 pl-13 sm:pl-0">
                       <span className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-900 text-xs font-bold px-2.5 py-1 rounded-md border border-emerald-300/80">
                         <Check className="w-3.5 h-3.5 stroke-[3] text-emerald-700" />
                         Pronto para uso imediato
                       </span>
-                      <span className="font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200 text-xs">
+                      <span className="font-bold text-slate-900 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 text-xs">
                         Basta inserir seus dados e logotipo
+                      </span>
+                      <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200/80 px-2.5 py-1 rounded-md">
+                        100% editáveis
                       </span>
                     </div>
                   </div>
@@ -1100,13 +1103,16 @@ export const DocumentExplosion: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:items-end items-start gap-1.5">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                   <span className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-900 text-xs font-bold px-2.5 py-1 rounded-md border border-emerald-300/80">
                     <Check className="w-3.5 h-3.5 stroke-[3] text-emerald-700" />
                     Pronto para uso imediato
                   </span>
-                  <span className="font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200 text-xs">
+                  <span className="font-bold text-slate-900 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 text-xs">
                     Basta inserir seus dados e logotipo
+                  </span>
+                  <span className="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200/80 px-2.5 py-1 rounded-md">
+                    100% editáveis
                   </span>
                 </div>
               </div>

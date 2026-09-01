@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {
+  BookOpen,
   Building2,
   Users,
   GraduationCap,
@@ -149,7 +150,7 @@ export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
 export interface PhysicalFolderData {
   id: string
   num: string
-  roman: string
+  labelNumber: string
   tag: string
   title: string
   subtitle: string
@@ -177,30 +178,63 @@ export interface PhysicalFolderData {
 }
 
 export const CHAPTERS_17 = [
-  'Capítulo I: Projeto básico de arquitetura',
-  'Capítulo II: Gestão de recursos humanos',
-  'Capítulo III: Plano anual de educação permanente',
-  'Capítulo IV: Contratos, licenças e qualificações de serviços terceirizados',
-  'Capítulo V: Plano de monitoramento e controle da água',
-  'Capítulo VI: Controle de vetores e pragas urbanas',
-  'Capítulo VII: Plano anual de manutenção preventiva e corretiva da edificação e instalações',
-  'Capítulo VIII: Plano de Gerenciamento de Tecnologias em Saúde (PGTS)',
-  'Capítulo IX: Plano de Gerenciamento de Resíduos (PGRSS)',
-  'Capítulo X: Protocolo para processamento de dispositivos médicos incluindo informações de rastreabilidade',
-  'Capítulo XI: Protocolo de limpeza de ambientes e superfícies',
-  'Capítulo XII: Plano de Segurança do Paciente (PSP)',
-  'Capítulo XIII: Protocolo de higiene das mãos, precauções e isolamento',
-  'Capítulo XIV: Protocolo de encaminhamento do profissional em caso de acidentes com exposição a material biológico',
-  'Capítulo XV: Protocolo de encaminhamento do paciente em caso de urgências e emergências',
-  'Capítulo XVI: Plano de prevenção e controle de infecções (PP-IRAS)',
-  'Capítulo XVII: Outros documentos e normativas aplicáveis',
+  'Introdução: Introdução (capa, índice, orientações, etc)',
+  'Capítulo 1: Projeto básico de arquitetura',
+  'Capítulo 2: Gestão de recursos humanos',
+  'Capítulo 3: Plano anual de educação permanente',
+  'Capítulo 4: Contratos, licenças e qualificações de serviços terceirizados',
+  'Capítulo 5: Plano de monitoramento e controle da água',
+  'Capítulo 6: Controle de vetores e pragas urbanas',
+  'Capítulo 7: Plano anual de manutenção preventiva e corretiva da edificação e instalações',
+  'Capítulo 8: Plano de Gerenciamento de Tecnologias em Saúde (PGTS)',
+  'Capítulo 9: Plano de Gerenciamento de Resíduos (PGRSS)',
+  'Capítulo 10: Protocolo para processamento de dispositivos médicos incluindo informações de rastreabilidade',
+  'Capítulo 11: Protocolo de limpeza de ambientes e superfícies',
+  'Capítulo 12: Plano de Segurança do Paciente (PSP)',
+  'Capítulo 13: Protocolo de higiene das mãos, precauções e isolamento',
+  'Capítulo 14: Protocolo de encaminhamento do profissional em caso de acidentes com exposição a material biológico',
+  'Capítulo 15: Protocolo de encaminhamento do paciente em caso de urgências e emergências',
+  'Capítulo 16: Plano de prevenção e controle de infecções (PP-IRAS)',
+  'Capítulo 17: Outros documentos e normativas aplicáveis',
 ]
 
 export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
   {
+    id: 'intro',
+    num: '0',
+    labelNumber: '0',
+    tag: 'Estrutura e Orientações',
+    title: 'Introdução (capa, índice, orientações, etc)',
+    subtitle:
+      'Capa oficial, índice geral, sumário executivo e instruções para preenchimento e personalização',
+    icon: BookOpen,
+    colorTheme: {
+      name: 'Azul Safira Intenso',
+      spineGradient: 'from-[#0f3b7a] via-[#1d58ad] to-[#0a2754]',
+      spineHighlight: 'from-white/35 via-white/10 to-transparent',
+      spineShadow:
+        'shadow-[inset_-3px_0_8px_rgba(0,0,0,0.5),inset_3px_0_8px_rgba(255,255,255,0.25)]',
+      spineEdge: 'border-l-[#60a5fa] border-r-[#071d40]',
+      labelBg: 'bg-[#f0f6ff]',
+      labelBorder: 'border-[#bfdbfe]',
+      labelTextColor: 'text-blue-950',
+      accentGlow: 'rgba(37, 99, 235, 0.4)',
+      badgeColor: 'bg-blue-900/80 text-blue-200 border-blue-700',
+      metalRingBorder: 'border-slate-300 ring-slate-800',
+    },
+    summaryBullets: [
+      'Capa padronizada pronta para inserção da logomarca',
+      'Índice geral com paginação e sumário executivo',
+      'Guia prático passo a passo de preenchimento e uso',
+    ],
+    wordFileName: '00_Introducao_Capa_Indice_Orientacoes.docx',
+    pagesCount: '10 páginas',
+    yearTag: 'VOL. 0',
+  },
+  {
     id: 'cap-1',
-    num: '01',
-    roman: 'CAPÍTULO I',
+    num: '1',
+    labelNumber: '1',
     tag: 'Arquitetura Sanitária',
     title: 'Projeto básico de arquitetura',
     subtitle: 'Layouts físicos, fluxos sanitários, dimensionamento e normas prediais odontológicas',
@@ -224,14 +258,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Dimensionamento de salas e CME odontológica',
       'Instalações hidrossanitárias e de gases',
     ],
-    wordFileName: 'Capitulo_I_Projeto_Basico_Arquitetura.docx',
+    wordFileName: 'Capitulo_01_Projeto_Basico_Arquitetura.docx',
     pagesCount: '18 páginas',
     yearTag: 'VOL. 01',
   },
   {
     id: 'cap-2',
-    num: '02',
-    roman: 'CAPÍTULO II',
+    num: '2',
+    labelNumber: '2',
     tag: 'Equipe e RH',
     title: 'Gestão de recursos humanos',
     subtitle: 'Qualificação profissional, descrição de cargos, treinamentos e registros da equipe',
@@ -255,14 +289,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Termos de responsabilidade técnica e ASB/TSB',
       'Manual de integração e conduta da equipe',
     ],
-    wordFileName: 'Capitulo_II_Gestao_Recursos_Humanos.docx',
+    wordFileName: 'Capitulo_02_Gestao_Recursos_Humanos.docx',
     pagesCount: '14 páginas',
     yearTag: 'VOL. 02',
   },
   {
     id: 'cap-3',
-    num: '03',
-    roman: 'CAPÍTULO III',
+    num: '3',
+    labelNumber: '3',
     tag: 'Educação Permanente',
     title: 'Plano anual de educação permanente',
     subtitle: 'Cronograma anual de treinamentos, capacitação em biossegurança e certificações',
@@ -286,14 +320,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Listas de presença e avaliações de eficácia',
       'Certificados de capacitação periódica',
     ],
-    wordFileName: 'Capitulo_III_Plano_Educacao_Permanente.docx',
+    wordFileName: 'Capitulo_03_Plano_Educacao_Permanente.docx',
     pagesCount: '12 páginas',
     yearTag: 'VOL. 03',
   },
   {
     id: 'cap-4',
-    num: '04',
-    roman: 'CAPÍTULO IV',
+    num: '4',
+    labelNumber: '4',
     tag: 'Serviços Terceirizados',
     title: 'Contratos, licenças e qualificações de serviços terceirizados',
     subtitle: 'Alvarás, contratos de manutenção, laboratórios de prótese e laudos técnicos',
@@ -317,14 +351,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Contratos de prestação de serviços odontológicos',
       'Qualificação de empresas de esterilização e suporte',
     ],
-    wordFileName: 'Capitulo_IV_Contratos_Licencas_Terceirizados.docx',
+    wordFileName: 'Capitulo_04_Contratos_Licencas_Terceirizados.docx',
     pagesCount: '16 páginas',
     yearTag: 'VOL. 04',
   },
   {
     id: 'cap-5',
-    num: '05',
-    roman: 'CAPÍTULO V',
+    num: '5',
+    labelNumber: '5',
     tag: 'Qualidade da Água',
     title: 'Plano de monitoramento e controle da água',
     subtitle: 'Higienização de caixas d’água, controle de potabilidade e análises periódicas',
@@ -348,14 +382,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Laudos de potabilidade físico-química e microbiológica',
       'Cronograma semestral de limpeza de reservatórios',
     ],
-    wordFileName: 'Capitulo_V_Plano_Controle_Agua.docx',
+    wordFileName: 'Capitulo_05_Plano_Controle_Agua.docx',
     pagesCount: '11 páginas',
     yearTag: 'VOL. 05',
   },
   {
     id: 'cap-6',
-    num: '06',
-    roman: 'CAPÍTULO VI',
+    num: '6',
+    labelNumber: '6',
     tag: 'Controle de Pragas',
     title: 'Controle de vetores e pragas urbanas',
     subtitle: 'Comprovantes de desinsetização/desratização, periodicidade e barreiras físicas',
@@ -379,14 +413,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Mapeamento de armadilhas e barreiras físicas',
       'Registro de aplicações e fichas toxicológicas',
     ],
-    wordFileName: 'Capitulo_VI_Controle_Vetores_Pragas.docx',
+    wordFileName: 'Capitulo_06_Controle_Vetores_Pragas.docx',
     pagesCount: '10 páginas',
     yearTag: 'VOL. 06',
   },
   {
     id: 'cap-7',
-    num: '07',
-    roman: 'CAPÍTULO VII',
+    num: '7',
+    labelNumber: '7',
     tag: 'Manutenção Predial',
     title: 'Plano anual de manutenção preventiva e corretiva da edificação e instalações',
     subtitle: 'Instalações elétricas, hidráulicas, ar-condicionado (PMOC) e estrutura física',
@@ -410,14 +444,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Inspeção preventiva de compressores e bombas de vácuo',
       'Relatórios e cronograma de manutenção estrutural',
     ],
-    wordFileName: 'Capitulo_VII_Manutencao_Predial_PMOC.docx',
+    wordFileName: 'Capitulo_07_Manutencao_Predial_PMOC.docx',
     pagesCount: '20 páginas',
     yearTag: 'VOL. 07',
   },
   {
     id: 'cap-8',
-    num: '08',
-    roman: 'CAPÍTULO VIII',
+    num: '8',
+    labelNumber: '8',
     tag: 'Tecnologias em Saúde (PGTS)',
     title: 'Plano de Gerenciamento de Tecnologias em Saúde (PGTS)',
     subtitle:
@@ -442,14 +476,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Calibração anual e testes de fotopolimerizador e raio-X',
       'Histórico de manutenção de autoclaves e periféricos',
     ],
-    wordFileName: 'Capitulo_VIII_PGTS_Tecnologias_Saude.docx',
+    wordFileName: 'Capitulo_08_PGTS_Tecnologias_Saude.docx',
     pagesCount: '22 páginas',
     yearTag: 'VOL. 08',
   },
   {
     id: 'cap-9',
-    num: '09',
-    roman: 'CAPÍTULO IX',
+    num: '9',
+    labelNumber: '9',
     tag: 'Resíduos Odonto (PGRSS)',
     title: 'Plano de Gerenciamento de Resíduos (PGRSS)',
     subtitle:
@@ -474,14 +508,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'POP de descarte seguro e abrigo temporário de resíduos',
       'Manifesto de transporte e destinação final de resíduos',
     ],
-    wordFileName: 'Capitulo_IX_PGRSS_Gerenciamento_Residuos.docx',
+    wordFileName: 'Capitulo_09_PGRSS_Gerenciamento_Residuos.docx',
     pagesCount: '19 páginas',
     yearTag: 'VOL. 09',
   },
   {
     id: 'cap-10',
     num: '10',
-    roman: 'CAPÍTULO X',
+    labelNumber: '10',
     tag: 'Central de Esterilização (CME)',
     title:
       'Protocolo para processamento de dispositivos médicos incluindo informações de rastreabilidade',
@@ -507,14 +541,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Planilha de rastreabilidade e controle de ciclos biológicos',
       'Rotulagem com data, lote, responsável e validade',
     ],
-    wordFileName: 'Capitulo_X_Processamento_Dispositivos_Medicos.docx',
+    wordFileName: 'Capitulo_10_Processamento_Dispositivos_Medicos.docx',
     pagesCount: '28 páginas',
     yearTag: 'VOL. 10',
   },
   {
     id: 'cap-11',
     num: '11',
-    roman: 'CAPÍTULO XI',
+    labelNumber: '11',
     tag: 'Limpeza e Superfícies',
     title: 'Protocolo de limpeza de ambientes e superfícies',
     subtitle: 'Higienização de consultórios, desinfecção concorrente e terminal, POPs de limpeza',
@@ -538,14 +572,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Limpeza terminal diária e semanal do consultório',
       'Diluição padronizada e saneantes aprovados pela ANVISA',
     ],
-    wordFileName: 'Capitulo_XI_Limpeza_Ambientes_Superficies.docx',
+    wordFileName: 'Capitulo_11_Limpeza_Ambientes_Superficies.docx',
     pagesCount: '15 páginas',
     yearTag: 'VOL. 11',
   },
   {
     id: 'cap-12',
     num: '12',
-    roman: 'CAPÍTULO XII',
+    labelNumber: '12',
     tag: 'Segurança do Paciente (PSP)',
     title: 'Plano de Segurança do Paciente (PSP)',
     subtitle:
@@ -570,14 +604,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Checklist de cirurgia odontológica segura',
       'Ficha de notificação interna e plano de ação de incidentes',
     ],
-    wordFileName: 'Capitulo_XII_Plano_Seguranca_Paciente_PSP.docx',
+    wordFileName: 'Capitulo_12_Plano_Seguranca_Paciente_PSP.docx',
     pagesCount: '17 páginas',
     yearTag: 'VOL. 12',
   },
   {
     id: 'cap-13',
     num: '13',
-    roman: 'CAPÍTULO XIII',
+    labelNumber: '13',
     tag: 'Higiene e EPIs',
     title: 'Protocolo de higiene das mãos, precauções e isolamento',
     subtitle:
@@ -602,14 +636,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Paramentação e desparamentação segura de EPIs',
       'Precauções padrão, por contato e por gotículas/aerossóis',
     ],
-    wordFileName: 'Capitulo_XIII_Higiene_Maos_EPIs.docx',
+    wordFileName: 'Capitulo_13_Higiene_Maos_EPIs.docx',
     pagesCount: '13 páginas',
     yearTag: 'VOL. 13',
   },
   {
     id: 'cap-14',
     num: '14',
-    roman: 'CAPÍTULO XIV',
+    labelNumber: '14',
     tag: 'Acidentes Biológicos',
     title:
       'Protocolo de encaminhamento do profissional em caso de acidentes com exposição a material biológico',
@@ -635,14 +669,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Formulário de notificação de acidente ocupacional (CAT)',
       'Encaminhamento para PEP (Profilaxia Pós-Exposição)',
     ],
-    wordFileName: 'Capitulo_XIV_Acidentes_Exposicao_Biologica.docx',
+    wordFileName: 'Capitulo_14_Acidentes_Exposicao_Biologica.docx',
     pagesCount: '16 páginas',
     yearTag: 'VOL. 14',
   },
   {
     id: 'cap-15',
     num: '15',
-    roman: 'CAPÍTULO XV',
+    labelNumber: '15',
     tag: 'Urgências e Emergências',
     title: 'Protocolo de encaminhamento do paciente em caso de urgências e emergências',
     subtitle:
@@ -667,14 +701,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Protocolos de PCR, síncope, anafilaxia e crises hipertensivas',
       'Ficha de transferência rápida para SAMU / Pronto Atendimento',
     ],
-    wordFileName: 'Capitulo_XV_Urgencias_Emergencias_Odonto.docx',
+    wordFileName: 'Capitulo_15_Urgencias_Emergencias_Odonto.docx',
     pagesCount: '21 páginas',
     yearTag: 'VOL. 15',
   },
   {
     id: 'cap-16',
     num: '16',
-    roman: 'CAPÍTULO XVI',
+    labelNumber: '16',
     tag: 'Prevenção de Infecções (PP-IRAS)',
     title: 'Plano de prevenção e controle de infecções (PP-IRAS)',
     subtitle:
@@ -699,14 +733,14 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Auditorias periódicas e checklists de conformidade',
       'Indicadores de vigilância epidemiológica na clínica',
     ],
-    wordFileName: 'Capitulo_XVI_PP_IRAS_Controle_Infeccoes.docx',
+    wordFileName: 'Capitulo_16_PP_IRAS_Controle_Infeccoes.docx',
     pagesCount: '24 páginas',
     yearTag: 'VOL. 16',
   },
   {
     id: 'cap-17',
     num: '17',
-    roman: 'CAPÍTULO XVII',
+    labelNumber: '17',
     tag: 'Normativas e Formulários',
     title: 'Outros documentos e normativas aplicáveis',
     subtitle:
@@ -731,15 +765,15 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Fichas de anamnese e termos de responsabilidade do paciente',
       'Compilado de portarias estaduais e municipais de vigilância',
     ],
-    wordFileName: 'Capitulo_XVII_Outros_Documentos_Normativas.docx',
+    wordFileName: 'Capitulo_17_Outros_Documentos_Normativas.docx',
     pagesCount: '30 páginas',
     yearTag: 'VOL. 17',
   },
 ]
 
 export const DocumentExplosion: React.FC = () => {
-  // Default to Chapter X (Esterilização / CME)
-  const [selectedIndex, setSelectedIndex] = useState<number>(9)
+  // Default to Chapter 10 (Esterilização / CME)
+  const [selectedIndex, setSelectedIndex] = useState<number>(10)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const activeIdx = hoveredIndex !== null ? hoveredIndex : selectedIndex
@@ -817,9 +851,17 @@ export const DocumentExplosion: React.FC = () => {
                   }}
                   onMouseEnter={() => setHoveredIndex(idx)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  title={`${chap.roman}: ${chap.title}`}
-                  aria-label={`${chap.roman}: ${chap.title}`}
-                  className={`group relative flex-1 flex flex-col justify-between rounded-t-md transition-all duration-300 cursor-pointer outline-none min-w-[34px] sm:min-w-[42px] max-w-[56px] ${
+                  title={
+                    chap.labelNumber === '0'
+                      ? chap.title
+                      : `Capítulo ${chap.labelNumber}: ${chap.title}`
+                  }
+                  aria-label={
+                    chap.labelNumber === '0'
+                      ? chap.title
+                      : `Capítulo ${chap.labelNumber}: ${chap.title}`
+                  }
+                  className={`group relative flex-1 flex flex-col justify-between rounded-t-md transition-all duration-300 cursor-pointer outline-none min-w-[32px] sm:min-w-[38px] md:min-w-[42px] max-w-[56px] ${
                     isSelected
                       ? '-translate-y-7 scale-105 z-30'
                       : 'hover:-translate-y-4 hover:scale-102 z-10'
@@ -832,7 +874,9 @@ export const DocumentExplosion: React.FC = () => {
                   {/* Floating Hover Tooltip with Full Chapter Name */}
                   <div className="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-50 flex flex-col items-center">
                     <div className="bg-slate-900/95 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow-xl whitespace-nowrap border border-slate-700 backdrop-blur-xs">
-                      <span className="text-amber-300 mr-1.5">{chap.roman}:</span>
+                      <span className="text-amber-300 mr-1.5">
+                        {chap.labelNumber === '0' ? 'Introdução:' : `Capítulo ${chap.labelNumber}:`}
+                      </span>
                       <span>{chap.title}</span>
                     </div>
                     <div className="w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-slate-900/95" />
@@ -871,9 +915,9 @@ export const DocumentExplosion: React.FC = () => {
                         {/* Paper label lines decoration */}
                         <div className="w-4 h-0.5 bg-slate-400/40 rounded-full mb-1" />
 
-                        {/* Roman Numeral ONLY */}
-                        <span className="text-[11px] sm:text-xs font-black text-slate-900 tracking-tight leading-none font-serif">
-                          {chap.roman.replace('CAPÍTULO ', '')}
+                        {/* Arabic Numeral ONLY (clean, no prefix, no leading zero) */}
+                        <span className="text-[12px] sm:text-[13px] font-black text-slate-900 tracking-tight leading-none font-sans">
+                          {chap.labelNumber}
                         </span>
                       </div>
                     </div>
@@ -919,7 +963,7 @@ export const DocumentExplosion: React.FC = () => {
           <div className="h-4 w-full bg-gradient-to-b from-[#6b3f20] via-[#543017] to-[#3b200e] rounded-b-md shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex items-center justify-between px-4 text-[10px] font-bold text-amber-200/70 border-b border-[#2d180b]">
             <span className="tracking-wider uppercase text-[9px] text-[#e0b288] flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80 inline-block" />
-              Estante Física do Manual de Boas Práticas (17 Pastas)
+              Estante Física do Manual de Boas Práticas (18 Pastas)
             </span>
             <span className="text-[9px] text-[#d59e6f] font-semibold hidden sm:inline-block">
               Clique em qualquer pasta para abrir os modelos
@@ -953,7 +997,9 @@ export const DocumentExplosion: React.FC = () => {
             <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs sm:text-sm font-black tracking-wider text-blue-700 uppercase">
-                  {activeChapter.roman}
+                  {activeChapter.labelNumber === '0'
+                    ? 'INTRODUÇÃO'
+                    : `CAPÍTULO ${activeChapter.labelNumber}`}
                 </span>
                 <span className="text-slate-300 text-xs hidden sm:inline">•</span>
 

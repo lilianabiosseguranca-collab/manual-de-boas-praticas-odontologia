@@ -782,7 +782,7 @@ export const DocumentExplosion: React.FC = () => {
           {/* +50 Docs Word Badge */}
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-bold shadow-xs">
             <FileText className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-            <span>+50 Documentos em Word (.docx) prontos para usar</span>
+            <span>69 Documentos em Word (.docx) prontos para usar</span>
           </div>
         </div>
 

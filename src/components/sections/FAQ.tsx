@@ -38,7 +38,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Tem certificado?',
-    a: 'Sim! Assim que você terminar as aulas poderá emitir o certificado pela própria Hotmart (plataforma digital intuitiva onde o curso está hospedado).',
+    a: 'Não. O intuito do Manual de Boas Práticas Sanitárias é entregar documentos pré-prontos.',
   },
   {
     q: 'Quais são as formas de pagamento?',

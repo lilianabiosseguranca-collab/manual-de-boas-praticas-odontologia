@@ -120,7 +120,7 @@ export const HandWashIcon = SoapBubblesIcon
 export interface ChapterDocumentItem {
   name: string
   fileName?: string
-  format?: string
+  format?: 'word' | 'excel' | string
 }
 
 export interface PhysicalFolderData {
@@ -330,12 +330,29 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-emerald-900/80 text-emerald-200 border-emerald-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'Matriz anual de treinamentos obrigatórios',
-      'Listas de presença e avaliações de eficácia',
-      'Certificados de capacitação periódica',
+    documents: [
+      {
+        name: 'Plano anual de educação permanente',
+        fileName: 'Plano_anual_de_educacao_permanente.docx',
+        format: 'word',
+      },
+      {
+        name: 'Instrumentos de registro, controle, avaliação e eficácia das capacitações',
+        fileName: 'Instrumentos_de_registro_controle_avaliacao_e_eficacia_das_capacitacoes.docx',
+        format: 'word',
+      },
+      {
+        name: 'Cronograma anual de educação permanente',
+        fileName: 'Cronograma_anual_de_educacao_permanente.xlsx',
+        format: 'excel',
+      },
     ],
-    wordFileName: 'Capitulo_03_Plano_Educacao_Permanente.docx',
+    summaryBullets: [
+      'Plano anual de educação permanente',
+      'Instrumentos de registro, controle, avaliação e eficácia das capacitações',
+      'Cronograma anual de educação permanente em planilha Excel',
+    ],
+    wordFileName: '3 arquivos inclusos nesta pasta',
     pagesCount: '12 páginas',
     yearTag: 'VOL. 03',
   },
@@ -1071,37 +1088,53 @@ export const DocumentExplosion: React.FC = () => {
           </div>
 
           {activeChapter.documents && activeChapter.documents.length > 0 ? (
-            /* Multi-document vertical list (Ex: Introdução - Capítulo 0) */
+            /* Multi-document vertical list (Ex: Introdução, Capítulos 1, 2, 3...) */
             <div className="space-y-3">
               <div className="divide-y divide-slate-200/80 rounded-xl bg-gradient-to-b from-slate-50 via-white to-slate-50/60 text-slate-900 shadow-sm border border-slate-200/80 overflow-hidden">
-                {activeChapter.documents.map((doc, dIdx) => (
-                  <div
-                    key={dIdx}
-                    className="flex items-center justify-between p-3.5 sm:p-4 gap-3 hover:bg-slate-50/80 transition-colors"
-                  >
-                    {/* Left side: Word Icon + Document Title */}
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-10 h-10 rounded-xl bg-[#185abd] text-white flex items-center justify-center font-black shadow-xs shrink-0 relative overflow-hidden group">
-                        <span className="text-sm font-extrabold tracking-tight">W</span>
-                        <div className="absolute top-0 left-0 right-0 h-1 bg-white/20" />
-                      </div>
-                      <div className="min-w-0">
-                        <span className="text-sm sm:text-base font-bold text-slate-900 block truncate">
-                          {doc.name}
-                        </span>
-                        <span className="text-[11px] sm:text-xs font-medium text-slate-500 block">
-                          Documento Microsoft Word (.docx)
-                        </span>
+                {activeChapter.documents.map((doc, dIdx) => {
+                  const isExcel =
+                    doc.format === 'excel' ||
+                    (doc.fileName && doc.fileName.endsWith('.xlsx')) ||
+                    (doc.fileName && doc.fileName.endsWith('.xls'))
+
+                  return (
+                    <div
+                      key={dIdx}
+                      className="flex items-center justify-between p-3.5 sm:p-4 gap-3 hover:bg-slate-50/80 transition-colors"
+                    >
+                      {/* Left side: Icon (Word or Excel) + Document Title */}
+                      <div className="flex items-center gap-3 min-w-0">
+                        {isExcel ? (
+                          <div className="w-10 h-10 rounded-xl bg-[#107c41] text-white flex items-center justify-center font-black shadow-xs shrink-0 relative overflow-hidden group">
+                            <span className="text-sm font-extrabold tracking-tight">X</span>
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-white/25" />
+                          </div>
+                        ) : (
+                          <div className="w-10 h-10 rounded-xl bg-[#185abd] text-white flex items-center justify-center font-black shadow-xs shrink-0 relative overflow-hidden group">
+                            <span className="text-sm font-extrabold tracking-tight">W</span>
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-white/20" />
+                          </div>
+                        )}
+                        <div className="min-w-0">
+                          <span className="text-sm sm:text-base font-bold text-slate-900 block truncate">
+                            {doc.name}
+                          </span>
+                          <span className="text-[11px] sm:text-xs font-medium text-slate-500 block">
+                            {isExcel
+                              ? 'Planilha Microsoft Excel (.xlsx)'
+                              : 'Documento Microsoft Word (.docx)'}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
 
               {/* Bottom footer with file count information */}
               <div className="flex items-center justify-between px-1 pt-1 text-slate-500">
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider">
-                  Arquivos em word (.docx) inclusos nessa pasta ({activeChapter.documents.length})
+                  Arquivos inclusos nessa pasta ({activeChapter.documents.length})
                 </span>
               </div>
             </div>

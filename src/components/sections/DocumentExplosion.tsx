@@ -23,6 +23,7 @@ import {
   Info,
   Shield,
   Layers,
+  Printer,
 } from 'lucide-react'
 
 // Custom Dental Explorer / Double-ended Probe Icon SVG matching Lucide standard style (stroke-width 2, round linecaps)
@@ -120,7 +121,7 @@ export const HandWashIcon = SoapBubblesIcon
 export interface ChapterDocumentItem {
   name: string
   fileName?: string
-  format?: 'word' | 'excel' | string
+  format?: 'word' | 'excel' | 'print' | 'guide' | string
 }
 
 export interface PhysicalFolderData {
@@ -675,15 +676,40 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       labelBorder: 'border-[#b6ddfc]',
       labelTextColor: 'text-blue-950',
       accentGlow: 'rgba(0, 150, 199, 0.45)',
-      badgeColor: 'bg-cyan-900/80 text-cyan-200 border-cyan-600',
+      badgeColor: 'bg-slate-100 text-slate-600 border border-slate-200',
       metalRingBorder: 'border-slate-200 ring-slate-800',
     },
-    summaryBullets: [
-      'Fluxograma completo do expurgo à guarda esterilizada',
-      'Planilha de rastreabilidade e controle de ciclos biológicos',
-      'Rotulagem com data, lote, responsável e validade',
+    documents: [
+      { name: 'POP: Pré-limpeza', fileName: 'POP_Pre_limpeza.docx', format: 'word' },
+      { name: 'POP: Limpeza', fileName: 'POP_Limpeza.docx', format: 'word' },
+      { name: 'POP: Inspeção visual', fileName: 'POP_Inspecao_visual.docx', format: 'word' },
+      { name: 'POP: Embalagem', fileName: 'POP_Embalagem.docx', format: 'word' },
+      { name: 'POP: Esterilização', fileName: 'POP_Esterilizacao.docx', format: 'word' },
+      { name: 'POP: Monitoramento', fileName: 'POP_Monitoramento.docx', format: 'word' },
+      { name: 'POP: Registro', fileName: 'POP_Registro.docx', format: 'word' },
+      { name: 'POP: Armazenamento', fileName: 'POP_Armazenamento.docx', format: 'word' },
+      {
+        name: 'Anexo: Relação dos kits por especialidade',
+        fileName: 'Anexo_Relacao_dos_kits_por_especialidade.docx',
+        format: 'word',
+      },
+      {
+        name: 'Passo a passo monitoramento biológico (Liliana/Cristófoli)',
+        fileName: 'Passo_a_passo_monitoramento_biologico_Liliana_Cristofoli.pdf',
+        format: 'print',
+      },
+      {
+        name: 'Registro monitoramento da esterilização (Liliana/Cristófoli)',
+        fileName: 'Registro_monitoramento_da_esterilizacao_Liliana_Cristofoli.pdf',
+        format: 'print',
+      },
     ],
-    wordFileName: 'Capitulo_10_Processamento_Dispositivos_Medicos.docx',
+    summaryBullets: [
+      'POPs completos: Pré-limpeza, Limpeza, Inspeção, Embalagem, Esterilização e Armazenamento',
+      'Monitoramento, registros e anexo com kits por especialidade',
+      'Guias e cartazes de monitoramento biológico Cristófoli prontos para impressão',
+    ],
+    wordFileName: '11 arquivos inclusos nesta pasta',
     pagesCount: '28 páginas',
     yearTag: 'VOL. 10',
   },
@@ -1145,7 +1171,13 @@ export const DocumentExplosion: React.FC = () => {
                 </span>
                 <span className="text-slate-300 text-xs hidden sm:inline">•</span>
 
-                <span className="text-[11px] sm:text-xs font-bold text-slate-600 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-full">
+                <span
+                  className={`text-[11px] sm:text-xs font-bold px-2 py-0.5 rounded-full ${
+                    activeChapter.colorTheme.badgeColor.startsWith('bg-')
+                      ? activeChapter.colorTheme.badgeColor
+                      : 'bg-slate-100 text-slate-600 border border-slate-200'
+                  }`}
+                >
                   {activeChapter.tag}
                 </span>
               </div>
@@ -1206,15 +1238,21 @@ export const DocumentExplosion: React.FC = () => {
                     doc.format === 'excel' ||
                     (doc.fileName && doc.fileName.endsWith('.xlsx')) ||
                     (doc.fileName && doc.fileName.endsWith('.xls'))
+                  const isPrint = doc.format === 'print' || doc.format === 'guide'
 
                   return (
                     <div
                       key={dIdx}
                       className="flex items-center justify-between p-3.5 sm:p-4 gap-3 hover:bg-slate-50/80 transition-colors"
                     >
-                      {/* Left side: Icon (Word or Excel) + Document Title */}
+                      {/* Left side: Icon (Word, Excel or Printer) + Document Title */}
                       <div className="flex items-center gap-3 min-w-0">
-                        {isExcel ? (
+                        {isPrint ? (
+                          <div className="w-10 h-10 rounded-xl bg-[#64748b] text-white flex items-center justify-center font-black shadow-xs shrink-0 relative overflow-hidden group">
+                            <Printer className="w-5 h-5 text-white stroke-[2.2]" />
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-white/25" />
+                          </div>
+                        ) : isExcel ? (
                           <div className="w-10 h-10 rounded-xl bg-[#107c41] text-white flex items-center justify-center font-black shadow-xs shrink-0 relative overflow-hidden group">
                             <span className="text-sm font-extrabold tracking-tight">X</span>
                             <div className="absolute top-0 left-0 right-0 h-1 bg-white/25" />
@@ -1230,9 +1268,11 @@ export const DocumentExplosion: React.FC = () => {
                             {doc.name}
                           </span>
                           <span className="text-[11px] sm:text-xs font-medium text-slate-500 block">
-                            {isExcel
-                              ? 'Planilha Microsoft Excel (.xlsx)'
-                              : 'Documento Microsoft Word (.docx)'}
+                            {isPrint
+                              ? 'Cartaz / Guia prático pronto para impressão'
+                              : isExcel
+                                ? 'Planilha Microsoft Excel (.xlsx)'
+                                : 'Documento Microsoft Word (.docx)'}
                           </span>
                         </div>
                       </div>
@@ -1244,8 +1284,13 @@ export const DocumentExplosion: React.FC = () => {
               {/* Bottom footer with file count information */}
               <div className="flex items-center justify-between px-1 pt-1 text-slate-500">
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider">
-                  {activeChapter.documents.some(
-                    (d) => d.format === 'excel' || d.fileName?.endsWith('.xlsx'),
+                  {activeChapter.num === '10' ||
+                  activeChapter.documents.some(
+                    (d) =>
+                      d.format === 'excel' ||
+                      d.format === 'print' ||
+                      d.format === 'guide' ||
+                      d.fileName?.endsWith('.xlsx'),
                   )
                     ? `Arquivos inclusos nessa pasta (${activeChapter.documents.length})`
                     : `Arquivos em word (.docx) inclusos nessa pasta (${activeChapter.documents.length})`}

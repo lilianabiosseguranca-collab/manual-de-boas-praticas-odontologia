@@ -676,7 +676,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       labelBorder: 'border-[#b6ddfc]',
       labelTextColor: 'text-blue-950',
       accentGlow: 'rgba(0, 150, 199, 0.45)',
-      badgeColor: 'bg-slate-100 text-slate-600 border border-slate-200',
+      badgeColor: 'bg-blue-900/80 text-blue-200 border-blue-700',
       metalRingBorder: 'border-slate-200 ring-slate-800',
     },
     documents: [

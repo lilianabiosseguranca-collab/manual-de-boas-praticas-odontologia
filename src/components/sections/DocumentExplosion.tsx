@@ -1031,10 +1031,13 @@ export const DocumentExplosion: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col sm:items-end items-start gap-1.5">
                 <span className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-900 text-xs font-bold px-2.5 py-1 rounded-md border border-emerald-300/80">
                   <Check className="w-3.5 h-3.5 stroke-[3] text-emerald-700" />
                   Pronto para uso imediato
+                </span>
+                <span className="font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200 text-xs">
+                  Basta inserir seus dados e logotipo
                 </span>
               </div>
             </div>
@@ -1064,9 +1067,6 @@ export const DocumentExplosion: React.FC = () => {
               <span className="flex items-center gap-1.5 text-slate-700 font-semibold">
                 <Info className="w-4 h-4 text-blue-600" />
                 <span>Formatação pronta para fiscalização sanitária municipal e estadual</span>
-              </span>
-              <span className="font-bold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200">
-                Basta inserir seus dados e logotipo
               </span>
             </div>
           </div>

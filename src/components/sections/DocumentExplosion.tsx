@@ -360,7 +360,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-4',
     num: '4',
     labelNumber: '4',
-    tag: 'Serviços Terceirizados',
+    tag: 'Documentação',
     title: 'Contratos, licenças e qualificações de serviços terceirizados',
     subtitle: 'Alvarás, contratos de manutenção, laboratórios de prótese e laudos técnicos',
     icon: FileCheck2,
@@ -378,12 +378,18 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-purple-900/80 text-purple-200 border-purple-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
+    documents: [
+      {
+        name: 'Contratos, licenças e qualificações de serviços terceirizados',
+        fileName: 'Contratos_licencas_e_qualificacoes_de_servicos_terceirizados.docx',
+      },
+    ],
     summaryBullets: [
       'Checklist de alvarás de fornecedores e laboratórios',
       'Contratos de prestação de serviços odontológicos',
       'Qualificação de empresas de esterilização e suporte',
     ],
-    wordFileName: 'Capitulo_04_Contratos_Licencas_Terceirizados.docx',
+    wordFileName: '1 arquivo Word (.docx) incluso nesta pasta',
     pagesCount: '16 páginas',
     yearTag: 'VOL. 04',
   },
@@ -1134,7 +1140,11 @@ export const DocumentExplosion: React.FC = () => {
               {/* Bottom footer with file count information */}
               <div className="flex items-center justify-between px-1 pt-1 text-slate-500">
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider">
-                  Arquivos inclusos nessa pasta ({activeChapter.documents.length})
+                  {activeChapter.documents.some(
+                    (d) => d.format === 'excel' || d.fileName?.endsWith('.xlsx'),
+                  )
+                    ? `Arquivos inclusos nessa pasta (${activeChapter.documents.length})`
+                    : `Arquivos em word (.docx) inclusos nessa pasta (${activeChapter.documents.length})`}
                 </span>
               </div>
             </div>

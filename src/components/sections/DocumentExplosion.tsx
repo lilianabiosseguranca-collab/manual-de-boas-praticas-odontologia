@@ -1027,9 +1027,6 @@ export const DocumentExplosion: React.FC = () => {
         </div>
 
         {/* Subtitle description */}
-        <p className="text-sm sm:text-base text-slate-600 mt-3 font-medium leading-relaxed">
-          {activeChapter.subtitle}
-        </p>
 
         {/* ================= REAL PHYSICAL DOCUMENT SHEET INSIDE FOLDER (WORD .DOCX DETAIL) ================= */}
         <div className="mt-5 relative">
@@ -1079,9 +1076,6 @@ export const DocumentExplosion: React.FC = () => {
               <div className="flex items-center justify-between px-1 pt-1 text-slate-500">
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                   Arquivos em word (.docx) inclusos nessa pasta ({activeChapter.documents.length})
-                </span>
-                <span className="text-xs font-medium text-slate-400">
-                  {activeChapter.pagesCount}
                 </span>
               </div>
             </div>

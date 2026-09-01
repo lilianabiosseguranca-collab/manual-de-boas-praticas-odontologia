@@ -415,12 +415,29 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-cyan-900/80 text-cyan-200 border-cyan-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'Protocolo de desinfecção de linhas de água dos equipos',
-      'Laudos de potabilidade físico-química e microbiológica',
-      'Cronograma semestral de limpeza de reservatórios',
+    documents: [
+      {
+        name: 'Plano de monitoramento e controle da água',
+        fileName: 'Plano_de_monitoramento_e_controle_da_agua.docx',
+        format: 'word',
+      },
+      {
+        name: 'Uso de água destilada para autoclave',
+        fileName: 'Uso_de_agua_destilada_para_autoclave.docx',
+        format: 'word',
+      },
+      {
+        name: 'Registros da água em serviço odontológico',
+        fileName: 'Registros_da_agua_em_servico_odontologico.xlsx',
+        format: 'excel',
+      },
     ],
-    wordFileName: 'Capitulo_05_Plano_Controle_Agua.docx',
+    summaryBullets: [
+      'Plano de monitoramento e controle da água',
+      'Uso de água destilada para autoclave',
+      'Registros da água em serviço odontológico',
+    ],
+    wordFileName: '3 arquivos inclusos nesta pasta',
     pagesCount: '11 páginas',
     yearTag: 'VOL. 05',
   },

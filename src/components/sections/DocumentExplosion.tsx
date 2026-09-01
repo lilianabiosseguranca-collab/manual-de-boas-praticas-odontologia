@@ -573,12 +573,49 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-pink-900/80 text-pink-200 border-pink-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'Inventário completo de equipamentos com tag de registro',
-      'Calibração anual e testes de fotopolimerizador e raio-X',
-      'Histórico de manutenção de autoclaves e periféricos',
+    documents: [
+      {
+        name: 'Plano de gerenciamento de tecnologias em saúde',
+        fileName: 'Plano_de_gerenciamento_de_tecnologias_em_saude.docx',
+        format: 'word',
+      },
+      {
+        name: 'Registro de descarte de equipamentos',
+        fileName: 'Registro_de_descarte_de_equipamentos.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Registro de treinamento da equipe',
+        fileName: 'Registro_de_treinamento_da_equipe.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Registro de calibração e monitoramento',
+        fileName: 'Registro_de_calibracao_e_monitoramento.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Registro de manutenção preventiva e corretiva de equipamentos',
+        fileName: 'Registro_de_manutencao_preventiva_e_corretiva_de_equipamentos.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Cronograma de manutenção dos equipamentos',
+        fileName: 'Cronograma_de_manutencao_dos_equipamentos.xlsx',
+        format: 'excel',
+      },
+      {
+        name: 'Inventário dos equipamentos',
+        fileName: 'Inventario_dos_equipamentos.xlsx',
+        format: 'excel',
+      },
     ],
-    wordFileName: 'Capitulo_08_PGTS_Tecnologias_Saude.docx',
+    summaryBullets: [
+      'Plano de gerenciamento de tecnologias em saúde',
+      'Registro de descarte e calibração de equipamentos',
+      'Cronograma e registros de manutenção preventiva/corretiva',
+    ],
+    wordFileName: '7 arquivos inclusos nesta pasta',
     pagesCount: '22 páginas',
     yearTag: 'VOL. 08',
   },

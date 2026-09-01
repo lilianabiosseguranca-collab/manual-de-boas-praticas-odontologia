@@ -28,7 +28,7 @@ export const Hero = () => {
 
           <p className="text-lg sm:text-xl md:text-2xl text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto">
             Guia completo com 88 documentos pré-prontos =&nbsp;tudo o que você precisa ficar
-            atualizado com
+            atualizado
           </p>
 
           <div className="pt-2 sm:pt-4 flex justify-center">

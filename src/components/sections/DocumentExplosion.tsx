@@ -484,7 +484,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-7',
     num: '7',
     labelNumber: '7',
-    tag: 'Manutenção Predial',
+    tag: 'Manutenção',
     title: 'Plano anual de manutenção preventiva e corretiva da edificação e instalações',
     subtitle: 'Instalações elétricas, hidráulicas, ar-condicionado (PMOC) e estrutura física',
     icon: Wrench,

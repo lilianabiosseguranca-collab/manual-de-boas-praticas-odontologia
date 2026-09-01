@@ -659,7 +659,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-10',
     num: '10',
     labelNumber: '10',
-    tag: 'Central de Esterilização (CME)',
+    tag: 'Processamento de dispositivos médicos',
     title:
       'Protocolo para processamento de dispositivos médicos incluindo informações de rastreabilidade',
     subtitle:

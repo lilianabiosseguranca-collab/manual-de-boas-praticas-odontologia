@@ -274,12 +274,37 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-blue-900/80 text-blue-200 border-blue-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'Fichas de qualificação e registro CRO',
-      'Termos de responsabilidade técnica e ASB/TSB',
-      'Manual de integração e conduta da equipe',
+    documents: [
+      { name: 'Organograma da equipe', fileName: 'Organograma_da_equipe.docx' },
+      {
+        name: 'Instruções gestão de recursos humanos',
+        fileName: 'Instrucoes_gestao_de_recursos_humanos.docx',
+      },
+      {
+        name: 'Ficha funcional responsável técnico',
+        fileName: 'Ficha_funcional_responsavel_tecnico.docx',
+      },
+      {
+        name: 'Ficha funcional cirurgião-dentista colaborador',
+        fileName: 'Ficha_funcional_cirurgiao_dentista_colaborador.docx',
+      },
+      {
+        name: 'Ficha funcional serviços gerais (limpeza/higienização)',
+        fileName: 'Ficha_funcional_servicos_gerais_limpeza_higienizacao.docx',
+      },
+      {
+        name: 'Ficha funcional recepcionista',
+        fileName: 'Ficha_funcional_recepcionista.docx',
+      },
+      { name: 'Ficha funcional ASB', fileName: 'Ficha_funcional_ASB.docx' },
+      { name: 'Ficha funcional TSB', fileName: 'Ficha_funcional_TSB.docx' },
     ],
-    wordFileName: 'Capitulo_02_Gestao_Recursos_Humanos.docx',
+    summaryBullets: [
+      'Organograma da equipe e instruções completas de RH',
+      'Fichas funcionais de RT, dentistas e equipe de apoio',
+      'Fichas funcionais de ASB, TSB e serviços gerais',
+    ],
+    wordFileName: '8 arquivos Word (.docx) inclusos nesta pasta',
     pagesCount: '14 páginas',
     yearTag: 'VOL. 02',
   },

@@ -1063,12 +1063,6 @@ export const DocumentExplosion: React.FC = () => {
             </div>
 
             {/* Paper Footer Info */}
-            <div className="mt-3.5 pt-3 border-t border-slate-200/70 flex flex-wrap items-center justify-between text-xs text-slate-600 font-medium gap-2">
-              <span className="flex items-center gap-1.5 text-slate-700 font-semibold">
-                <Info className="w-4 h-4 text-blue-600" />
-                <span>Formatação pronta para fiscalização sanitária municipal e estadual</span>
-              </span>
-            </div>
           </div>
         </div>
       </div>

@@ -64,12 +64,9 @@ export const DentalInstrumentsIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
 // Alias for backwards compatibility if needed
 export const AutoclaveIcon = DentalInstrumentsIcon
 
-// Custom Hand Washing (Two Human Hands Rubbing / Interlacing in Active Friction with Soap Foam & Water Drops) Icon SVG
-// Based faithfully on the Coren clinical hand hygiene technique (two clearly anatomical hands with defined wrists, palms, thumbs and interlaced fingers in friction, surrounded by water drops and soap bubbles)
-// High-fidelity anatomical Hand Wash Icon based faithfully on reference image:
-// Shows two hands in active rubbing/washing motion (dorsum/palm friction technique) with distinct fingers, palm, thumb, and soap lather/foam bubbles.
-// Rendered in standard 24x24 SVG with stroke="currentColor", strokeWidth="1.6", strokeLinecap="round", strokeLinejoin="round".
-export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
+// Custom Soap Bubbles Icon SVG (Apenas bolhas de sabão translúcidas com brilho, reflexos de luz e microespuma, sem mãos)
+// Design equilibrado e elegante no padrão 24x24 com círculos em harmonia com os outros ícones do Lucide
+export const SoapBubblesIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   className = 'w-6 h-6',
   ...props
 }) => (
@@ -78,62 +75,47 @@ export const HandWashIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    strokeWidth="1.6"
+    strokeWidth="1.8"
     strokeLinecap="round"
     strokeLinejoin="round"
     className={className}
     {...props}
   >
-    {/* ===== TOP HAND / DORSUM (Scrubbing over the bottom hand) ===== */}
-    {/* Arm / Wrist entering from upper-left */}
-    <path d="M1.5 5.2 C 3.2 4.8, 5.2 4.6, 7.2 4.7 C 8.5 4.8, 9.8 5.2, 11 6" />
-    <path d="M1.5 9.2 C 3.4 9.0, 5.0 8.6, 6.8 7.8" />
+    {/* ===== 1. BOLHA PRINCIPAL (Grande - Centro-inferior / direita) cx=14, cy=14, r=6.5 ===== */}
+    <circle cx="14" cy="14" r="6.5" />
+    {/* Brilho / Arco de reflexo curvo superior esquerdo */}
+    <path d="M10.8 10.5 C12.2 9.2, 14.5 9.0, 16.5 9.8" strokeWidth="1.5" strokeOpacity="0.9" />
+    {/* Ponto de destaque secundário / brilho interno */}
+    <circle cx="16.5" cy="11.8" r="0.6" fill="currentColor" stroke="none" />
 
-    {/* Thumb of top hand resting / curving over top */}
-    <path d="M7.2 4.7 C 8.8 3.5, 11.2 3.6, 12.8 4.8 C 13.5 5.4, 13.6 6.3, 13 7" />
+    {/* ===== 2. SEGUNDA BOLHA PRINCIPAL (Média - Superior esquerda) cx=7.5, cy=8.5, r=4.5 ===== */}
+    <circle cx="7.5" cy="8.5" r="4.5" />
+    {/* Brilho / Reflexo curvado */}
+    <path d="M5.2 6.5 C6.2 5.5, 7.8 5.3, 9.2 5.9" strokeWidth="1.3" strokeOpacity="0.9" />
+    {/* Ponto de brilho */}
+    <circle cx="9.2" cy="7.2" r="0.5" fill="currentColor" stroke="none" />
 
-    {/* Dorsum of hand transitioning into extended fingers pointing towards the right */}
-    {/* Index finger */}
-    <path d="M11 6 C 13.5 6.2, 16.5 7.0, 19.5 7.8 C 20.6 8.1, 21.2 8.9, 21.0 9.7 C 20.8 10.4, 20.0 10.8, 18.8 10.6 L 14.5 10.0" />
+    {/* ===== 3. TERCEIRA BOLHA (Flutuando no alto à direita) cx=18, cy=4.5, r=2.5 ===== */}
+    <circle cx="18" cy="4.5" r="2.5" strokeWidth="1.6" />
+    <path d="M17 3.2 C17.6 2.8, 18.5 2.8, 19.2 3.3" strokeWidth="1.2" />
 
-    {/* Middle finger */}
-    <path d="M14.5 10.0 C 17 10.3, 19.8 10.8, 22.2 11.4 C 23.3 11.7, 23.7 12.5, 23.4 13.2 C 23.1 13.9, 22.2 14.2, 21.0 14.0 L 14.2 13.0" />
+    {/* ===== 4. QUARTA BOLHA (Pequena inferior esquerda / flutuante) cx=4.5, cy=17.5, r=2.2 ===== */}
+    <circle cx="4.5" cy="17.5" r="2.2" strokeWidth="1.6" />
+    <path d="M3.5 16.3 C4.0 15.9, 4.8 15.9, 5.3 16.4" strokeWidth="1.1" />
 
-    {/* Ring finger */}
-    <path d="M14.2 13.0 C 16.5 13.4, 19.2 14.0, 21.5 14.7 C 22.5 15.0, 22.8 15.8, 22.4 16.4 C 22.0 17.0, 21.0 17.1, 19.8 16.8 L 14 15.6" />
-
-    {/* Little / Pinky finger */}
-    <path d="M14 15.6 C 15.8 16.0, 17.8 16.6, 19.2 17.2 C 20.0 17.6, 20.2 18.2, 19.7 18.7 C 19.2 19.1, 18.2 19.0, 17.0 18.5 L 12.5 16.8" />
-
-    {/* Knuckle definition & finger contour separations on top hand */}
-    <path d="M11.5 8.2 C 14.2 8.8, 17 9.5, 19.2 10.1" strokeWidth="1.2" strokeOpacity="0.85" />
-    <path d="M12.0 11.4 C 14.5 12.0, 17.5 12.6, 20.0 13.2" strokeWidth="1.2" strokeOpacity="0.85" />
-    <path d="M11.8 14.2 C 14.0 14.7, 16.8 15.3, 18.8 15.8" strokeWidth="1.2" strokeOpacity="0.85" />
-
-    {/* ===== BOTTOM HAND (Supporting / scrubbing underneath) ===== */}
-    {/* Lower wrist / base of bottom hand coming from lower left */}
-    <path d="M1.5 11.5 C 3.5 11.8, 5.5 12.6, 7.2 14.0 C 8.5 15.1, 9.8 16.8, 11.2 18.8 C 12.0 20.0, 13.2 21.0, 14.8 21.5 C 16.2 22.0, 17.2 21.6, 17.6 20.5" />
-    {/* Bottom hand supporting palm / fingers peeking beneath */}
-    <path d="M12.5 16.8 C 13.5 17.8, 15.0 18.8, 16.5 19.5" strokeWidth="1.3" />
-    <path d="M14.5 19.0 C 15.8 19.8, 17.0 20.2, 18.0 19.8" strokeWidth="1.3" />
-
-    {/* ===== SOAP LATHER & FOAM BUBBLES (Active washing friction) ===== */}
-    {/* Micro lather dots and clusters around the friction area */}
-    <circle cx="10.8" cy="8.2" r="0.9" fill="currentColor" fillOpacity="0.3" />
-    <circle cx="13.2" cy="7.2" r="1.1" fill="currentColor" fillOpacity="0.25" />
-    <circle cx="15.8" cy="8.6" r="0.8" fill="currentColor" fillOpacity="0.3" />
-    <circle cx="9.2" cy="10.5" r="0.9" fill="currentColor" fillOpacity="0.3" />
-    <circle cx="12.0" cy="12.8" r="0.75" fill="currentColor" fillOpacity="0.25" />
-    <circle cx="14.8" cy="14.5" r="0.85" fill="currentColor" fillOpacity="0.25" />
-    <circle cx="16.5" cy="17.2" r="0.7" fill="currentColor" fillOpacity="0.25" />
-    <circle cx="11.2" cy="17.0" r="0.8" fill="currentColor" fillOpacity="0.3" />
-
-    {/* Floating soap bubbles / foam above hands */}
-    <circle cx="6.5" cy="2.8" r="1.0" strokeWidth="1.2" />
-    <circle cx="14.2" cy="2.5" r="1.2" strokeWidth="1.2" />
-    <circle cx="17.0" cy="3.8" r="0.8" strokeWidth="1.1" />
+    {/* ===== 5. MICROBOLHAS DE ESPUMA / BRILHO (Aeradas e leves) ===== */}
+    {/* Microbolha intermediária entre a 1 e a 2 */}
+    <circle cx="7" cy="14" r="1.2" strokeWidth="1.4" />
+    {/* Microbolha no topo esquerdo */}
+    <circle cx="12.5" cy="3.5" r="1.1" strokeWidth="1.3" />
+    {/* Gotícula / brilho de espuma cintilante */}
+    <circle cx="21" cy="9.5" r="0.75" fill="currentColor" fillOpacity="0.7" stroke="none" />
+    <circle cx="2.5" cy="12" r="0.65" fill="currentColor" fillOpacity="0.6" stroke="none" />
   </svg>
 )
+
+// Alias for backwards compatibility if needed
+export const HandWashIcon = SoapBubblesIcon
 
 export interface PhysicalFolderData {
   id: string
@@ -604,7 +586,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     title: 'Protocolo de higiene das mãos, precauções e isolamento',
     subtitle:
       'Técnica correta de antissepsia, uso racional de EPIs e prevenção de transmissão cruzada',
-    icon: HandWashIcon,
+    icon: SoapBubblesIcon,
     colorTheme: {
       name: 'Azul Cobalto Brilhante',
       spineGradient: 'from-[#1e3d59] via-[#2a557d] to-[#122638]',

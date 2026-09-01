@@ -992,7 +992,7 @@ export const DocumentExplosion: React.FC = () => {
                 </span>
                 <span className="text-slate-300 text-xs hidden sm:inline">•</span>
 
-                <span className="text-[11px] sm:text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                <span className="text-[11px] sm:text-xs font-bold text-slate-600 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-full">
                   {activeChapter.tag}
                 </span>
               </div>

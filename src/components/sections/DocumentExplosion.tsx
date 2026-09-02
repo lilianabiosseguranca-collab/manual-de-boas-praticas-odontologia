@@ -1087,7 +1087,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-16',
     num: '16',
     labelNumber: '16',
-    tag: 'Prevenção de Infecções (PP-IRAS)',
+    tag: 'PP-IRAS',
     title: 'Plano de prevenção e controle de infecções (PP-IRAS)',
     subtitle:
       'Programa de controle de infecções relacionadas à assistência à saúde e auditorias internas',

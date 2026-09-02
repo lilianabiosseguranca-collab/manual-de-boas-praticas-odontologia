@@ -1224,22 +1224,6 @@ export const DocumentExplosion: React.FC = () => {
             <Shield className="w-3.5 h-3.5 text-blue-600 shrink-0" />
             <span>Consultório seguro contra multas</span>
           </div>
-
-          {/* File Count Badges */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50/80 border border-blue-200/90 text-blue-900 text-xs font-bold shadow-xs">
-            <FileText className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-            <span>73 Documentos em Word (.docx)</span>
-          </div>
-
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-200/90 text-emerald-900 text-xs font-bold shadow-xs">
-            <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-            <span>14 Planilhas em Excel (.xlsx)</span>
-          </div>
-
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-bold shadow-xs">
-            <Printer className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-            <span>8 Cartazes / Guias para Impressão</span>
-          </div>
         </div>
 
         {/* Right: Shelf Hint */}

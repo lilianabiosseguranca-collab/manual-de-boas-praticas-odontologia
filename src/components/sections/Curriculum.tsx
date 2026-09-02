@@ -1,4 +1,4 @@
-import { Check } from 'lucide-react'
+import { Check, FileText, FileSpreadsheet, Printer } from 'lucide-react'
 import depoimento2 from '@/assets/12-2b647.png'
 import depoimento3 from '@/assets/9-bfd98.png'
 import depoimento4 from '@/assets/14-98a44.png'
@@ -24,10 +24,28 @@ export function Curriculum() {
   return (
     <section className="py-16 md:py-24 bg-slate-50">
       <div className="container px-4 md:px-6 mx-auto max-w-5xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 space-y-5">
           <h2 className="font-extrabold tracking-tight text-slate-900 text-[2.29rem]">
             Por dentro do Manual de Boas Práticas Sanitárias
           </h2>
+
+          {/* Three count badges relocated from Hero */}
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50/90 border border-blue-200/90 text-blue-900 text-sm font-bold shadow-xs">
+              <FileText className="w-4 h-4 text-blue-600 shrink-0" />
+              <span>73 Documentos em Word (.docx)</span>
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50/90 border border-emerald-200/90 text-emerald-900 text-sm font-bold shadow-xs">
+              <FileSpreadsheet className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span>14 Planilhas em Excel (.xlsx)</span>
+            </div>
+
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-sm font-bold shadow-xs">
+              <Printer className="w-4 h-4 text-slate-600 shrink-0" />
+              <span>8 Cartazes / Guias para Impressão</span>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
@@ -121,14 +139,12 @@ export function Curriculum() {
             {[
               {
                 title: 'Checklist de esterilização para consultório odontológico',
-                image:
-                  'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&h=800&q=80',
+                image: 'https://img.usecurling.com/p/600/800?q=abstract',
                 spine: 'border-l-[#1e3a8a]',
               },
               {
                 title: 'Checklist de esterilização para salão de beleza',
-                image:
-                  'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=600&h=800&q=80',
+                image: 'https://img.usecurling.com/p/600/800?q=abstract',
                 spine: 'border-l-[#831843]',
               },
               {

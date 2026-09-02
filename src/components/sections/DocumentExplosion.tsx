@@ -882,7 +882,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-13',
     num: '13',
     labelNumber: '13',
-    tag: 'Higiene e EPIs',
+    tag: 'Biossegurança: Higiene e EPIs',
     title: 'Protocolo de higiene das mãos, precauções e isolamento',
     subtitle:
       'Técnica correta de antissepsia, uso racional de EPIs e prevenção de transmissão cruzada',
@@ -901,13 +901,80 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-blue-900/80 text-blue-200 border-blue-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
+    documents: [
+      {
+        name: 'POP: Higiene simples das mãos com água e sabonete líquido',
+        fileName: 'POP_Higiene_simples_das_maos_com_agua_e_sabonete_liquido.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Higiene Simples das mãos com preparação a base de álcool PBA',
+        fileName: 'POP_Higiene_Simples_das_maos_com_preparacao_a_base_de_alcool_PBA.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Higiene das mãos técnica para antissepsia cirúrgica com PBA',
+        fileName: 'POP_Higiene_das_maos_tecnica_para_antissepsia_cirurgica_com_PBA.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Colocação e remoção de EPIs em procedimentos não cirúrgicos',
+        fileName: 'POP_Colocacao_e_remocao_de_EPIs_em_procedimentos_nao_cirurgicos.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Colocação e remoção de EPIs na área de processamento DM',
+        fileName: 'POP_Colocacao_e_remocao_de_EPIs_na_area_de_processamento_DM.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Precauções de contato e isolamento',
+        fileName: 'POP_Precaucoes_de_contato_e_isolamento.docx',
+        format: 'word',
+      },
+      {
+        name: 'Lista: EPIs área de processamento DM',
+        fileName: 'Lista_EPIs_area_de_processamento_DM.docx',
+        format: 'word',
+      },
+      {
+        name: 'Lista: EPIs para procedimentos cirúrgicos',
+        fileName: 'Lista_EPIs_para_procedimentos_cirurgicos.docx',
+        format: 'word',
+      },
+      {
+        name: 'Lista: EPIs para procedimentos não cirúrgicos',
+        fileName: 'Lista_EPIs_para_procedimentos_nao_cirurgicos.docx',
+        format: 'word',
+      },
+      {
+        name: 'Lista: EPIs para zeladoria',
+        fileName: 'Lista_EPIs_para_zeladoria.docx',
+        format: 'word',
+      },
+      {
+        name: 'Cartaz: Precaução padrão (Anvisa)',
+        fileName: 'Cartaz_Precaucao_padrao_Anvisa.pdf',
+        format: 'print',
+      },
+      {
+        name: 'Cartaz: Higiene das mãos simples (Anvisa)',
+        fileName: 'Cartaz_Higiene_das_maos_simples_Anvisa.pdf',
+        format: 'print',
+      },
+      {
+        name: 'Cartaz: Higiene das mãos cirúrgica (Anvisa)',
+        fileName: 'Cartaz_Higiene_das_maos_cirurgica_Anvisa.pdf',
+        format: 'print',
+      },
+    ],
     summaryBullets: [
       'Passo a passo visual dos 5 momentos de higiene das mãos',
       'Paramentação e desparamentação segura de EPIs',
       'Precauções padrão, por contato e por gotículas/aerossóis',
     ],
-    wordFileName: 'Capitulo_13_Higiene_Maos_EPIs.docx',
-    pagesCount: '13 páginas',
+    wordFileName: '13 arquivos inclusos nesta pasta',
+    pagesCount: '25 páginas',
     yearTag: 'VOL. 13',
   },
   {

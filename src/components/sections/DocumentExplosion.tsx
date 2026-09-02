@@ -257,7 +257,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-2',
     num: '2',
     labelNumber: '2',
-    tag: 'Equipe e RH',
+    tag: 'Equipe',
     title: 'Gestão de recursos humanos',
     subtitle: 'Qualificação profissional, descrição de cargos, treinamentos e registros da equipe',
     icon: Users,

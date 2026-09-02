@@ -1106,12 +1106,15 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-teal-900/80 text-teal-200 border-teal-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'Diretrizes de prevenção de infecção cruzada odontológica',
-      'Auditorias periódicas e checklists de conformidade',
-      'Indicadores de vigilância epidemiológica na clínica',
+    documents: [
+      {
+        name: 'POP: Plano de prevenção e controle de infecções',
+        fileName: 'POP_Plano_de_prevencao_e_controle_de_infeccoes.docx',
+        format: 'word',
+      },
     ],
-    wordFileName: 'Capitulo_16_PP_IRAS_Controle_Infeccoes.docx',
+    summaryBullets: ['POP: Plano de prevenção e controle de infecções'],
+    wordFileName: '1 arquivo em word (.docx) incluso nesta pasta',
     pagesCount: '24 páginas',
     yearTag: 'VOL. 16',
   },

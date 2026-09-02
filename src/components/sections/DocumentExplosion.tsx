@@ -981,33 +981,51 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-14',
     num: '14',
     labelNumber: '14',
-    tag: 'Acidentes Biológicos',
+    tag: 'Acidentes Ocupacionais',
     title:
       'Protocolo de encaminhamento do profissional em caso de acidentes com exposição a material biológico',
     subtitle:
       'Conduta imediata pós-exposição, quimioprofilaxia, fluxo de atendimento, CAT e acompanhamento',
     icon: AlertTriangle,
     colorTheme: {
-      name: 'Amarelo Segurança / Ocre',
-      spineGradient: 'from-[#c25e00] via-[#e8710a] to-[#803e00]',
-      spineHighlight: 'from-white/40 via-white/15 to-transparent',
+      name: 'Rosa / Rose Alerta Saúde',
+      spineGradient: 'from-[#881337] via-[#be123c] to-[#4c0519]',
+      spineHighlight: 'from-white/35 via-white/10 to-transparent',
       spineShadow:
-        'shadow-[inset_-3px_0_8px_rgba(0,0,0,0.5),inset_3px_0_8px_rgba(255,255,255,0.3)]',
-      spineEdge: 'border-l-[#ffb366] border-r-[#522800]',
-      labelBg: 'bg-[#fffaf0]',
-      labelBorder: 'border-[#eddab4]',
-      labelTextColor: 'text-amber-950',
-      accentGlow: 'rgba(234, 88, 12, 0.35)',
-      badgeColor: 'bg-orange-900/80 text-orange-200 border-orange-700',
+        'shadow-[inset_-3px_0_8px_rgba(0,0,0,0.5),inset_3px_0_8px_rgba(255,255,255,0.25)]',
+      spineEdge: 'border-l-[#fb7185] border-r-[#2f030f]',
+      labelBg: 'bg-[#fff1f2]',
+      labelBorder: 'border-[#fecdd3]',
+      labelTextColor: 'text-rose-950',
+      accentGlow: 'rgba(225, 29, 72, 0.35)',
+      badgeColor: 'bg-rose-900/80 text-rose-200 border-rose-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'Fluxograma pós-perfuração com agulha/instrumental',
-      'Formulário de notificação de acidente ocupacional (CAT)',
-      'Encaminhamento para PEP (Profilaxia Pós-Exposição)',
+    documents: [
+      {
+        name: 'POP: Encaminhamento do profissional em caso de acidente com exposição a material biológico potencialmente infectante',
+        fileName:
+          'POP_Encaminhamento_do_profissional_em_caso_de_acidente_com_exposicao_a_material_biologico_potencialmente_infectante.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Formulário de registro de acidente ocupacional',
+        fileName: 'Anexo_Formulario_de_registro_de_acidente_ocupacional.docx',
+        format: 'word',
+      },
+      {
+        name: 'Cartaz: Acidente ocupacional (GerAção Biossegurança)',
+        fileName: 'Cartaz_Acidente_ocupacional_GerAcao_Biosseguranca.pdf',
+        format: 'print',
+      },
     ],
-    wordFileName: 'Capitulo_14_Acidentes_Exposicao_Biologica.docx',
-    pagesCount: '16 páginas',
+    summaryBullets: [
+      'POP: Encaminhamento do profissional em caso de acidente com exposição a material biológico potencialmente infectante',
+      'Anexo: Formulário de registro de acidente ocupacional',
+      'Cartaz: Acidente ocupacional (GerAção Biossegurança)',
+    ],
+    wordFileName: '3 arquivos inclusos nesta pasta',
+    pagesCount: '12 páginas',
     yearTag: 'VOL. 14',
   },
   {

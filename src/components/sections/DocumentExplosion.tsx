@@ -624,7 +624,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-9',
     num: '9',
     labelNumber: '9',
-    tag: '(PGRSS)',
+    tag: 'PGRSS',
     title: 'Plano de gerenciamento de resíduos de serviço de saúde',
     subtitle:
       'Segregação, acondicionamento, perfurocortantes, resíduos químicos e coleta especializada',

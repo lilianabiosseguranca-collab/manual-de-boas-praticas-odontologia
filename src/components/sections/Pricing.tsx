@@ -6,7 +6,7 @@ import { trackEvent } from '@/lib/pixel'
 export const Pricing = () => {
   const handleCheckout = () => {
     trackEvent('InitiateCheckout', { value: 297.0, currency: 'BRL', content_name: 'LBA' })
-    window.open('https://pay.hotmart.com/X96845284X?off=l1vlggal&checkoutMode=10', '_blank')
+    window.open('https://pay.hotmart.com/D97925218P?checkoutMode=10&bid=1788356054231', '_blank')
   }
 
   return (

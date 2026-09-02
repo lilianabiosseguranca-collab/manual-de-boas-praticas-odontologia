@@ -41,11 +41,10 @@ export const Pricing = () => {
             <div className="w-full max-w-md mx-auto mb-10 bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-green-50 shadow-[0_0_20px_rgba(56,161,105,0.05)] relative z-10">
               <ul className="space-y-4 text-left">
                 {[
-                  'Acesso imediato a todos os módulos (curso on-line e gravado)',
+                  'Acesso imediato a todos os arquivos',
                   'Suporte via Zoom (ao vivo)',
-                  'Todos os bônus inclusos',
+                  'Bônus incluso',
                   '1 ano de acesso',
-                  'Certificado de conclusão',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <div className="bg-[#38a169]/10 p-1.5 rounded-full shadow-[0_0_10px_rgba(56,161,105,0.2)]">

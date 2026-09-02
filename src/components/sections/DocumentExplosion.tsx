@@ -981,7 +981,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-14',
     num: '14',
     labelNumber: '14',
-    tag: 'Acidentes Ocupacionais',
+    tag: 'Acidentes',
     title:
       'Protocolo de encaminhamento do profissional em caso de acidentes com exposição a material biológico',
     subtitle:

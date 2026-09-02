@@ -1207,27 +1207,9 @@ export const DocumentExplosion: React.FC = () => {
   return (
     <div className="relative w-full mx-auto select-none">
       {/* ================= FLOATING BADGES & STATUS BAR AT TOP ================= */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 px-1">
-        {/* Left: Floating Status Pills */}
-        <div className="flex flex-wrap items-center gap-2.5">
-          {/* Green pulsing indicator */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-bold shadow-xs">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-            </span>
-            <span>Documentos formulados conforme os capítulos da RDC 1002/2025</span>
-          </div>
-
-          {/* RDC 1002 Seal */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-900 text-xs font-bold shadow-xs">
-            <Shield className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-            <span>Consultório seguro contra multas</span>
-          </div>
-        </div>
-
+      <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 mb-6 px-1">
         {/* Right: Shelf Hint */}
-        <div className="hidden sm:inline-flex items-center gap-1.5 text-xs text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full border border-slate-200/60">
+        <div className="inline-flex items-center gap-1.5 text-xs text-slate-500 font-medium bg-slate-50 px-3 py-1 rounded-full border border-slate-200/60">
           <Layers className="w-3.5 h-3.5 text-slate-400" />
           <span>Passe o mouse ou clique nas pastas para inspecionar</span>
         </div>

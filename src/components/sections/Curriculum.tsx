@@ -1,4 +1,4 @@
-import { Check, FileText, FileSpreadsheet, Printer } from 'lucide-react'
+import { Check, FileText, FileSpreadsheet, Printer, Shield } from 'lucide-react'
 import depoimento2 from '@/assets/12-2b647.png'
 import depoimento3 from '@/assets/9-bfd98.png'
 import depoimento4 from '@/assets/14-98a44.png'
@@ -29,21 +29,40 @@ export function Curriculum() {
             Por dentro do Manual de Boas Práticas Sanitárias
           </h2>
 
-          {/* Three count badges relocated from Hero */}
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50/90 border border-blue-200/90 text-blue-900 text-sm font-bold shadow-xs">
-              <FileText className="w-4 h-4 text-blue-600 shrink-0" />
-              <span>73 Documentos em Word (.docx)</span>
+          {/* Badges de conformidade e contadores de arquivos */}
+          <div className="flex flex-col items-center justify-center gap-3 pt-1">
+            {/* Linha 1: Badges de conformidade RDC 1002 e Consultório Seguro */}
+            <div className="flex flex-wrap items-center justify-center gap-2.5">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50/90 border border-emerald-200 text-emerald-900 text-sm font-bold shadow-xs">
+                <span className="relative flex h-2.5 w-2.5 shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                </span>
+                <span>Documentos formulados conforme os capítulos da RDC 1002/2025</span>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50/90 border border-blue-200 text-blue-950 text-sm font-bold shadow-xs">
+                <Shield className="w-4 h-4 text-blue-700 shrink-0" />
+                <span>Consultório seguro contra multas</span>
+              </div>
             </div>
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50/90 border border-emerald-200/90 text-emerald-900 text-sm font-bold shadow-xs">
-              <FileSpreadsheet className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>14 Planilhas em Excel (.xlsx)</span>
-            </div>
+            {/* Linha 2: Contadores de arquivos do manual */}
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50/90 border border-blue-200/90 text-blue-900 text-sm font-bold shadow-xs">
+                <FileText className="w-4 h-4 text-blue-600 shrink-0" />
+                <span>73 Documentos em Word (.docx)</span>
+              </div>
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-sm font-bold shadow-xs">
-              <Printer className="w-4 h-4 text-slate-600 shrink-0" />
-              <span>8 Cartazes / Guias para Impressão</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50/90 border border-emerald-200/90 text-emerald-900 text-sm font-bold shadow-xs">
+                <FileSpreadsheet className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>14 Planilhas em Excel (.xlsx)</span>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-sm font-bold shadow-xs">
+                <Printer className="w-4 h-4 text-slate-600 shrink-0" />
+                <span>8 Cartazes / Guias para Impressão</span>
+              </div>
             </div>
           </div>
         </div>

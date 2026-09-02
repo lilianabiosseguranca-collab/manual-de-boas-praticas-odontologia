@@ -361,7 +361,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-4',
     num: '4',
     labelNumber: '4',
-    tag: 'Documentação',
+    tag: 'Serviços Terceirizados',
     title: 'Contratos, licenças e qualificações de serviços terceirizados',
     subtitle: 'Alvarás, contratos de manutenção, laboratórios de prótese e laudos técnicos',
     icon: FileCheck2,

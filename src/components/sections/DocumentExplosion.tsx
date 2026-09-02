@@ -1141,13 +1141,48 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-slate-800 text-slate-200 border-slate-600',
       metalRingBorder: 'border-slate-400 ring-slate-900',
     },
-    summaryBullets: [
-      'Modelos de Termo de Consentimento Livre e Esclarecido (TCLE)',
-      'Fichas de anamnese e termos de responsabilidade do paciente',
-      'Compilado de portarias estaduais e municipais de vigilância',
+    documents: [
+      {
+        name: 'POP: Desinfecção de moldes para envio ao laboratório de prótese',
+        fileName: 'POP_Desinfeccao_de_moldes_para_envio_ao_laboratorio_de_protese.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Recebimento e desinfecção de próteses provenientes do laboratório',
+        fileName: 'POP_Recebimento_e_desinfeccao_de_proteses_provenientes_do_laboratorio.docx',
+        format: 'word',
+      },
+      {
+        name: 'Modelo de POP: Técnico para procedimentos odontológicos',
+        fileName: 'Modelo_de_POP_Tecnico_para_procedimentos_odontologicos.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Formulário de rastreabilidade de desinfecção de molde',
+        fileName: 'Anexo_Formulario_de_rastreabilidade_de_desinfeccao_de_molde.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Tabela de compatibilidade de desinfetantes por material de moldagem',
+        fileName: 'Anexo_Tabela_de_compatibilidade_de_desinfetantes_por_material_de_moldagem.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Modelo de etiqueta de identificação do molde',
+        fileName: 'Anexo_Modelo_de_etiqueta_de_identificacao_do_molde.docx',
+        format: 'word',
+      },
     ],
-    wordFileName: 'Capitulo_17_Outros_Documentos_Normativas.docx',
-    pagesCount: '30 páginas',
+    summaryBullets: [
+      'POP: Desinfecção de moldes para envio ao laboratório de prótese',
+      'POP: Recebimento e desinfecção de próteses provenientes do laboratório',
+      'Modelo de POP: Técnico para procedimentos odontológicos',
+      'Anexo: Formulário de rastreabilidade de desinfecção de molde',
+      'Anexo: Tabela de compatibilidade de desinfetantes por material de moldagem',
+      'Anexo: Modelo de etiqueta de identificação do molde',
+    ],
+    wordFileName: '6 arquivos em word (.docx) inclusos nesta pasta',
+    pagesCount: '16 páginas',
     yearTag: 'VOL. 17',
   },
 ]

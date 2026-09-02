@@ -1353,7 +1353,7 @@ export const DocumentExplosion: React.FC = () => {
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs sm:text-sm font-black tracking-wider text-blue-700 uppercase">
                   {activeChapter.labelNumber === '0'
-                    ? 'INTRODUÇÃO'
+                    ? 'Capítulo 0'
                     : `CAPÍTULO ${activeChapter.labelNumber}`}
                 </span>
                 <span className="text-slate-300 text-xs hidden sm:inline">•</span>

@@ -717,7 +717,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-11',
     num: '11',
     labelNumber: '11',
-    tag: 'Limpeza e Superfícies',
+    tag: 'Limpeza e Higienização',
     title: 'Protocolo de limpeza de ambientes e superfícies',
     subtitle: 'Higienização de consultórios, desinfecção concorrente e terminal, POPs de limpeza',
     icon: Sparkles,
@@ -735,13 +735,80 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-emerald-900/80 text-emerald-200 border-emerald-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'POPs de limpeza entre pacientes (alta rotação e cadeira)',
-      'Limpeza terminal diária e semanal do consultório',
-      'Diluição padronizada e saneantes aprovados pela ANVISA',
+    documents: [
+      {
+        name: 'POP: Limpeza imediata',
+        fileName: 'POP_Limpeza_imediata.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Limpeza concorrente',
+        fileName: 'POP_Limpeza_concorrente.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Limpeza entre pacientes',
+        fileName: 'POP_Limpeza_entre_pacientes.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Limpeza terminal',
+        fileName: 'POP_Limpeza_terminal.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Limpeza sala de espera e recepção',
+        fileName: 'POP_Limpeza_sala_de_espera_e_recepcao.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Limpeza área de processamento de dispositivos médicos',
+        fileName: 'POP_Limpeza_area_de_processamento_de_dispositivos_medicos.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Limpeza banheiros e sanitários',
+        fileName: 'POP_Limpeza_banheiros_e_sanitarios.docx',
+        format: 'word',
+      },
+      {
+        name: 'POP: Limpeza áreas comuns',
+        fileName: 'POP_Limpeza_areas_comuns.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Quadro para definição de cores dos panos',
+        fileName: 'Anexo_Quadro_para_definicao_de_cores_dos_panos.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Tabela de diluição para hipoclorito de sódio',
+        fileName: 'Anexo_Tabela_de_diluicao_para_hipoclorito_de_sodio.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Instruções rápidas e limpeza terminal',
+        fileName: 'Anexo_Instrucoes_rapidas_e_limpeza_terminal.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Instruções rápidas de limpeza dos sanitários',
+        fileName: 'Anexo_Instrucoes_rapidas_de_limpeza_dos_sanitarios.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Limpeza da área de processamento de dispositivos médicos',
+        fileName: 'Anexo_Limpeza_da_area_de_processamento_de_dispositivos_medicos.docx',
+        format: 'word',
+      },
     ],
-    wordFileName: 'Capitulo_11_Limpeza_Ambientes_Superficies.docx',
-    pagesCount: '15 páginas',
+    summaryBullets: [
+      'POPs completos de limpeza imediata, concorrente, terminal e entre pacientes',
+      'POPs para recepção, sanitários, áreas comuns e área de processamento de dispositivos médicos',
+      'Anexos com tabela de diluição de hipoclorito, código de cores de panos e instruções rápidas',
+    ],
+    wordFileName: '13 arquivos Word (.docx) inclusos nesta pasta',
+    pagesCount: '24 páginas',
     yearTag: 'VOL. 11',
   },
   {
@@ -1285,6 +1352,7 @@ export const DocumentExplosion: React.FC = () => {
               <div className="flex items-center justify-between px-1 pt-1 text-slate-500">
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider">
                   {activeChapter.num === '10' ||
+                  activeChapter.num === '11' ||
                   activeChapter.documents.some(
                     (d) =>
                       d.format === 'excel' ||

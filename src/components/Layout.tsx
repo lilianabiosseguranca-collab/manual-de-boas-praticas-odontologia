@@ -45,8 +45,8 @@ export default function Layout() {
           isScrolled ? 'glass-header py-3 md:py-4 shadow-sm' : 'bg-transparent py-4 md:py-6',
         )}
       >
-        <div className="container px-4 md:px-6 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="container px-4 md:px-6 flex items-center justify-center">
+          <div className="flex items-center justify-center gap-3 text-center">
             <img
               src={transparentLogo || logoImg}
               alt="Manual de Boas Práticas"

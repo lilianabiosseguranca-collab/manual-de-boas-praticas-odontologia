@@ -1051,13 +1051,36 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       badgeColor: 'bg-red-900/80 text-red-200 border-red-700',
       metalRingBorder: 'border-slate-300 ring-slate-800',
     },
-    summaryBullets: [
-      'Kit de emergência médica no consultório dentário',
-      'Protocolos de PCR, síncope, anafilaxia e crises hipertensivas',
-      'Ficha de transferência rápida para SAMU / Pronto Atendimento',
+    documents: [
+      {
+        name: 'POP: Encaminhamento do paciente em caso de urgências e emergências',
+        fileName: 'POP_Encaminhamento_do_paciente_em_caso_de_urgencias_e_emergencias.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Formulário de registro de ocorrência e encaminhamento',
+        fileName: 'Anexo_Formulario_de_registro_de_ocorrencia_e_encaminhamento.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Lista de contatos de emergência',
+        fileName: 'Anexo_Lista_de_contatos_de_emergencia.docx',
+        format: 'word',
+      },
+      {
+        name: 'Anexo: Checklist do kit de emergência',
+        fileName: 'Anexo_Checklist_do_kit_de_emergencia.docx',
+        format: 'word',
+      },
     ],
-    wordFileName: 'Capitulo_15_Urgencias_Emergencias_Odonto.docx',
-    pagesCount: '21 páginas',
+    summaryBullets: [
+      'POP: Encaminhamento do paciente em caso de urgências e emergências',
+      'Anexo: Formulário de registro de ocorrência e encaminhamento',
+      'Anexo: Lista de contatos de emergência',
+      'Anexo: Checklist do kit de emergência',
+    ],
+    wordFileName: '4 arquivos em word (.docx) inclusos nesta pasta',
+    pagesCount: '15 páginas',
     yearTag: 'VOL. 15',
   },
   {

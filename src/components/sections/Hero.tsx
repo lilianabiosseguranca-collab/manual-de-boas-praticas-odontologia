@@ -13,7 +13,7 @@ export const Hero = () => {
   }
 
   return (
-    <section className="relative w-full bg-white overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24">
+    <section className="relative w-full bg-white overflow-hidden pt-36 pb-16 md:pt-20 md:pb-24">
       {/* Light subtle background nuances */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50/80 via-white to-slate-50/40 pointer-events-none -z-10" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-radial from-blue-100/30 via-emerald-100/10 to-transparent blur-3xl pointer-events-none -z-10" />

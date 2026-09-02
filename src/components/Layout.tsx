@@ -42,20 +42,22 @@ export default function Layout() {
       <header
         className={cn(
           'fixed top-0 w-full z-50 transition-all duration-300',
-          isScrolled ? 'glass-header py-3 md:py-4 shadow-sm' : 'bg-transparent py-4 md:py-6',
+          isScrolled
+            ? 'glass-header py-2.5 sm:py-3 md:py-4 shadow-sm'
+            : 'bg-white/85 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none py-3 sm:py-4 md:py-6',
         )}
       >
         <div className="container px-4 md:px-6 flex items-center justify-center">
-          <div className="flex items-center justify-center gap-3 text-center">
+          <div className="flex items-center justify-center gap-2.5 sm:gap-3 text-center max-w-2xl">
             <img
               src={transparentLogo || logoImg}
               alt="Manual de Boas Práticas"
               className={cn(
-                'w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain shrink-0 transition-opacity duration-200',
+                'w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 object-contain shrink-0 transition-opacity duration-200',
                 !transparentLogo ? 'opacity-0' : 'opacity-100',
               )}
             />
-            <span className="font-serif font-bold text-base sm:text-lg md:text-xl tracking-tight text-slate-900 leading-tight">
+            <span className="font-serif font-bold text-sm sm:text-lg md:text-xl tracking-tight text-slate-900 leading-tight">
               Manual de Boas Práticas Sanitárias - Documentos para odontologia
             </span>
           </div>

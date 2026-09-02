@@ -446,7 +446,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-6',
     num: '6',
     labelNumber: '6',
-    tag: 'Controle de Pragas',
+    tag: 'Pragas e Vetores',
     title: 'Controle de pragas e vetores',
     subtitle: 'Comprovantes de desinsetização/desratização, periodicidade e barreiras físicas',
     icon: Bug,

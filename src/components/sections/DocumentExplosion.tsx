@@ -717,7 +717,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-11',
     num: '11',
     labelNumber: '11',
-    tag: 'Limpeza e Higienização',
+    tag: 'Limpeza',
     title: 'Protocolo de limpeza de ambientes e superfícies',
     subtitle: 'Higienização de consultórios, desinfecção concorrente e terminal, POPs de limpeza',
     icon: Sparkles,

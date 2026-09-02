@@ -36,7 +36,7 @@ export const Hero = () => {
               className="text-base sm:text-lg md:text-xl px-7 py-5 sm:px-9 sm:py-6 md:py-7 h-auto bg-green-600 hover:bg-green-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-200 hover:-translate-y-0.5 whitespace-normal text-center leading-snug cursor-pointer"
             >
               <a href="#pricing" onClick={handleCtaClick} className="inline-flex items-center">
-                Quero uma atualização rápida e eficiente
+                Quero uma atualização eficiente
                 <ArrowRight className="ml-2.5 w-5 h-5 md:w-6 md:h-6 shrink-0" />
               </a>
             </Button>

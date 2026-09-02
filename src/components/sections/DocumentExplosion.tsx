@@ -1122,7 +1122,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-17',
     num: '17',
     labelNumber: '17',
-    tag: 'Normativas e Formulários',
+    tag: 'Documentos',
     title: 'Outros documentos e normativas aplicáveis',
     subtitle:
       'Formulários complementares, termos de consentimento, fichas de controle e normas locais',

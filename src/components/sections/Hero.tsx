@@ -27,7 +27,7 @@ export const Hero = () => {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto">
-            Guia completo com tudo o que você precisa: 90 documentos pré-prontos seguindo os
+            Guia completo com tudo o que você precisa: 95 documentos pré-prontos seguindo os
             capítulos da RDC 1002/2025
           </p>
 

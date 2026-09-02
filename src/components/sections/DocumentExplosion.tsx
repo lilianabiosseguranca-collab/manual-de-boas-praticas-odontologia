@@ -169,7 +169,7 @@ export const CHAPTERS_17 = [
   'Capítulo 10: Protocolo para processamento de dispositivos médicos incluindo informações de rastreabilidade',
   'Capítulo 11: Protocolo de limpeza de ambientes e superfícies',
   'Capítulo 12: Plano de Segurança do Paciente (PSP)',
-  'Capítulo 13: Protocolo de higiene das mãos, precauções e isolamento: precauções de contato',
+  'Capítulo 13: Protocolo de higiene das mãos, precauções de contato e isolamento',
   'Capítulo 14: Protocolo de encaminhamento do profissional em caso de acidentes com exposição a material biológico',
   'Capítulo 15: Protocolo de encaminhamento do paciente em caso de urgências e emergências',
   'Capítulo 16: Plano de prevenção e controle de infecções (PP-IRAS)',
@@ -883,7 +883,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     num: '13',
     labelNumber: '13',
     tag: 'Biossegurança: Higiene e EPIs',
-    title: 'Protocolo de higiene das mãos, precauções e isolamento: precauções de contato',
+    title: 'Protocolo de higiene das mãos, precauções de contato e isolamento',
     subtitle:
       'Técnica correta de antissepsia, uso racional de EPIs e prevenção de transmissão cruzada',
     icon: SoapBubblesIcon,

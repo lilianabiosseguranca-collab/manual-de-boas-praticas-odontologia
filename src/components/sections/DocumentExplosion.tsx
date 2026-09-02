@@ -882,7 +882,7 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
     id: 'cap-13',
     num: '13',
     labelNumber: '13',
-    tag: 'Biossegurança: Higiene e EPIs',
+    tag: 'Higiene e EPI',
     title: 'Protocolo de higiene das mãos, precauções de contato e isolamento',
     subtitle:
       'Técnica correta de antissepsia, uso racional de EPIs e prevenção de transmissão cruzada',

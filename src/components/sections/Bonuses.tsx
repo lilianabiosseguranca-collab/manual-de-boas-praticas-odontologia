@@ -36,12 +36,9 @@ export function Bonuses() {
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="inline-flex items-center gap-1.5 bg-[#2b6cb0] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
                     <Sparkles className="w-3.5 h-3.5" />
-                    Bônus #1
+                    Bônus
                   </span>
-                  <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 border border-emerald-200/60 text-xs font-semibold px-3 py-1 rounded-full">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                    100% Gratuito na inscrição
-                  </span>
+
                   <span className="inline-flex items-center gap-1 text-slate-500 text-xs font-medium">
                     <Clock className="w-3.5 h-3.5" />
                     Acesso Imediato

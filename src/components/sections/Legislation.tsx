@@ -104,12 +104,6 @@ export const Legislation = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.15] tracking-tight text-slate-900">
             A nova legislação da Anvisa mudou o jogo
           </h2>
-
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            As regras da vigilância sanitária foram atualizadas. Apenas ter um arquivo solto ou um
-            modelo antigo de manual não é suficiente para passar no teste da inspeção sanitária —
-            agora você precisa do <strong>inventário documental completo</strong> da nova RDC.
-          </p>
         </div>
 
         {/* ========================================================= */}
@@ -118,27 +112,8 @@ export const Legislation = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {questStats.map((st, idx) => {
             const Icon = st.icon
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between gap-3"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500">
-                    {st.label}
-                  </span>
-                  <div className={`p-2 rounded-xl border ${st.accent}`}>
-                    <Icon className="w-4 h-4" />
-                  </div>
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                    {st.value}
-                  </div>
-                  <div className="text-xs text-slate-500 mt-0.5 leading-snug">{st.sub}</div>
-                </div>
-              </div>
-            )
+            return
+            null
           })}
         </div>
 

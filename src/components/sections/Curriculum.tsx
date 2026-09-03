@@ -1,5 +1,4 @@
 import {
-  Check,
   FileText,
   FileSpreadsheet,
   Printer,
@@ -12,6 +11,7 @@ import {
 import cartazConsultorioImg from '@/assets/editedimage1788353047992-4f028.png'
 import depoimento2 from '@/assets/12-2b647.png'
 import depoimento3 from '@/assets/9-bfd98.png'
+import { DocumentShowcase } from '@/components/sections/DocumentShowcase'
 
 export function Curriculum() {
   const chaptersSummary = [
@@ -82,8 +82,13 @@ export function Curriculum() {
           </div>
         </div>
 
-        {/* Layout de Duas Colunas: Lista de Capítulos à Esquerda + Mockup Real do Cartaz à Direita */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start mt-10">
+        {/* Vitrine Visual das 5 Prévia Reais (Substituindo o antigo bloco de 18 volumes e 95 arquivos prontos) */}
+        <div className="mt-10">
+          <DocumentShowcase />
+        </div>
+
+        {/* Layout de Duas Colunas: Lista dos 18 Capítulos à Esquerda + Mockup Real do Cartaz à Direita */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start mt-12">
           {/* Coluna da Esquerda: Resumo dos Capítulos e Conteúdos (7 colunas no desktop) */}
           <div className="lg:col-span-7 space-y-6">
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm">
@@ -94,16 +99,16 @@ export function Curriculum() {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-slate-900">
-                      18 Volumes e 95 Arquivos Prontos
+                      Estrutura Completa em 18 Capítulos
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-500">
-                      Totalmente personalizáveis para a rotina da sua clínica
+                      Cobertura total das exigências da Vigilância Sanitária e RDC 1002/2025
                     </p>
                   </div>
                 </div>
                 <span className="hidden sm:inline-flex items-center gap-1 text-xs font-bold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200/60">
                   <CheckCircle2 className="w-3.5 h-3.5" />
-                  100% Editáveis
+                  18 Capítulos
                 </span>
               </div>
 

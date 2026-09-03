@@ -11,7 +11,6 @@ import {
   FileCheck2,
   Target,
   Sparkles,
-  ArrowRight,
   ChevronRight,
   Swords,
   Layers,
@@ -22,14 +21,6 @@ import { LegislationMissionHUD } from './LegislationMissionHUD'
 
 export const Legislation = () => {
   const [activeTab, setActiveTab] = useState<'rules' | 'status'>('rules')
-
-  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-    const pricingSection = document.getElementById('pricing')
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }
 
   // Estatísticas gamificadas da RDC 1002/2025
   const questStats = [
@@ -414,26 +405,15 @@ export const Legislation = () => {
             ))}
           </div>
 
-          {/* Mini CTA gamificado direcionando para o checkout/pricing */}
-          <div className="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3 text-center sm:text-left">
-              <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                <ShieldAlert className="w-5 h-5 text-emerald-700" />
-              </div>
-              <p className="text-xs sm:text-sm text-slate-600">
-                Pronto para desbloquear todos os <strong>95 arquivos</strong> e passar de primeira
-                na fiscalização?
-              </p>
+          {/* Resumo da Missão RDC 1002/2025 */}
+          <div className="mt-8 pt-6 border-t border-slate-200 flex items-center gap-3 text-left">
+            <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <ShieldAlert className="w-5 h-5 text-emerald-700" />
             </div>
-
-            <a
-              href="#pricing"
-              onClick={handleCtaClick}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 shrink-0 w-full sm:w-auto"
-            >
-              <span>Desbloquear Manual Completo</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
+            <p className="text-xs sm:text-sm text-slate-600">
+              Todos os <strong>95 arquivos</strong> estruturados para você passar de primeira na
+              fiscalização sanitária.
+            </p>
           </div>
         </div>
       </div>

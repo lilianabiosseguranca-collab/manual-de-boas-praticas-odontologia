@@ -1,10 +1,17 @@
-import { FileText, FileSpreadsheet, Printer, Shield, Sparkles, Layers } from 'lucide-react'
+import React from 'react'
+import { FileText, FileSpreadsheet, Printer, Shield, Sparkles, ArrowRight } from 'lucide-react'
 import cartazConsultorioImg from '@/assets/editedimage1788353047992-4f028.png'
-import depoimento2 from '@/assets/12-2b647.png'
-import depoimento3 from '@/assets/9-bfd98.png'
 import { CompactDocumentShowcase } from '@/components/sections/CompactDocumentShowcase'
 
 export function Curriculum() {
+  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const pricingSection = document.getElementById('pricing')
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   const chaptersSummary = [
     { num: '0', title: 'Estrutura, capa, índice e orientações gerais' },
     { num: '1', title: 'Projeto arquitetônico e fluxos sanitários' },
@@ -138,7 +145,17 @@ export function Curriculum() {
           </div>
         </div>
 
-        {/* Provas Sociais / Depoimentos Reais */}
+        {/* Botão CTA final da seção direcionando suavemente para #pricing */}
+        <div className="mt-10 sm:mt-12 flex justify-center">
+          <a
+            href="#pricing"
+            onClick={handleCtaClick}
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5 shrink-0 w-full sm:w-auto"
+          >
+            <span>Desbloquear Manual Completo</span>
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </div>
       </div>
     </section>
   )

@@ -66,7 +66,7 @@ export function Bonuses() {
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
                     <span className="text-sm font-medium text-slate-700">
-                      Economia de tempo e foco no essencial
+                      Clareza no que precisa ser atualizado
                     </span>
                   </div>
 
@@ -75,7 +75,7 @@ export function Bonuses() {
                       <CheckCircle2 className="w-4 h-4" />
                     </div>
                     <span className="text-sm font-medium text-slate-700">
-                      Evite multas e exigências da Vigilância
+                      Evite multas e dor de cabeça com a vigilância sanitária
                     </span>
                   </div>
                 </div>

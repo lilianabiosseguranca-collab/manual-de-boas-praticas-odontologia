@@ -18,10 +18,6 @@ export function Bonuses() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
             Bônus Especial Incluso
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Além de todo o treinamento completo, você garante acesso imediato a uma aula prática
-            exclusiva para acelerar ainda mais os seus resultados.
-          </p>
         </div>
 
         {/* Horizontal Full-width Card */}

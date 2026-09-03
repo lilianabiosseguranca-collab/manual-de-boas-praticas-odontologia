@@ -1,17 +1,8 @@
-import {
-  FileText,
-  FileSpreadsheet,
-  Printer,
-  Shield,
-  Sparkles,
-  Layers,
-  FileCheck2,
-  CheckCircle2,
-} from 'lucide-react'
+import { FileText, FileSpreadsheet, Printer, Shield, Sparkles, Layers } from 'lucide-react'
 import cartazConsultorioImg from '@/assets/editedimage1788353047992-4f028.png'
 import depoimento2 from '@/assets/12-2b647.png'
 import depoimento3 from '@/assets/9-bfd98.png'
-import { DocumentShowcase } from '@/components/sections/DocumentShowcase'
+import { CompactDocumentShowcase } from '@/components/sections/CompactDocumentShowcase'
 
 export function Curriculum() {
   const chaptersSummary = [
@@ -82,29 +73,61 @@ export function Curriculum() {
           </div>
         </div>
 
-        {/* Vitrine Visual das 5 Prévia Reais (Substituindo o antigo bloco de 18 volumes e 95 arquivos prontos) */}
-        <div className="mt-10">
-          <DocumentShowcase />
+        {/* Bloco 1: Estrutura dos 18 Capítulos da RDC 1002/2025 */}
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm">
+          <div className="flex items-center gap-3 pb-5 border-b border-slate-100">
+            <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold">
+              <Layers className="w-5 h-5 text-blue-700" />
+            </div>
+            <div>
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
+                Estrutura Completa do Manual
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-500">
+                18 capítulos organizados para implementação imediata e conformidade sanitária
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-6">
+            {chaptersSummary.map((chap) => (
+              <div
+                key={chap.num}
+                className="flex items-start gap-3 p-3 rounded-2xl bg-slate-50/80 hover:bg-blue-50/60 border border-slate-100 transition-colors"
+              >
+                <span className="flex-shrink-0 w-7 h-7 rounded-xl bg-blue-100 text-blue-800 text-xs font-black flex items-center justify-center mt-0.5">
+                  {chap.num}
+                </span>
+                <span className="text-xs sm:text-[13px] font-medium text-slate-700 leading-snug">
+                  {chap.title}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Layout de Duas Colunas: Lista dos 18 Capítulos à Esquerda + Mockup Real do Cartaz à Direita */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start mt-12">
-          {/* Coluna da Esquerda: Resumo dos Capítulos e Conteúdos (7 colunas no desktop) */}
-          <div className="lg:col-span-7 space-y-6"></div>
+        {/* Bloco 2: Vitrine Compacta de Documentos (Original) + Card "Exemplo Real de Aplicação" (Cartaz) */}
+        {/* Mobile: Vitrine de fotos originais em cima, Cartaz embaixo */}
+        {/* Desktop: Vitrine de fotos originais à esquerda (col-span-7) e Cartaz à direita (col-span-5) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mt-10">
+          {/* Vitrine Compacta das Fotos Originais (Word & Excel) */}
+          <div className="lg:col-span-7 flex flex-col">
+            <CompactDocumentShowcase />
+          </div>
 
-          {/* Coluna da Direita: Mockup Real do Cartaz no Consultório (5 colunas no desktop) */}
-          <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="w-full relative group">
+          {/* Coluna do Cartaz: Exemplo Real de Aplicação */}
+          <div className="lg:col-span-5 flex flex-col">
+            <div className="w-full h-full relative group flex flex-col">
               {/* Glow decorativo suave atrás do quadro */}
               <div className="absolute -inset-2 bg-gradient-to-tr from-blue-500/15 via-emerald-500/10 to-sky-400/15 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
               {/* Card / Moldura Elegante do Mockup Real */}
-              <div className="relative bg-white rounded-3xl border border-slate-200/90 shadow-[0_15px_40px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_55px_-5px_rgba(0,0,0,0.14)] transition-all duration-300 overflow-hidden p-3.5 sm:p-4.5">
+              <div className="relative bg-white rounded-3xl border border-slate-200/90 shadow-[0_15px_40px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_55px_-5px_rgba(0,0,0,0.14)] transition-all duration-300 overflow-hidden p-4 sm:p-5 flex flex-col justify-between h-full">
                 {/* Header do Mockup */}
-                <div className="flex items-center justify-between gap-2 px-2 pb-3 mb-2 border-b border-slate-100">
+                <div className="flex items-center justify-between gap-2 pb-3 mb-3 border-b border-slate-100">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+                    <span className="text-xs sm:text-sm font-extrabold text-slate-800 uppercase tracking-wider">
                       Exemplo Real de Aplicação
                     </span>
                   </div>
@@ -115,15 +138,15 @@ export function Curriculum() {
                 </div>
 
                 {/* Imagem do Cartaz em Ambiente de Consultório */}
-                <div className="relative rounded-2xl overflow-hidden bg-slate-100 shadow-inner group/img">
+                <div className="relative rounded-2xl overflow-hidden bg-slate-100 shadow-inner group/img flex-1 min-h-[260px] flex items-center justify-center">
                   <img
                     src={cartazConsultorioImg}
                     alt="Exemplo real do cartaz de conduta em acidentes ocupacionais afixado no consultório odontológico"
-                    className="w-full h-auto object-cover object-center transform transition-transform duration-700 group-hover/img:scale-[1.02]"
+                    className="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover/img:scale-[1.02]"
                     loading="lazy"
                   />
                   {/* Subtle glass gradient overlay at bottom for title */}
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-900/40 to-transparent p-4 pt-8 text-white">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-900/45 to-transparent p-4 pt-8 text-white">
                     <p className="text-xs font-semibold text-emerald-300 uppercase tracking-wide">
                       Capítulo 14 • Cartaz Educativo
                     </p>
@@ -134,7 +157,7 @@ export function Curriculum() {
                 </div>
 
                 {/* Legenda explicativa abaixo da imagem */}
-                <div className="pt-3.5 px-2">
+                <div className="pt-3 px-1">
                   <p className="text-xs text-slate-600 leading-relaxed text-center">
                     <strong className="text-slate-800 font-semibold">
                       Material visual de alta resolução pronto para impressão

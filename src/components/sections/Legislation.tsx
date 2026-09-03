@@ -18,6 +18,7 @@ import {
   Zap,
 } from 'lucide-react'
 import legislacaoImg from '@/assets/como-se-adaptar-a-nova-legislacao-federal-3-aff2e.png'
+import { LegislationMissionHUD } from './LegislationMissionHUD'
 
 export const Legislation = () => {
   const [activeTab, setActiveTab] = useState<'rules' | 'status'>('rules')
@@ -126,21 +127,40 @@ export const Legislation = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {questStats.map((st, idx) => {
             const Icon = st.icon
-            return
-            null
+            return (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between gap-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500">
+                    {st.label}
+                  </span>
+                  <div className={`p-2 rounded-xl border ${st.accent}`}>
+                    <Icon className="w-4 h-4" />
+                  </div>
+                </div>
+                <div>
+                  <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                    {st.value}
+                  </div>
+                  <div className="text-xs text-slate-500 mt-0.5 leading-snug">{st.sub}</div>
+                </div>
+              </div>
+            )
           })}
         </div>
 
         {/* ========================================================= */}
-        {/* ESPAÇO DEDICADO À IMAGEM CENTRAL (MOLDURA GAMIFICADA HUD) */}
-        {/* O usuário atualizará a imagem central por conta própria   */}
+        {/* ESPAÇO DEDICADO À COMPOSIÇÃO CENTRAL GAMIFICADA HUD       */}
+        {/* Missão RDC 1002/2025: Inventário Desbloqueado + Boss HP  */}
         {/* ========================================================= */}
         <div className="max-w-5xl mx-auto w-full">
           <div className="relative group">
             {/* Glow exterior da moldura */}
-            <div className="absolute -inset-2 bg-gradient-to-r from-blue-600/10 via-emerald-500/15 to-indigo-600/10 rounded-[2.5rem] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <div className="absolute -inset-2 bg-gradient-to-r from-emerald-600/20 via-teal-500/20 to-indigo-600/20 rounded-[2.5rem] blur-xl opacity-80 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-            {/* Container HUD com cabeçalho de status da imagem */}
+            <LegislationMissionHUD />
           </div>
         </div>
 

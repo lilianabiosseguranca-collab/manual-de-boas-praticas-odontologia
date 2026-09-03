@@ -174,51 +174,6 @@ export const Legislation = () => {
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-600/10 via-emerald-500/15 to-indigo-600/10 rounded-[2.5rem] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
             {/* Container HUD com cabeçalho de status da imagem */}
-            <div className="relative bg-slate-900 rounded-[2rem] sm:rounded-[2.5rem] p-3 sm:p-5 shadow-2xl border border-slate-800 overflow-hidden">
-              {/* Barra superior de status estilo HUD / Terminal */}
-              <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2 mb-3 bg-slate-950/70 rounded-xl border border-slate-800 text-xs font-mono">
-                <div className="flex items-center gap-2 text-slate-300">
-                  <span className="flex h-2 w-2 relative">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-                  </span>
-                  <span className="font-bold text-slate-200">DIRETRIZ OFICIAL • RDC 1002/2025</span>
-                  <span className="text-slate-500 hidden sm:inline">|</span>
-                  <span className="text-slate-400 hidden sm:inline">
-                    STATUS: LEGISLAÇÃO ATUALIZADA
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <span className="px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/50 text-[10px] sm:text-[11px] font-bold">
-                    PATCH v1002.25
-                  </span>
-                  <span className="text-amber-400 font-bold hidden md:inline text-[11px]">
-                    ★ NÍVEL DE CONFORMIDADE: 100%
-                  </span>
-                </div>
-              </div>
-
-              {/* IMAGEM CENTRAL PRESERVADA / ESPAÇO PARA O USUÁRIO ATUALIZAR */}
-              <div
-                id="central-legislation-image-slot"
-                className="relative rounded-2xl overflow-hidden bg-slate-950 flex items-center justify-center border border-slate-800/80"
-              >
-                <img
-                  src={legislacaoImg}
-                  alt="A nova legislação da Anvisa RDC 1002/2025 mudou o jogo"
-                  className="w-full h-auto max-h-[640px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.01]"
-                />
-
-                {/* Badge flutuante de canto confirmando o slot */}
-                <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10 pointer-events-none">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-950/90 backdrop-blur-md border border-slate-700/80 text-white text-[11px] font-mono shadow-lg">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                    <span>Visão Estratégica do Guia</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

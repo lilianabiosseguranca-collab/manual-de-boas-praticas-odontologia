@@ -139,35 +139,6 @@ export function Curriculum() {
         </div>
 
         {/* Provas Sociais / Depoimentos Reais */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <h4 className="text-2xl md:text-3xl font-bold text-slate-900 mb-10 text-center tracking-tight">
-            Resultados reais de quem já aplicou:
-          </h4>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-white group">
-              <img
-                src={depoimento2}
-                alt="Depoimento de aluna sobre o Método Foguete"
-                className="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-white group">
-              <img
-                src={depoimento3}
-                alt="Depoimento de aluna sobre o Método Foguete"
-                className="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl bg-white group">
-              <img
-                src="/visual-edits/10-9e783a53.png"
-                alt="Depoimento de aluna sobre o Método Foguete"
-                className="w-full h-auto object-contain transform transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

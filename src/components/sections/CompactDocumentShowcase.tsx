@@ -21,7 +21,7 @@ export const ORIGINAL_DOC_PHOTOS = [
   },
   {
     id: 'pop-143',
-    title: 'POP 14.3 — Derramamento Biológico',
+    title: 'POP 11.1 Limpeza imediata',
     category: 'Word (.docx)',
     type: 'word' as const,
     url: 'https://dagtlwojkqyivnjgveda.supabase.co/storage/v1/object/public/message-attachments/75d80f4e-1ecd-46a4-be18-c1106166646a/captura-de-tela-2026-09-03-as-16.52.12-115e0.png',

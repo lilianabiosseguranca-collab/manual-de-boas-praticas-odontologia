@@ -183,10 +183,8 @@ export function Curriculum() {
                 <div className="pt-3.5 px-2">
                   <p className="text-xs text-slate-600 leading-relaxed text-center">
                     <strong className="text-slate-800 font-semibold">
-                      Material visual de alta resolução pronto para impressão:
-                    </strong>{' '}
-                    basta imprimir e afixar no consultório para orientar sua equipe e cumprir as
-                    exigências da fiscalização sanitária.
+                      Material visual de alta resolução pronto para impressão
+                    </strong>
                   </p>
                 </div>
               </div>

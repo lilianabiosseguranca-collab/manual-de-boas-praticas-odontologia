@@ -108,22 +108,6 @@ export const Legislation = () => {
         {/* ========================================================= */}
         <div className="text-center max-w-4xl mx-auto space-y-6">
           {/* Badge duplo: Gamificação + Legislação */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-900 text-amber-300 text-xs sm:text-sm font-mono font-semibold tracking-wide shadow-sm border border-slate-700">
-              <Gamepad2 className="w-4 h-4 text-amber-400" />
-              <span>NOVO META DO JOGO</span>
-            </span>
-
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-900 text-xs sm:text-sm font-semibold tracking-wide border border-blue-200 shadow-xs">
-              <ScrollText className="w-4 h-4 text-blue-600 shrink-0" />
-              <span>PATCH OFICIAL • RDC Nº 1002/2025 ANVISA</span>
-            </span>
-
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs sm:text-sm font-bold border border-emerald-200">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              REGRA EM VIGOR
-            </span>
-          </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.15] tracking-tight text-slate-900">
             A nova legislação da Anvisa mudou o jogo
@@ -142,25 +126,8 @@ export const Legislation = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {questStats.map((st, idx) => {
             const Icon = st.icon
-            return (
-              <div
-                key={idx}
-                className="relative bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-xs hover:shadow-md transition-all duration-200 group"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-slate-500 font-semibold">
-                    {st.label}
-                  </span>
-                  <div className={`p-1.5 rounded-lg border ${st.accent} shrink-0`}>
-                    <Icon className="w-4 h-4" />
-                  </div>
-                </div>
-                <div className="text-lg sm:text-2xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                  {st.value}
-                </div>
-                <div className="text-xs text-slate-500 mt-1 line-clamp-1 font-medium">{st.sub}</div>
-              </div>
-            )
+            return
+            null
           })}
         </div>
 

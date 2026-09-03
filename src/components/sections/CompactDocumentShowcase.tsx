@@ -64,9 +64,6 @@ export function CompactDocumentShowcase() {
               Prévias dos Documentos Reais
             </span>
           </div>
-          <span className="inline-flex items-center gap-1 text-[11px] font-bold bg-amber-50 text-amber-700 px-2.5 py-0.5 rounded-full border border-amber-200/70">
-            <Sparkles className="w-3 h-3 text-amber-500" />5 Arquivos Prontos
-          </span>
         </div>
 
         {/* Microtexto de Apoio Destacado */}

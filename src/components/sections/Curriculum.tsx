@@ -74,37 +74,6 @@ export function Curriculum() {
         </div>
 
         {/* Bloco 1: Estrutura dos 18 Capítulos da RDC 1002/2025 */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm">
-          <div className="flex items-center gap-3 pb-5 border-b border-slate-100">
-            <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold">
-              <Layers className="w-5 h-5 text-blue-700" />
-            </div>
-            <div>
-              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
-                Estrutura Completa do Manual
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-500">
-                18 capítulos organizados para implementação imediata e conformidade sanitária
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-6">
-            {chaptersSummary.map((chap) => (
-              <div
-                key={chap.num}
-                className="flex items-start gap-3 p-3 rounded-2xl bg-slate-50/80 hover:bg-blue-50/60 border border-slate-100 transition-colors"
-              >
-                <span className="flex-shrink-0 w-7 h-7 rounded-xl bg-blue-100 text-blue-800 text-xs font-black flex items-center justify-center mt-0.5">
-                  {chap.num}
-                </span>
-                <span className="text-xs sm:text-[13px] font-medium text-slate-700 leading-snug">
-                  {chap.title}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Bloco 2: Vitrine Compacta de Documentos (Original) + Card "Exemplo Real de Aplicação" (Cartaz) */}
         {/* Mobile: Vitrine de fotos originais em cima, Cartaz embaixo */}

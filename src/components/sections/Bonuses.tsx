@@ -51,11 +51,8 @@ export function Bonuses() {
                     de Funcionamento
                   </h3>
                   <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-                    Nesta aula exclusiva,{' '}
-                    <strong className="text-slate-800 font-semibold">Liliana Donatelli</strong>{' '}
-                    ensina de forma direta e descomplicada como organizar seus documentos com total
-                    conformidade sanitária, poupar horas de trabalho e evitar gastos desnecessários
-                    com retrabalho ou adequações incorretas.
+                    Nesta aula você vai entender a diferença entre os dois e terá clareza para
+                    atualizar o que realmente precisa.
                   </p>
                 </div>
 

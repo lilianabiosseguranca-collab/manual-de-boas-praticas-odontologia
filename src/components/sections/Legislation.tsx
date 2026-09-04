@@ -148,14 +148,8 @@ export const Legislation = () => {
                 </div>
 
                 <p className="text-xl sm:text-2xl md:text-[1.75rem] font-extrabold leading-snug tracking-tight text-slate-900">
-                  “O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
-                  precisa ter para mostrar em uma inspeção sanitária”
-                </p>
-
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl pt-1">
-                  A Anvisa expandiu os requisitos: além da rotina básica, o fiscal agora audita
-                  planos de segurança do paciente (PSP), controle de água, rastreabilidade de
-                  autoclave, PMOC e fichas funcionais completas.
+                  O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
+                  precisa ter para mostrar em uma inspeção sanitária
                 </p>
               </div>
             </div>

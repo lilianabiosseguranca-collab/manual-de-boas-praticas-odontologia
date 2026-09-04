@@ -182,7 +182,7 @@ export const Legislation = () => {
 
                 <div className="space-y-1">
                   <h4 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                    <span>Sem o Manual</span>
+                    <span>Sem o Manual de Boas Práticas</span>
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-500">
                     O caminho improvisado que trava na primeira pergunta do fiscal.

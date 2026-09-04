@@ -118,38 +118,41 @@ export const Legislation = () => {
 
         {/* ========================================================= */}
         {/* DISCLAIMER OBRIGATÓRIO (TEXTO EXATO EM DESTAQUE MÁXIMO)  */}
-        {/* "O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você precisa ter para mostrar em uma inspeção sanitária" */}
+        {/* Design minimalista e premium estilo editorial com barra vertical */}
         {/* ========================================================= */}
-        <div className="max-w-5xl mx-auto w-full">
-          <div className="relative overflow-hidden bg-white/95 rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl border-2 border-amber-400/80 hover:border-amber-500/90 transition-all duration-300">
-            {/* Faixa / Borda superior de alerta sanitário */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 via-amber-500 to-emerald-500" />
-
-            {/* Efeitos luminosos sutis de fundo (off-white / âmbar / esmeralda) */}
-            <div className="absolute -right-16 -top-16 w-56 h-56 bg-amber-100/60 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -left-16 -bottom-16 w-56 h-56 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
-              {/* Badge visual do Disclaimer */}
-              <div className="shrink-0 flex flex-col items-center gap-2">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-amber-50 border-2 border-amber-300/80 text-amber-700 flex items-center justify-center shadow-md shadow-amber-500/10">
-                  <AlertCircle className="w-9 h-9 sm:w-11 sm:h-11 text-amber-600 stroke-[2.2]" />
-                </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-mono font-bold tracking-wider uppercase">
-                  Aviso Crítico
-                </span>
+        <div className="max-w-4xl mx-auto w-full">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-9 shadow-md shadow-slate-200/50 border border-slate-200/90 border-l-[6px] border-l-amber-500 transition-shadow duration-300 hover:shadow-lg">
+            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
+              {/* Ícone de alerta sóbrio em círculo discreto */}
+              <div className="shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-50 border border-amber-200/80 text-amber-600 flex items-center justify-center">
+                <ShieldAlert className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
               </div>
 
-              {/* Texto com o disclaimer exato */}
-              <div className="flex-1 space-y-3">
-                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-widest text-amber-900 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
-                  <span className="w-2 h-2 rounded-full bg-amber-500" />
-                  LEI FEDERAL em Vigor (RDC 1002/2025)
+              {/* Conteúdo principal */}
+              <div className="flex-1 min-w-0 space-y-3">
+                {/* Header com selo oficial intacto e badge discreto */}
+                <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 text-amber-900 border border-amber-200/90 text-[11px] font-mono font-bold tracking-tight uppercase">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                    LEI FEDERAL em Vigor (RDC 1002/2025)
+                  </span>
+                  <span className="text-[11px] font-semibold tracking-wider uppercase text-slate-400">
+                    Aviso Oficial
+                  </span>
                 </div>
 
-                <p className="text-xl sm:text-2xl md:text-[1.75rem] font-extrabold leading-snug tracking-tight text-slate-900">
-                  O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
-                  precisa ter para mostrar em uma inspeção sanitária
+                {/* Citação principal com tipografia forte */}
+                <blockquote className="text-lg sm:text-xl md:text-2xl font-extrabold leading-snug tracking-tight text-slate-900">
+                  “O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
+                  precisa ter para mostrar em uma inspeção sanitária”
+                </blockquote>
+
+                {/* Parágrafo de apoio sobre a expansão dos requisitos */}
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
+                  A fiscalização agora exige a comprovação integrada de múltiplos controles
+                  obrigatórios: Plano de Segurança do Paciente (PSP), controle de qualidade da água,
+                  PMOC de climatização, rastreabilidade total do ciclo de autoclave e fichas
+                  funcionais atualizadas de toda a equipe.
                 </p>
               </div>
             </div>

@@ -180,9 +180,6 @@ export const Legislation = () => {
         {/* ========================================================= */}
         <div className="max-w-5xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-slate-500">
-              Scoreboard & Comparativo de Desempenho
-            </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
               Como você quer enfrentar a visita da fiscalização?
             </h3>
@@ -257,8 +254,7 @@ export const Legislation = () => {
             <div className="relative bg-gradient-to-b from-white to-emerald-50/30 p-7 sm:p-9 rounded-3xl shadow-md border-2 border-emerald-400 flex flex-col justify-between hover:shadow-xl transition-all duration-300">
               {/* Selo flutuante de recomendação */}
               <div className="absolute -top-3.5 right-6 bg-emerald-600 text-white text-[11px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1">
-                <Zap className="w-3 h-3 text-amber-300 fill-amber-300" />
-                Build Recomendada
+                Recomendada
               </div>
 
               <div className="space-y-4">
@@ -331,67 +327,6 @@ export const Legislation = () => {
         {/* CHECKPOINTS DA MISSÃO / PROGRESSO DOS CAPÍTULOS          */}
         {/* Metáfora: Fases da inspeção sanitária                     */}
         {/* ========================================================= */}
-        <div className="max-w-5xl mx-auto bg-slate-50 border border-slate-200/80 rounded-3xl p-6 sm:p-8">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-indigo-700 uppercase tracking-wider mb-1">
-                <FileCheck2 className="w-4 h-4 text-indigo-600" />
-                Trilha de Conquistas da Fiscalização
-              </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-                Os 3 Checkpoints para Zerar a Inspeção Sanitária
-              </h3>
-            </div>
-            <span className="self-start md:self-auto px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-mono text-slate-600 font-semibold shadow-xs">
-              Dificuldade: Normal com o Guia
-            </span>
-          </div>
-
-          <div className="grid sm:grid-cols-3 gap-4">
-            {questSteps.map((step, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-5 border border-slate-200/70 shadow-xs flex flex-col justify-between hover:border-slate-300 transition-colors"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-mono font-extrabold text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-md border border-indigo-100">
-                      {step.phase}
-                    </span>
-                    <span className="text-[10px] font-mono text-slate-400 font-semibold">
-                      {step.capitulos}
-                    </span>
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-slate-900 text-base leading-tight">
-                      {step.title}
-                    </h5>
-                    <p className="text-xs text-slate-600 mt-2 leading-relaxed">{step.desc}</p>
-                  </div>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-medium text-slate-500">
-                  <span>Requisito Anvisa</span>
-                  <span className="text-emerald-600 font-semibold flex items-center gap-1">
-                    <CheckCircle2 className="w-3.5 h-3.5" />
-                    Incluso
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Resumo da Missão RDC 1002/2025 */}
-          <div className="mt-8 pt-6 border-t border-slate-200 flex items-center gap-3 text-left">
-            <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-              <ShieldAlert className="w-5 h-5 text-emerald-700" />
-            </div>
-            <p className="text-xs sm:text-sm text-slate-600">
-              Todos os <strong>95 arquivos</strong> estruturados para você passar de primeira na
-              fiscalização sanitária.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   )

@@ -1,4 +1,4 @@
-import { sendPageViewCAPI, sendEventCAPI } from '@/services/meta-capi'
+import { sendPageViewCAPI, sendEventCAPI, generateEventId } from '@/services/meta-capi'
 
 declare global {
   interface Window {
@@ -8,24 +8,33 @@ declare global {
 }
 
 export const PIXEL_ID = '1115990062814370'
-export const TEST_EVENT_CODE = 'TEST92693'
 
 export const initPixel = () => {
   // Initialization is handled in index.html head
 }
 
-export const trackPageView = () => {
+export const trackPageView = (customEventId?: string) => {
+  const eventID = customEventId || generateEventId()
+
   if (typeof window !== 'undefined' && window.fbq) {
-    window.fbq('track', 'PageView', {}, { test_event_code: TEST_EVENT_CODE })
+    window.fbq('track', 'PageView', {}, { eventID })
   }
-  sendPageViewCAPI()
+  sendPageViewCAPI(undefined, eventID)
+  return eventID
 }
 
-export const trackEvent = (eventName: string, data?: Record<string, any>) => {
+export const trackEvent = (
+  eventName: string,
+  data?: Record<string, any>,
+  customEventId?: string,
+) => {
+  const eventID = customEventId || generateEventId()
+
   if (typeof window !== 'undefined' && window.fbq) {
-    window.fbq('track', eventName, data, { test_event_code: TEST_EVENT_CODE })
+    window.fbq('track', eventName, data || {}, { eventID })
   } else {
-    console.log(`[Pixel Mock] Tracked: ${eventName}`, data)
+    console.log(`[Pixel Mock] Tracked: ${eventName}`, data, { eventID })
   }
-  sendEventCAPI(eventName, data)
+  sendEventCAPI(eventName, data, undefined, eventID)
+  return eventID
 }

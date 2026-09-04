@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
-import { initPixel, trackPageView, trackEvent } from '@/lib/pixel'
+import { initPixel, trackEvent } from '@/lib/pixel'
 import { cn } from '@/lib/utils'
 import { setupTransparentFavicon } from '@/lib/favicon'
 import logoImg from '@/assets/design-sem-nome-11-26c3d.png'
@@ -9,7 +9,6 @@ import logoImg from '@/assets/design-sem-nome-11-26c3d.png'
 export default function Layout() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [transparentLogo, setTransparentLogo] = useState<string>('')
-  const location = useLocation()
 
   useEffect(() => {
     // Initialize Meta Pixel
@@ -26,10 +25,6 @@ export default function Layout() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  useEffect(() => {
-    trackPageView()
-  }, [location.pathname])
 
   const scrollToPricing = () => {
     trackEvent('Lead', { source: 'header_cta' })

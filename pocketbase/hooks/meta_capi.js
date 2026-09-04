@@ -2,8 +2,13 @@ routerAdd('POST', '/backend/v1/meta/capi', (e) => {
   const body = e.requestInfo().body || {}
   const pixelId = '1115990062814370'
 
-  const token = $secrets.get('META_CAPI_TOKEN') || ''
+  const token = $secrets.get('META_CAPI_TOKEN') || $os.getenv('META_CAPI_TOKEN') || ''
   if (!token) {
+    $app
+      .logger()
+      .warn(
+        'Meta CAPI: META_CAPI_TOKEN is not configured in backend secrets or environment variables',
+      )
     return e.json(200, { success: false, message: 'CAPI token not configured' })
   }
 

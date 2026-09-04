@@ -144,7 +144,7 @@ export const Legislation = () => {
               <div className="flex-1 space-y-3">
                 <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-widest text-amber-900 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
                   <span className="w-2 h-2 rounded-full bg-amber-500" />
-                  Regra Sanitária em Vigor (RDC 1002/2025)
+                  LEI FEDERAL em Vigor (RDC 1002/2025)
                 </div>
 
                 <p className="text-xl sm:text-2xl md:text-[1.75rem] font-extrabold leading-snug tracking-tight text-slate-900">

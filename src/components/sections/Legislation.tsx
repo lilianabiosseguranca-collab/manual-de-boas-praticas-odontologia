@@ -91,7 +91,7 @@ export const Legislation = () => {
           backgroundPosition: '0 0, 12px 12px',
         }}
       />
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container relative z-10 px-4 md:px-6 max-w-6xl mx-auto space-y-14 md:space-y-18">
@@ -112,8 +112,7 @@ export const Legislation = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {questStats.map((st, idx) => {
             const Icon = st.icon
-            return
-            null
+            return null
           })}
         </div>
 
@@ -122,35 +121,38 @@ export const Legislation = () => {
         {/* "O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você precisa ter para mostrar em uma inspeção sanitária" */}
         {/* ========================================================= */}
         <div className="max-w-5xl mx-auto w-full">
-          <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl border-2 border-blue-500/30 text-white">
-            {/* Efeito luminoso de fundo */}
-            <div className="absolute -right-20 -top-20 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="relative overflow-hidden bg-white/95 rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl border-2 border-amber-400/80 hover:border-amber-500/90 transition-all duration-300">
+            {/* Faixa / Borda superior de alerta sanitário */}
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 via-amber-500 to-emerald-500" />
+
+            {/* Efeitos luminosos sutis de fundo (off-white / âmbar / esmeralda) */}
+            <div className="absolute -right-16 -top-16 w-56 h-56 bg-amber-100/60 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -left-16 -bottom-16 w-56 h-56 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
               {/* Badge visual do Disclaimer */}
               <div className="shrink-0 flex flex-col items-center gap-2">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 flex items-center justify-center shadow-lg shadow-amber-500/20 font-black text-2xl">
-                  <AlertCircle className="w-10 h-10 sm:w-12 sm:h-12 text-slate-950 stroke-[2.2]" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-amber-50 border-2 border-amber-300/80 text-amber-700 flex items-center justify-center shadow-md shadow-amber-500/10">
+                  <AlertCircle className="w-9 h-9 sm:w-11 sm:h-11 text-amber-600 stroke-[2.2]" />
                 </div>
-                <span className="px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[10px] font-mono font-bold tracking-wider uppercase">
+                <span className="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-[10px] font-mono font-bold tracking-wider uppercase">
                   Aviso Crítico
                 </span>
               </div>
 
               {/* Texto com o disclaimer exato */}
               <div className="flex-1 space-y-3">
-                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-widest text-blue-200">
-                  <span className="w-2 h-2 rounded-full bg-amber-400" />
+                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-widest text-amber-900 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                  <span className="w-2 h-2 rounded-full bg-amber-500" />
                   Regra Sanitária em Vigor (RDC 1002/2025)
                 </div>
 
-                <p className="text-xl sm:text-2xl md:text-[1.75rem] font-extrabold leading-snug tracking-tight text-white drop-shadow-xs">
+                <p className="text-xl sm:text-2xl md:text-[1.75rem] font-extrabold leading-snug tracking-tight text-slate-900">
                   “O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
                   precisa ter para mostrar em uma inspeção sanitária”
                 </p>
 
-                <p className="text-sm sm:text-base text-blue-100/90 leading-relaxed max-w-3xl pt-1">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl pt-1">
                   A Anvisa expandiu os requisitos: além da rotina básica, o fiscal agora audita
                   planos de segurança do paciente (PSP), controle de água, rastreabilidade de
                   autoclave, PMOC e fichas funcionais completas.

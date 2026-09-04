@@ -21,7 +21,7 @@ export const Hero = () => {
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Centered Header */}
         <div className="text-center max-w-4xl mx-auto space-y-4 md:space-y-6">
-          <h1 className="font-extrabold tracking-tight text-slate-900 leading-[1.15] drop-shadow-xs text-[1.71rem]">
+          <h1 className="font-extrabold tracking-tight text-slate-900 leading-[1.15] drop-shadow-xs text-[2.23rem]">
             A maneira mais eficiente de ficar atualizado com os documentos exigidos pela nova
             legislação de odontologia
           </h1>

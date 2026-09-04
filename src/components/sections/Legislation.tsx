@@ -136,24 +136,15 @@ export const Legislation = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                     LEI FEDERAL em Vigor (RDC 1002/2025)
                   </span>
-                  <span className="text-[11px] font-semibold tracking-wider uppercase text-slate-400">
-                    Aviso Oficial
-                  </span>
                 </div>
 
                 {/* Citação principal com tipografia forte */}
                 <blockquote className="text-lg sm:text-xl md:text-2xl font-extrabold leading-snug tracking-tight text-slate-900">
-                  “O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
-                  precisa ter para mostrar em uma inspeção sanitária”
+                  O Manual de Rotinas e Procedimentos agora é só uma parte dos documentos que você
+                  precisa ter para mostrar em uma inspeção sanitária
                 </blockquote>
 
                 {/* Parágrafo de apoio sobre a expansão dos requisitos */}
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
-                  A fiscalização agora exige a comprovação integrada de múltiplos controles
-                  obrigatórios: Plano de Segurança do Paciente (PSP), controle de qualidade da água,
-                  PMOC de climatização, rastreabilidade total do ciclo de autoclave e fichas
-                  funcionais atualizadas de toda a equipe.
-                </p>
               </div>
             </div>
           </div>

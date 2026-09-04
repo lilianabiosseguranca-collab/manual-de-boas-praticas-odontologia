@@ -17,7 +17,6 @@ import {
 } from 'lucide-react'
 
 export const LegislationMissionHUD: React.FC = () => {
-  return
-  null
+  return null
 }
 export default LegislationMissionHUD

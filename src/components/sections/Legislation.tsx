@@ -237,7 +237,7 @@ export const Legislation = () => {
                 <div className="flex items-center justify-between pb-3 border-b border-emerald-100">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 text-xs font-mono font-bold">
                     <Award className="w-3.5 h-3.5 text-emerald-700" />
-                    MODO PRO • 100% BLINDADO
+                    MODO PRO • 100% PROTEGIDO
                   </span>
                   <span className="text-xs font-mono text-emerald-700 font-bold">HP: 100%</span>
                 </div>

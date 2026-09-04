@@ -112,22 +112,8 @@ export const Legislation = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {questStats.map((st, idx) => {
             const Icon = st.icon
-            return (
-              <div
-                key={idx}
-                className="bg-white/80 border border-slate-200/80 rounded-2xl p-4 shadow-xs flex items-center gap-3"
-              >
-                <div className="p-2.5 rounded-xl bg-slate-100 text-slate-700 shrink-0">
-                  <Icon className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                    {st.value}
-                  </div>
-                  <div className="text-xs text-slate-500 font-medium leading-tight">{st.label}</div>
-                </div>
-              </div>
-            )
+            return
+            null
           })}
         </div>
 

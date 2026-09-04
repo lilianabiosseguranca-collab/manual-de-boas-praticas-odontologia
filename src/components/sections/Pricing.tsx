@@ -5,7 +5,7 @@ import { trackEvent } from '@/lib/pixel'
 
 export const Pricing = () => {
   const handleCheckout = () => {
-    trackEvent('InitiateCheckout', { value: 297.0, currency: 'BRL', content_name: 'LBA' })
+    trackEvent('InitiateCheckout', { value: 59.9, currency: 'BRL', content_name: 'LBA' })
     window.open('https://pay.hotmart.com/D97925218P?checkoutMode=10&bid=1788356054231', '_blank')
   }
 

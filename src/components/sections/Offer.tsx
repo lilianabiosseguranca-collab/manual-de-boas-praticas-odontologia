@@ -58,10 +58,10 @@ export const Offer = () => {
                     O seu investimento será
                   </p>{' '}
                   <div className="text-6xl md:text-7xl font-bold text-slate-900 tracking-tighter">
-                    <span className="text-2xl font-normal text-slate-500 mr-2">12x de R$</span>
-                    30,72
+                    <span className="text-2xl font-normal text-slate-500 mr-2">7x de R$</span>
+                    9,79
                   </div>
-                  <p className="text-slate-500 mt-2 text-lg">ou R$ 297 à vista</p>
+                  <p className="text-slate-500 mt-2 text-lg">ou R$ 59,90 à vista</p>
                 </div>
 
                 <Button

@@ -250,7 +250,7 @@ export const Legislation = () => {
 
                 <div className="space-y-1">
                   <h4 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
-                    <span>Com o Manual</span>
+                    <span>Com o Manual de Boas Práticas</span>
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-500">
                     O roteiro oficial estruturado item a item segundo a RDC 1002/2025.

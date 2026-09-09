@@ -1493,11 +1493,11 @@ export const DocumentExplosion: React.FC = () => {
                               {doc.name}
                             </span>
                             {isPrint ? (
-                              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200/80 shrink-0">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/80 shrink-0">
                                 pronto para imprimir
                               </span>
                             ) : (
-                              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/90 shrink-0">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/80 shrink-0">
                                 100% editável
                               </span>
                             )}
@@ -1546,7 +1546,7 @@ export const DocumentExplosion: React.FC = () => {
                     <span className="text-xs sm:text-sm font-black text-slate-900 block">
                       {activeChapter.wordFileName}
                     </span>
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/90 shrink-0">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/80 shrink-0">
                       100% editável
                     </span>
                   </div>

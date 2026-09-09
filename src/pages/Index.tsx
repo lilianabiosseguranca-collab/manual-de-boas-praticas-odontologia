@@ -20,13 +20,13 @@ const Index = () => {
         <Curriculum />
         <InspectionComparison />
         <TargetAudience />
+        <AboutAuthor />
         <Pain />
         <Testimonials />
         <OfferHighlights />
         <CourseStructure />
         <Bonuses />
         <Pricing />
-        <AboutAuthor />
         <FAQ />
       </div>
     </div>

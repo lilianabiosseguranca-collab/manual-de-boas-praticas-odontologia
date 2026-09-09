@@ -16,7 +16,7 @@ export function AboutAuthor() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
-            Quem é Liliana Donatelli
+            Quem elaborou os documentos: Liliana Donatelli
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full mb-12" />
         </div>

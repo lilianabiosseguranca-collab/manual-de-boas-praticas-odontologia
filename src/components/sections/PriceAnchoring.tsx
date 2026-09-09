@@ -1,15 +1,5 @@
-import {
-  Clock,
-  Stethoscope,
-  Briefcase,
-  AlertTriangle,
-  Ban,
-  ArrowRight,
-  ShieldCheck,
-  Sparkles,
-} from 'lucide-react'
+import { Clock, Stethoscope, Briefcase, AlertTriangle, Ban } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { Reveal } from '@/components/Reveal'
 
 export function PriceAnchoring() {
@@ -54,7 +44,7 @@ export function PriceAnchoring() {
       category: 'Risco Fiscal',
       title: 'Multa aplicada na hora da fiscalização',
       description:
-        'que pode chegar a dezenas de milhares de reais pela ausência de conformidade sanitária imediata.',
+        'que pode chegar a milhares de reais pela ausência de conformidade sanitária imediata.',
       tag: 'Penalidade legal',
     },
     {
@@ -66,13 +56,6 @@ export function PriceAnchoring() {
       tag: 'Suspensão de alvará',
     },
   ]
-
-  const handleScrollToPricing = () => {
-    const el = document.getElementById('pricing')
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
 
   return (
     <section className="py-20 md:py-28 bg-white relative overflow-hidden">
@@ -151,9 +134,6 @@ export function PriceAnchoring() {
             </CardContent>
           </Card>
         </Reveal>
-
-        {/* Card Escuro de Fechamento: Risco / Custo Alto Riscado → R$ 59,90 Hoje */}
-        <Reveal direction="up" delay={250}></Reveal>
       </div>
     </section>
   )

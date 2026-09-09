@@ -92,7 +92,7 @@ export function PriceAnchoring() {
               <span className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-slate-100 text-slate-700 border border-slate-200/80 shrink-0 shadow-xs">
                 <Clock className="w-5 h-5 sm:w-6 sm:h-6" />
               </span>
-              <span>Quanto custa produzir tudo isso sozinho?</span>
+              <span>Quanto custaria produzir tudo isso?</span>
             </h2>
             <p className="mt-4 text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
               O custo real não é apenas o tempo gasto redigindo: é o faturamento que você perde na

@@ -153,64 +153,7 @@ export function PriceAnchoring() {
         </Reveal>
 
         {/* Card Escuro de Fechamento: Risco / Custo Alto Riscado → R$ 59,90 Hoje */}
-        <Reveal direction="up" delay={250}>
-          <div className="relative rounded-3xl bg-slate-950 text-white p-7 sm:p-9 md:p-10 border border-slate-800 shadow-[0_20px_50px_rgba(15,23,42,0.35)] overflow-hidden">
-            {/* Ambient emerald glow */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/15 rounded-full blur-[90px] pointer-events-none" />
-            <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-emerald-600/10 rounded-full blur-[80px] pointer-events-none" />
-
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
-              <div className="space-y-3 max-w-xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-xs font-semibold">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>A alternativa inteligente para seu consultório</span>
-                </div>
-
-                {/* Âncora Riscada com Consultoria e Risco */}
-                <div className="pt-1">
-                  <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold block mb-1">
-                    Se você fosse resolver por conta própria ou terceirizar:
-                  </span>
-                  <p className="text-slate-400 line-through text-base sm:text-lg font-medium decoration-rose-500/80 decoration-2">
-                    R$ 15.000 de consultoria + R$ 5.000 de consultas perdidas + risco de autuação
-                  </p>
-                </div>
-
-                {/* Oferta com contraste de valor */}
-                <div className="pt-2">
-                  <p className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight flex flex-wrap items-center justify-center lg:justify-start gap-2">
-                    <span>Hoje:</span>
-                    <span className="text-emerald-400 underline decoration-emerald-500/50 underline-offset-4">
-                      R$ 59,90
-                    </span>
-                    <span className="text-lg sm:text-xl font-normal text-slate-300">
-                      — e você continua atendendo.
-                    </span>
-                  </p>
-                  <p className="text-sm text-slate-400 mt-2 flex items-center justify-center lg:justify-start gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>95 documentos prontos em Word + atualizações conforme RDC 63.</span>
-                  </p>
-                </div>
-              </div>
-
-              {/* Botão de Ação direcionando para a seção de oferta */}
-              <div className="shrink-0 w-full sm:w-auto">
-                <Button
-                  onClick={handleScrollToPricing}
-                  size="lg"
-                  className="w-full sm:w-auto h-auto py-4 px-8 text-base sm:text-lg font-bold rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-[0_10px_25px_rgba(16,185,129,0.35)] hover:shadow-[0_12px_30px_rgba(16,185,129,0.5)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2.5"
-                >
-                  <span>Ver Condições Especiais</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-                <p className="text-xs text-slate-400 text-center mt-2.5">
-                  Acesso imediato e vitalício aos arquivos
-                </p>
-              </div>
-            </div>
-          </div>
-        </Reveal>
+        <Reveal direction="up" delay={250}></Reveal>
       </div>
     </section>
   )

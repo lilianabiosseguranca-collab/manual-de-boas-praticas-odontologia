@@ -19,6 +19,7 @@ const Index = () => {
         <Hero />
         <Legislation />
         <Curriculum />
+        <Bonuses />
         <InspectionComparison />
         <TargetAudience />
         <AboutAuthor />
@@ -26,7 +27,6 @@ const Index = () => {
         <Testimonials />
         <OfferHighlights />
         <CourseStructure />
-        <Bonuses />
         <PriceAnchoring />
         <Pricing />
         <FAQ />

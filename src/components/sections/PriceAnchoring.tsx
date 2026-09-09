@@ -139,33 +139,7 @@ export function PriceAnchoring() {
         </div>
 
         {/* Fechamento / Transição para o Preço */}
-        <Reveal direction="up" delay={300}>
-          <div className="relative rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-6 sm:p-8 md:p-10 shadow-xl overflow-hidden border border-slate-800">
-            {/* Subtle glow accent */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/15 blur-3xl pointer-events-none rounded-full" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 blur-3xl pointer-events-none rounded-full" />
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-              <div className="space-y-2">
-                <p className="text-slate-400 line-through text-sm sm:text-base font-medium">
-                  R$ 5.000 de consultas perdidas + risco de multa
-                </p>
-                <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight">
-                  Hoje: <span className="text-emerald-400">R$ 59,90</span> — e você continua
-                  atendendo.
-                </p>
-              </div>
-
-              <a
-                href="#pricing"
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base shadow-lg hover:shadow-emerald-500/30 transition-all duration-200 shrink-0 hover:-translate-y-0.5"
-              >
-                <span>Ver condições de acesso</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </Reveal>
+        <Reveal direction="up" delay={300}></Reveal>
       </div>
     </section>
   )

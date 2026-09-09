@@ -1,7 +1,7 @@
 import { Hero } from '@/components/sections/Hero'
 import { Testimonials } from '@/components/sections/Testimonials'
 import { Pain } from '@/components/sections/Pain'
-import { Legislation } from '@/components/sections/Legislation'
+import { Legislation, InspectionComparison } from '@/components/sections/Legislation'
 import { TargetAudience } from '@/components/sections/TargetAudience'
 import { Curriculum } from '@/components/sections/Curriculum'
 import { OfferHighlights } from '@/components/sections/OfferHighlights'
@@ -18,6 +18,7 @@ const Index = () => {
         <Hero />
         <Legislation />
         <Curriculum />
+        <InspectionComparison />
         <TargetAudience />
         <Pain />
         <Testimonials />

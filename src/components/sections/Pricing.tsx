@@ -112,11 +112,7 @@ export const Pricing = () => {
               </div>
             </div>
 
-            <div className="shrink-0">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider border border-emerald-200">
-                Mais barato que um café
-              </span>
-            </div>
+            <div className="shrink-0"></div>
           </div>
         </Reveal>
       </div>

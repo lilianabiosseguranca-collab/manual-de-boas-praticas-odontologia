@@ -1488,10 +1488,21 @@ export const DocumentExplosion: React.FC = () => {
                           </div>
                         )}
                         <div className="min-w-0">
-                          <span className="text-sm sm:text-base font-bold text-slate-900 block truncate">
-                            {doc.name}
-                          </span>
-                          <span className="text-[11px] sm:text-xs font-medium text-slate-500 block">
+                          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                            <span className="text-sm sm:text-base font-bold text-slate-900 truncate">
+                              {doc.name}
+                            </span>
+                            {isPrint ? (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200/80 shrink-0">
+                                pronto para imprimir
+                              </span>
+                            ) : (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/90 shrink-0">
+                                100% editável
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-[11px] sm:text-xs font-medium text-slate-500 block mt-0.5">
                             {isPrint
                               ? 'Cartaz / Guia prático pronto para impressão'
                               : isExcel
@@ -1530,10 +1541,15 @@ export const DocumentExplosion: React.FC = () => {
                 <div className="w-8 h-8 rounded-lg bg-[#185abd] text-white flex items-center justify-center text-xs font-black shadow-sm">
                   W
                 </div>
-                <div>
-                  <span className="text-xs sm:text-sm font-black text-slate-900 block">
-                    {activeChapter.wordFileName}
-                  </span>
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                    <span className="text-xs sm:text-sm font-black text-slate-900 block">
+                      {activeChapter.wordFileName}
+                    </span>
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10.5px] sm:text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/90 shrink-0">
+                      100% editável
+                    </span>
+                  </div>
                   <span className="text-[11px] sm:text-xs font-medium text-slate-500">
                     Arquivo Word (.docx) 100% editável e formatado
                   </span>

@@ -7,6 +7,7 @@ import { Curriculum } from '@/components/sections/Curriculum'
 import { OfferHighlights } from '@/components/sections/OfferHighlights'
 import { CourseStructure } from '@/components/sections/CourseStructure'
 import { Bonuses } from '@/components/sections/Bonuses'
+import { PriceAnchoring } from '@/components/sections/PriceAnchoring'
 import { Pricing } from '@/components/sections/Pricing'
 import { AboutAuthor } from '@/components/sections/AboutAuthor'
 import { FAQ } from '@/components/sections/FAQ'
@@ -26,6 +27,7 @@ const Index = () => {
         <OfferHighlights />
         <CourseStructure />
         <Bonuses />
+        <PriceAnchoring />
         <Pricing />
         <FAQ />
       </div>

@@ -1,4 +1,4 @@
-import { Check, ShieldCheck } from 'lucide-react'
+import { Check, ShieldCheck, FileText, Coffee } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Reveal } from '@/components/Reveal'
 import { trackEvent } from '@/lib/pixel'
@@ -85,6 +85,37 @@ export const Pricing = () => {
                 <ShieldCheck className="w-5 h-5 text-emerald-500" />
                 <span>Compra 100% Segura. Garantia incondicional de 7 dias.</span>
               </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Card Âncora de Granularidade: Mais barato que um café */}
+        <Reveal direction="up" delay={250} className="w-full max-w-2xl mt-8">
+          <div className="p-5 sm:p-6 rounded-2xl bg-emerald-50/90 border border-emerald-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div className="flex items-center gap-3.5">
+              <div className="w-11 h-11 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                <FileText className="w-5 h-5" />
+              </div>
+              <div>
+                <p className="text-base sm:text-lg font-bold text-slate-900">
+                  <span className="text-emerald-800">95 documentos</span> por{' '}
+                  <span className="text-emerald-800">R$ 59,90</span> — menos de{' '}
+                  <span className="text-emerald-800 underline decoration-emerald-400 decoration-2 underline-offset-2">
+                    R$ 1,00 por documento
+                  </span>
+                  .
+                </p>
+                <div className="flex items-center justify-center sm:justify-start gap-1.5 text-xs sm:text-sm text-slate-600 mt-0.5">
+                  <Coffee className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+                  <span>Cada POP sai mais barato que um café.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="shrink-0">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider border border-emerald-200">
+                Mais barato que um café
+              </span>
             </div>
           </div>
         </Reveal>

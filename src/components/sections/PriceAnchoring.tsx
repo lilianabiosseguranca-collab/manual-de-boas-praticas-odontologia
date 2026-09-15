@@ -34,7 +34,7 @@ export function PriceAnchoring() {
       description: (
         <>
           custaria <strong className="text-slate-900 font-semibold">a partir de R$ 15.000</strong>{' '}
-          para visitar sua clínica, elaborar todo o manual e padronizar os 95 documentos.
+          para visitar sua clínica, elaborar todo o manual e padronizar os 96 documentos.
         </>
       ),
       tag: 'A partir de R$ 15.000',

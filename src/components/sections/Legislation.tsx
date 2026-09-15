@@ -186,8 +186,8 @@ export const Legislation = () => {
     },
     {
       label: 'Itens no Inventário',
-      value: '95 Documentos',
-      sub: '73 DOCX + 14 XLSX + 8 Guias',
+      value: '96 Documentos',
+      sub: '73 DOCX + 14 XLSX + 9 Guias',
       icon: Layers,
       accent: 'text-emerald-600 bg-emerald-50 border-emerald-100',
     },

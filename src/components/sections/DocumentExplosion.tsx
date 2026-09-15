@@ -1172,6 +1172,11 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
         fileName: 'Anexo_Modelo_de_etiqueta_de_identificacao_do_molde.docx',
         format: 'word',
       },
+      {
+        name: 'Roteiro Objetivo de Inspeção (ROI) (Anvisa)',
+        fileName: 'Roteiro_Objetivo_de_Inspecao_ROI_Anvisa.pdf',
+        format: 'print',
+      },
     ],
     summaryBullets: [
       'POP: Desinfecção de moldes para envio ao laboratório de prótese',
@@ -1180,8 +1185,9 @@ export const PHYSICAL_CHAPTERS: PhysicalFolderData[] = [
       'Anexo: Formulário de rastreabilidade de desinfecção de molde',
       'Anexo: Tabela de compatibilidade de desinfetantes por material de moldagem',
       'Anexo: Modelo de etiqueta de identificação do molde',
+      'Roteiro Objetivo de Inspeção (ROI) (Anvisa)',
     ],
-    wordFileName: '6 arquivos em word (.docx) inclusos nesta pasta',
+    wordFileName: '7 arquivos inclusos nesta pasta',
     pagesCount: '16 páginas',
     yearTag: 'VOL. 17',
   },

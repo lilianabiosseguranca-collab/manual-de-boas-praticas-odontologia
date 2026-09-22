@@ -99,7 +99,7 @@ export const Pricing = () => {
               <div>
                 <p className="text-base sm:text-lg font-bold text-slate-900">
                   <span className="text-emerald-800">96 documentos</span> por{' '}
-                  <span className="text-emerald-800">R$ 59,90</span> — menos de{' '}
+                  <span className="text-emerald-800">R$ 97</span> — tipo&nbsp;
                   <span className="text-emerald-800 underline decoration-emerald-400 decoration-2 underline-offset-2">
                     R$ 1,00 por documento
                   </span>

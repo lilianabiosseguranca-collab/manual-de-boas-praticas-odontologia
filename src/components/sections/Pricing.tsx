@@ -35,7 +35,7 @@ export const Pricing = () => {
                   R$ 9,79
                 </span>
               </div>
-              <p className="text-base text-slate-500 font-medium">ou R$ 59,90 à vista</p>
+              <p className="text-base text-slate-500 font-medium">ou R$ 97 à vista</p>
             </div>
 
             <div className="w-full max-w-md mx-auto mb-10 bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-green-50 shadow-[0_0_20px_rgba(56,161,105,0.05)] relative z-10">

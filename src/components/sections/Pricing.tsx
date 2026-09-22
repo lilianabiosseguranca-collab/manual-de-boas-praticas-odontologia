@@ -32,7 +32,7 @@ export const Pricing = () => {
               <div className="flex flex-col md:flex-row items-center justify-center gap-2 mb-3">
                 <span className="text-2xl font-bold text-slate-700">7x de</span>
                 <span className="text-6xl md:text-7xl font-serif font-bold tracking-tight text-[#38a169] drop-shadow-[0_0_15px_rgba(56,161,105,0.2)]">
-                  R$ 9,79
+                  R$ 15,86
                 </span>
               </div>
               <p className="text-base text-slate-500 font-medium">ou R$ 97 à vista</p>
